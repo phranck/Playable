@@ -1,0 +1,717 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 54;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		FD030475257106DD002CA713 /* FavoritesTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD030474257106DD002CA713 /* FavoritesTabView.swift */; };
+		FD03F37725770EF700463D8E /* ServiceSetupDeezer.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD03F37625770EF700463D8E /* ServiceSetupDeezer.swift */; };
+		FD05B0C3256D4576000ECA44 /* Playable+Logging.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD05B0C2256D4576000ECA44 /* Playable+Logging.swift */; };
+		FD05B0DC256D7F04000ECA44 /* ApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD05B0DB256D7F04000ECA44 /* ApiClient.swift */; };
+		FD05B0DF256D7F22000ECA44 /* ApiClientTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD05B0DE256D7F22000ECA44 /* ApiClientTypes.swift */; };
+		FD05B0E3256D7F75000ECA44 /* String+Crypto.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD05B0E2256D7F75000ECA44 /* String+Crypto.swift */; };
+		FD05B0E6256D7F8E000ECA44 /* Playable+Bundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD05B0E5256D7F8E000ECA44 /* Playable+Bundle.swift */; };
+		FD05B0E9256D7FAC000ECA44 /* Dictionary+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD05B0E8256D7FAC000ECA44 /* Dictionary+Extensions.swift */; };
+		FD05B0F2256D8D40000ECA44 /* ApiClientConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD05B0F1256D8D40000ECA44 /* ApiClientConfiguration.swift */; };
+		FD05B0F6256DA9CC000ECA44 /* URL+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD05B0F5256DA9CC000ECA44 /* URL+Extension.swift */; };
+		FD060BA325F2AEAA00440AF9 /* DeviceBrowser.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD060BA225F2AEAA00440AF9 /* DeviceBrowser.swift */; };
+		FD099DE625769C5A00C19A4C /* StreamingServiceSelectionDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD099DE525769C5A00C19A4C /* StreamingServiceSelectionDetailView.swift */; };
+		FD1CEC10257ED9880044689A /* SwiftUIX in Frameworks */ = {isa = PBXBuildFile; productRef = FD1CEC0F257ED9880044689A /* SwiftUIX */; };
+		FD2B481125701D3300C6660B /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD2B481025701D3300C6660B /* Environment.swift */; };
+		FD2B481C2570279D00C6660B /* Color+UISystemColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD2B481B2570279D00C6660B /* Color+UISystemColors.swift */; };
+		FD59FB4A25B77E5400C345E8 /* RadioBrowser in Frameworks */ = {isa = PBXBuildFile; productRef = FD59FB4925B77E5400C345E8 /* RadioBrowser */; };
+		FD61FF872572F6C500EF7C52 /* ButtonStyles.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD61FF862572F6C500EF7C52 /* ButtonStyles.swift */; };
+		FD61FF8C2572FAA700EF7C52 /* StreamingServiceSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD61FF8B2572FAA700EF7C52 /* StreamingServiceSelectionView.swift */; };
+		FD61FF8F2572FE1D00EF7C52 /* ServiceSetupRadio.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD61FF8E2572FE1C00EF7C52 /* ServiceSetupRadio.swift */; };
+		FD61FF962574111400EF7C52 /* StreamingServiceType.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD61FF952574111400EF7C52 /* StreamingServiceType.swift */; };
+		FD61FF9C257419BE00EF7C52 /* StreamingServiceConfigurable.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD61FF9B257419BE00EF7C52 /* StreamingServiceConfigurable.swift */; };
+		FD61FFA025741B4700EF7C52 /* Image+CustomImages.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD61FF9F25741B4700EF7C52 /* Image+CustomImages.swift */; };
+		FD61FFA525742A7600EF7C52 /* Playable+Appearance.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD61FFA425742A7600EF7C52 /* Playable+Appearance.swift */; };
+		FD61FFA82574307800EF7C52 /* NavigationBarItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD61FFA72574307800EF7C52 /* NavigationBarItem.swift */; };
+		FD74F1F72576A45E0022B4F5 /* ServiceSetupHead.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD74F1F62576A45E0022B4F5 /* ServiceSetupHead.swift */; };
+		FD98E5EB256FA264004B308D /* ExpandedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD98E5EA256FA264004B308D /* ExpandedButton.swift */; };
+		FD98E5EE25700A4B004B308D /* ListRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD98E5ED25700A4B004B308D /* ListRow.swift */; };
+		FDA7099A2615184400BD08F9 /* RealmManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDA709992615184400BD08F9 /* RealmManager.swift */; };
+		FDC5564E261A5DA80030C20E /* SwiftyBeaver in Frameworks */ = {isa = PBXBuildFile; productRef = FDC5564D261A5DA80030C20E /* SwiftyBeaver */; };
+		FDF2E7A6256DB6C80023AF75 /* KeychainAccess in Frameworks */ = {isa = PBXBuildFile; productRef = FDF2E7A5256DB6C80023AF75 /* KeychainAccess */; };
+		FDFCEAF52565B56800CBE3D0 /* Playable.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDFCEAE22565B56800CBE3D0 /* Playable.swift */; };
+		FDFCEAF72565B56800CBE3D0 /* DevicesTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDFCEAE32565B56800CBE3D0 /* DevicesTabView.swift */; };
+		FDFCEAF92565B56800CBE3D0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FDFCEAE42565B56800CBE3D0 /* Assets.xcassets */; };
+		FDFCEB112565BD0500CBE3D0 /* ServicesTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDFCEB102565BD0500CBE3D0 /* ServicesTabView.swift */; };
+		FDFCEB142565BD4300CBE3D0 /* SettingsTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDFCEB132565BD4300CBE3D0 /* SettingsTabView.swift */; };
+		FDFCEB2B2565CEA100CBE3D0 /* TappableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDFCEB2A2565CEA100CBE3D0 /* TappableView.swift */; };
+		FDFCEB302565D63000CBE3D0 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDFCEB2F2565D63000CBE3D0 /* ContentView.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		FD030474257106DD002CA713 /* FavoritesTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesTabView.swift; sourceTree = "<group>"; };
+		FD03F37625770EF700463D8E /* ServiceSetupDeezer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceSetupDeezer.swift; sourceTree = "<group>"; };
+		FD05B0C2256D4576000ECA44 /* Playable+Logging.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Playable+Logging.swift"; sourceTree = "<group>"; };
+		FD05B0DB256D7F04000ECA44 /* ApiClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiClient.swift; sourceTree = "<group>"; };
+		FD05B0DE256D7F22000ECA44 /* ApiClientTypes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiClientTypes.swift; sourceTree = "<group>"; };
+		FD05B0E2256D7F75000ECA44 /* String+Crypto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Crypto.swift"; sourceTree = "<group>"; };
+		FD05B0E5256D7F8E000ECA44 /* Playable+Bundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Playable+Bundle.swift"; sourceTree = "<group>"; };
+		FD05B0E8256D7FAC000ECA44 /* Dictionary+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Dictionary+Extensions.swift"; sourceTree = "<group>"; };
+		FD05B0F1256D8D40000ECA44 /* ApiClientConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiClientConfiguration.swift; sourceTree = "<group>"; };
+		FD05B0F5256DA9CC000ECA44 /* URL+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URL+Extension.swift"; sourceTree = "<group>"; };
+		FD060BA225F2AEAA00440AF9 /* DeviceBrowser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceBrowser.swift; sourceTree = "<group>"; };
+		FD099DE525769C5A00C19A4C /* StreamingServiceSelectionDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StreamingServiceSelectionDetailView.swift; sourceTree = "<group>"; };
+		FD2B481025701D3300C6660B /* Environment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Environment.swift; sourceTree = "<group>"; };
+		FD2B481B2570279D00C6660B /* Color+UISystemColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+UISystemColors.swift"; sourceTree = "<group>"; };
+		FD61FF862572F6C500EF7C52 /* ButtonStyles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonStyles.swift; sourceTree = "<group>"; };
+		FD61FF8B2572FAA700EF7C52 /* StreamingServiceSelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StreamingServiceSelectionView.swift; sourceTree = "<group>"; };
+		FD61FF8E2572FE1C00EF7C52 /* ServiceSetupRadio.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceSetupRadio.swift; sourceTree = "<group>"; };
+		FD61FF952574111400EF7C52 /* StreamingServiceType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StreamingServiceType.swift; sourceTree = "<group>"; };
+		FD61FF9B257419BE00EF7C52 /* StreamingServiceConfigurable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StreamingServiceConfigurable.swift; sourceTree = "<group>"; };
+		FD61FF9F25741B4700EF7C52 /* Image+CustomImages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Image+CustomImages.swift"; sourceTree = "<group>"; };
+		FD61FFA425742A7600EF7C52 /* Playable+Appearance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Playable+Appearance.swift"; sourceTree = "<group>"; };
+		FD61FFA72574307800EF7C52 /* NavigationBarItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBarItem.swift; sourceTree = "<group>"; };
+		FD74F1F62576A45E0022B4F5 /* ServiceSetupHead.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceSetupHead.swift; sourceTree = "<group>"; };
+		FD8EB890260E7F2400CDD933 /* RadioBrowser */ = {isa = PBXFileReference; lastKnownFileType = folder; name = RadioBrowser; path = "../../../Swift Packages/RadioBrowser"; sourceTree = "<group>"; };
+		FD98E5EA256FA264004B308D /* ExpandedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpandedButton.swift; sourceTree = "<group>"; };
+		FD98E5ED25700A4B004B308D /* ListRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListRow.swift; sourceTree = "<group>"; };
+		FDA709992615184400BD08F9 /* RealmManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmManager.swift; sourceTree = "<group>"; };
+		FDFCEAE22565B56800CBE3D0 /* Playable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Playable.swift; sourceTree = "<group>"; };
+		FDFCEAE32565B56800CBE3D0 /* DevicesTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DevicesTabView.swift; sourceTree = "<group>"; };
+		FDFCEAE42565B56800CBE3D0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		FDFCEAE92565B56800CBE3D0 /* Playable.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Playable.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FDFCEAEC2565B56800CBE3D0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FDFCEB052565B5B000CBE3D0 /* Playable.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Playable.entitlements; sourceTree = "<group>"; };
+		FDFCEB102565BD0500CBE3D0 /* ServicesTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServicesTabView.swift; sourceTree = "<group>"; };
+		FDFCEB132565BD4300CBE3D0 /* SettingsTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTabView.swift; sourceTree = "<group>"; };
+		FDFCEB2A2565CEA100CBE3D0 /* TappableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TappableView.swift; sourceTree = "<group>"; };
+		FDFCEB2F2565D63000CBE3D0 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		FDFCEAE62565B56800CBE3D0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FDF2E7A6256DB6C80023AF75 /* KeychainAccess in Frameworks */,
+				FD1CEC10257ED9880044689A /* SwiftUIX in Frameworks */,
+				FD59FB4A25B77E5400C345E8 /* RadioBrowser in Frameworks */,
+				FDC5564E261A5DA80030C20E /* SwiftyBeaver in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		FD03047825727BAE002CA713 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				FD05B0E5256D7F8E000ECA44 /* Playable+Bundle.swift */,
+				FD05B0C2256D4576000ECA44 /* Playable+Logging.swift */,
+				FD61FFA425742A7600EF7C52 /* Playable+Appearance.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		FD03047A25727BC1002CA713 /* Foundation */ = {
+			isa = PBXGroup;
+			children = (
+				FD05B0E8256D7FAC000ECA44 /* Dictionary+Extensions.swift */,
+				FD05B0E2256D7F75000ECA44 /* String+Crypto.swift */,
+				FD05B0F5256DA9CC000ECA44 /* URL+Extension.swift */,
+			);
+			path = Foundation;
+			sourceTree = "<group>";
+		};
+		FD03047C25727BCD002CA713 /* SwiftUI */ = {
+			isa = PBXGroup;
+			children = (
+				FD2B481B2570279D00C6660B /* Color+UISystemColors.swift */,
+				FD61FF9F25741B4700EF7C52 /* Image+CustomImages.swift */,
+			);
+			path = SwiftUI;
+			sourceTree = "<group>";
+		};
+		FD05B0C1256D4557000ECA44 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				FD03047825727BAE002CA713 /* Application */,
+				FD03047A25727BC1002CA713 /* Foundation */,
+				FD03047C25727BCD002CA713 /* SwiftUI */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		FD05B0D3256D7551000ECA44 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				FD060BAC25F4170700440AF9 /* Devices */,
+				FD05B0EC256D8CAD000ECA44 /* Streaming Services */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		FD05B0EC256D8CAD000ECA44 /* Streaming Services */ = {
+			isa = PBXGroup;
+			children = (
+				FD98E5F025700F35004B308D /* Model */,
+				FD05B0EE256D8CC2000ECA44 /* Deezer */,
+				FD05B0ED256D8CBA000ECA44 /* Radio */,
+			);
+			path = "Streaming Services";
+			sourceTree = "<group>";
+		};
+		FD05B0ED256D8CBA000ECA44 /* Radio */ = {
+			isa = PBXGroup;
+			children = (
+				FD61FF8E2572FE1C00EF7C52 /* ServiceSetupRadio.swift */,
+			);
+			path = Radio;
+			sourceTree = "<group>";
+		};
+		FD05B0EE256D8CC2000ECA44 /* Deezer */ = {
+			isa = PBXGroup;
+			children = (
+				FD05B0F0256D8CF0000ECA44 /* Model */,
+				FD03F37625770EF700463D8E /* ServiceSetupDeezer.swift */,
+			);
+			path = Deezer;
+			sourceTree = "<group>";
+		};
+		FD05B0F0256D8CF0000ECA44 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		FD060BA625F4165800440AF9 /* Browser */ = {
+			isa = PBXGroup;
+			children = (
+				FD060BA225F2AEAA00440AF9 /* DeviceBrowser.swift */,
+			);
+			path = Browser;
+			sourceTree = "<group>";
+		};
+		FD060BA725F4167A00440AF9 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				FD05B0DB256D7F04000ECA44 /* ApiClient.swift */,
+				FD05B0F1256D8D40000ECA44 /* ApiClientConfiguration.swift */,
+				FD05B0DE256D7F22000ECA44 /* ApiClientTypes.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		FD060BA925F416BA00440AF9 /* Devices */ = {
+			isa = PBXGroup;
+			children = (
+				FDFCEAE32565B56800CBE3D0 /* DevicesTabView.swift */,
+			);
+			path = Devices;
+			sourceTree = "<group>";
+		};
+		FD060BAA25F416C100440AF9 /* Favorites */ = {
+			isa = PBXGroup;
+			children = (
+				FD030474257106DD002CA713 /* FavoritesTabView.swift */,
+			);
+			path = Favorites;
+			sourceTree = "<group>";
+		};
+		FD060BAB25F416CB00440AF9 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				FDFCEB132565BD4300CBE3D0 /* SettingsTabView.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		FD060BAC25F4170700440AF9 /* Devices */ = {
+			isa = PBXGroup;
+			children = (
+				FD060BA725F4167A00440AF9 /* API */,
+				FD060BA625F4165800440AF9 /* Browser */,
+			);
+			path = Devices;
+			sourceTree = "<group>";
+		};
+		FD2B481725701FBE00C6660B /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				FD74F1F62576A45E0022B4F5 /* ServiceSetupHead.swift */,
+				FDFCEB102565BD0500CBE3D0 /* ServicesTabView.swift */,
+				FD61FF9B257419BE00EF7C52 /* StreamingServiceConfigurable.swift */,
+				FD099DE525769C5A00C19A4C /* StreamingServiceSelectionDetailView.swift */,
+				FD61FF8B2572FAA700EF7C52 /* StreamingServiceSelectionView.swift */,
+				FD61FF952574111400EF7C52 /* StreamingServiceType.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		FD59AD8C2583FC9900E8E385 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FD59FB4625B77E1300C345E8 /* Packages */ = {
+			isa = PBXGroup;
+			children = (
+				FD8EB890260E7F2400CDD933 /* RadioBrowser */,
+			);
+			path = Packages;
+			sourceTree = "<group>";
+		};
+		FD61FF852572F6AE00EF7C52 /* Button Styles */ = {
+			isa = PBXGroup;
+			children = (
+				FD61FF862572F6C500EF7C52 /* ButtonStyles.swift */,
+			);
+			path = "Button Styles";
+			sourceTree = "<group>";
+		};
+		FD98E5F025700F35004B308D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		FDA709982615182B00BD08F9 /* Realm */ = {
+			isa = PBXGroup;
+			children = (
+				FDA709992615184400BD08F9 /* RealmManager.swift */,
+			);
+			path = Realm;
+			sourceTree = "<group>";
+		};
+		FDF2E7B2256F19B60023AF75 /* Custom Views */ = {
+			isa = PBXGroup;
+			children = (
+				FD98E5EA256FA264004B308D /* ExpandedButton.swift */,
+				FD98E5ED25700A4B004B308D /* ListRow.swift */,
+				FD61FFA72574307800EF7C52 /* NavigationBarItem.swift */,
+			);
+			path = "Custom Views";
+			sourceTree = "<group>";
+		};
+		FDFCEADC2565B56700CBE3D0 = {
+			isa = PBXGroup;
+			children = (
+				FDFCEAE12565B56800CBE3D0 /* Playable */,
+				FD59FB4625B77E1300C345E8 /* Packages */,
+				FD59AD8C2583FC9900E8E385 /* Frameworks */,
+				FDFCEAEA2565B56800CBE3D0 /* Products */,
+				FDFCEB052565B5B000CBE3D0 /* Playable.entitlements */,
+			);
+			sourceTree = "<group>";
+		};
+		FDFCEAE12565B56800CBE3D0 /* Playable */ = {
+			isa = PBXGroup;
+			children = (
+				FDFCEB0C2565BA1B00CBE3D0 /* Application */,
+				FD61FF852572F6AE00EF7C52 /* Button Styles */,
+				FDF2E7B2256F19B60023AF75 /* Custom Views */,
+				FD05B0C1256D4557000ECA44 /* Extensions */,
+				FD05B0D3256D7551000ECA44 /* Network */,
+				FDA709982615182B00BD08F9 /* Realm */,
+				FDFCEB0D2565BA3800CBE3D0 /* Ressources */,
+			);
+			path = Playable;
+			sourceTree = "<group>";
+		};
+		FDFCEAEA2565B56800CBE3D0 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FDFCEAE92565B56800CBE3D0 /* Playable.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FDFCEB0C2565BA1B00CBE3D0 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				FDFCEB2F2565D63000CBE3D0 /* ContentView.swift */,
+				FD2B481025701D3300C6660B /* Environment.swift */,
+				FDFCEAE22565B56800CBE3D0 /* Playable.swift */,
+				FDFCEB162565BD5A00CBE3D0 /* TabViews */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		FDFCEB0D2565BA3800CBE3D0 /* Ressources */ = {
+			isa = PBXGroup;
+			children = (
+				FDFCEAEC2565B56800CBE3D0 /* Info.plist */,
+				FDFCEAE42565B56800CBE3D0 /* Assets.xcassets */,
+			);
+			path = Ressources;
+			sourceTree = "<group>";
+		};
+		FDFCEB162565BD5A00CBE3D0 /* TabViews */ = {
+			isa = PBXGroup;
+			children = (
+				FD060BA925F416BA00440AF9 /* Devices */,
+				FD060BAA25F416C100440AF9 /* Favorites */,
+				FD2B481725701FBE00C6660B /* Services */,
+				FD060BAB25F416CB00440AF9 /* Settings */,
+				FDFCEB2A2565CEA100CBE3D0 /* TappableView.swift */,
+			);
+			path = TabViews;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		FDFCEAE82565B56800CBE3D0 /* Playable */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FDFCEAFD2565B56800CBE3D0 /* Build configuration list for PBXNativeTarget "Playable" */;
+			buildPhases = (
+				FDFCEAE52565B56800CBE3D0 /* Sources */,
+				FDFCEAE62565B56800CBE3D0 /* Frameworks */,
+				FDFCEAE72565B56800CBE3D0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Playable;
+			packageProductDependencies = (
+				FDF2E7A5256DB6C80023AF75 /* KeychainAccess */,
+				FD1CEC0F257ED9880044689A /* SwiftUIX */,
+				FD59FB4925B77E5400C345E8 /* RadioBrowser */,
+				FDC5564D261A5DA80030C20E /* SwiftyBeaver */,
+			);
+			productName = "Playable (iOS)";
+			productReference = FDFCEAE92565B56800CBE3D0 /* Playable.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		FDFCEADD2565B56700CBE3D0 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = WB;
+				LastSwiftUpdateCheck = 1220;
+				LastUpgradeCheck = 1220;
+				ORGANIZATIONNAME = Woodbytes;
+				TargetAttributes = {
+					FDFCEAE82565B56800CBE3D0 = {
+						CreatedOnToolsVersion = 12.2;
+					};
+				};
+			};
+			buildConfigurationList = FDFCEAE02565B56700CBE3D0 /* Build configuration list for PBXProject "Playable" */;
+			compatibilityVersion = "Xcode 12.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = FDFCEADC2565B56700CBE3D0;
+			packageReferences = (
+				FDF2E7A4256DB6C80023AF75 /* XCRemoteSwiftPackageReference "KeychainAccess" */,
+				FD1CEC0E257ED9880044689A /* XCRemoteSwiftPackageReference "SwiftUIX" */,
+				FDC5564C261A5DA80030C20E /* XCRemoteSwiftPackageReference "SwiftyBeaver" */,
+			);
+			productRefGroup = FDFCEAEA2565B56800CBE3D0 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FDFCEAE82565B56800CBE3D0 /* Playable */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		FDFCEAE72565B56800CBE3D0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FDFCEAF92565B56800CBE3D0 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		FDFCEAE52565B56800CBE3D0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FDFCEAF72565B56800CBE3D0 /* DevicesTabView.swift in Sources */,
+				FDFCEB142565BD4300CBE3D0 /* SettingsTabView.swift in Sources */,
+				FD05B0DC256D7F04000ECA44 /* ApiClient.swift in Sources */,
+				FD74F1F72576A45E0022B4F5 /* ServiceSetupHead.swift in Sources */,
+				FD05B0F2256D8D40000ECA44 /* ApiClientConfiguration.swift in Sources */,
+				FD61FF872572F6C500EF7C52 /* ButtonStyles.swift in Sources */,
+				FD61FFA525742A7600EF7C52 /* Playable+Appearance.swift in Sources */,
+				FDFCEB302565D63000CBE3D0 /* ContentView.swift in Sources */,
+				FD2B481C2570279D00C6660B /* Color+UISystemColors.swift in Sources */,
+				FD05B0C3256D4576000ECA44 /* Playable+Logging.swift in Sources */,
+				FDFCEAF52565B56800CBE3D0 /* Playable.swift in Sources */,
+				FD03F37725770EF700463D8E /* ServiceSetupDeezer.swift in Sources */,
+				FDFCEB2B2565CEA100CBE3D0 /* TappableView.swift in Sources */,
+				FD61FF8C2572FAA700EF7C52 /* StreamingServiceSelectionView.swift in Sources */,
+				FD61FFA025741B4700EF7C52 /* Image+CustomImages.swift in Sources */,
+				FD05B0F6256DA9CC000ECA44 /* URL+Extension.swift in Sources */,
+				FD05B0DF256D7F22000ECA44 /* ApiClientTypes.swift in Sources */,
+				FD61FF9C257419BE00EF7C52 /* StreamingServiceConfigurable.swift in Sources */,
+				FD05B0E6256D7F8E000ECA44 /* Playable+Bundle.swift in Sources */,
+				FD060BA325F2AEAA00440AF9 /* DeviceBrowser.swift in Sources */,
+				FD05B0E9256D7FAC000ECA44 /* Dictionary+Extensions.swift in Sources */,
+				FD030475257106DD002CA713 /* FavoritesTabView.swift in Sources */,
+				FD2B481125701D3300C6660B /* Environment.swift in Sources */,
+				FD61FF962574111400EF7C52 /* StreamingServiceType.swift in Sources */,
+				FD61FFA82574307800EF7C52 /* NavigationBarItem.swift in Sources */,
+				FDA7099A2615184400BD08F9 /* RealmManager.swift in Sources */,
+				FDFCEB112565BD0500CBE3D0 /* ServicesTabView.swift in Sources */,
+				FD099DE625769C5A00C19A4C /* StreamingServiceSelectionDetailView.swift in Sources */,
+				FD98E5EE25700A4B004B308D /* ListRow.swift in Sources */,
+				FD61FF8F2572FE1D00EF7C52 /* ServiceSetupRadio.swift in Sources */,
+				FD98E5EB256FA264004B308D /* ExpandedButton.swift in Sources */,
+				FD05B0E3256D7F75000ECA44 /* String+Crypto.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		FDFCEAFB2565B56800CBE3D0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		FDFCEAFC2565B56800CBE3D0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		FDFCEAFE2565B56800CBE3D0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Playable.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2Z5E3BGZR8;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = Playable/Ressources/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 0.1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = me.woodbytes.Playable;
+				PRODUCT_NAME = Playable;
+				SDKROOT = iphoneos;
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		FDFCEAFF2565B56800CBE3D0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Playable.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2Z5E3BGZR8;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = Playable/Ressources/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 0.1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = me.woodbytes.Playable;
+				PRODUCT_NAME = Playable;
+				SDKROOT = iphoneos;
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		FDFCEAE02565B56700CBE3D0 /* Build configuration list for PBXProject "Playable" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FDFCEAFB2565B56800CBE3D0 /* Debug */,
+				FDFCEAFC2565B56800CBE3D0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FDFCEAFD2565B56800CBE3D0 /* Build configuration list for PBXNativeTarget "Playable" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FDFCEAFE2565B56800CBE3D0 /* Debug */,
+				FDFCEAFF2565B56800CBE3D0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		FD1CEC0E257ED9880044689A /* XCRemoteSwiftPackageReference "SwiftUIX" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "git@github.com:SwiftUIX/SwiftUIX.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+		FDC5564C261A5DA80030C20E /* XCRemoteSwiftPackageReference "SwiftyBeaver" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SwiftyBeaver/SwiftyBeaver.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.9.3;
+			};
+		};
+		FDF2E7A4256DB6C80023AF75 /* XCRemoteSwiftPackageReference "KeychainAccess" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "git@github.com:kishikawakatsumi/KeychainAccess.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.2.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		FD1CEC0F257ED9880044689A /* SwiftUIX */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FD1CEC0E257ED9880044689A /* XCRemoteSwiftPackageReference "SwiftUIX" */;
+			productName = SwiftUIX;
+		};
+		FD59FB4925B77E5400C345E8 /* RadioBrowser */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = RadioBrowser;
+		};
+		FDC5564D261A5DA80030C20E /* SwiftyBeaver */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FDC5564C261A5DA80030C20E /* XCRemoteSwiftPackageReference "SwiftyBeaver" */;
+			productName = SwiftyBeaver;
+		};
+		FDF2E7A5256DB6C80023AF75 /* KeychainAccess */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FDF2E7A4256DB6C80023AF75 /* XCRemoteSwiftPackageReference "KeychainAccess" */;
+			productName = KeychainAccess;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = FDFCEADD2565B56700CBE3D0 /* Project object */;
+}
