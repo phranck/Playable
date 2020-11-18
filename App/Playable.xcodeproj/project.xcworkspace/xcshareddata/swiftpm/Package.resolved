@@ -1,0 +1,34 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "KeychainAccess",
+        "repositoryURL": "git@github.com:kishikawakatsumi/KeychainAccess.git",
+        "state": {
+          "branch": null,
+          "revision": "654d52d30f3dd4592e944c3e0bccb53178c992f6",
+          "version": "4.2.1"
+        }
+      },
+      {
+        "package": "SwiftUIX",
+        "repositoryURL": "git@github.com:SwiftUIX/SwiftUIX.git",
+        "state": {
+          "branch": "master",
+          "revision": "3aa4cd8749ead1605aee30e1fb13023ade851796",
+          "version": null
+        }
+      },
+      {
+        "package": "SwiftyBeaver",
+        "repositoryURL": "git@github.com:SwiftyBeaver/SwiftyBeaver.git",
+        "state": {
+          "branch": null,
+          "revision": "2c513a2e8fbfbd6495afc4a05941d8e3fdba68e9",
+          "version": "1.9.3"
+        }
+      }
+    ]
+  },
+  "version": 1
+}
