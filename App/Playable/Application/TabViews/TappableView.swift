@@ -11,7 +11,7 @@ protocol TappableView: View {
     var tabItemTitle: TappableViewTitle { get }
 }
 
-enum TappableViewTitle: String {
+enum TappableViewTitle: LocalizedStringKey {
     case devices = "Devices"
     case services = "Services"
     case favorites = "Favorites"

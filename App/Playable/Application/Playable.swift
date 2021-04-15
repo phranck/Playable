@@ -6,17 +6,34 @@
 //
 
 import SwiftUI
+import RadioBrowser
 
 @main
 struct Playable: App {
     @Environment(\.scenePhase) var scenePhase
-    let browser = DeviceBrowser()
     
+    let deviceBrowser: DeviceBrowser!
+    let radioBrowser = RadioBrowser(agent: "Playable", version: RadioBrowser.version)
+
     init() {
+        deviceBrowser = DeviceBrowser()
+        deviceBrowser.start()
+
         setupLogging()
         setupAppearance()
         
-        browser.start()
+        let realm = RealmManager.sharedInstance
+        realm.start()
+
+        radioBrowser.stationsForCountryCode("de") { result in
+            do {
+                let stations = try result.get()
+                realm.addOrUpdate(stations)
+            }
+            catch {
+                log.error(error.localizedDescription)
+            }
+        }
     }
     
     var body: some Scene {

@@ -34,8 +34,9 @@
 		FD74F1F72576A45E0022B4F5 /* ServiceSetupHead.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD74F1F62576A45E0022B4F5 /* ServiceSetupHead.swift */; };
 		FD98E5EB256FA264004B308D /* ExpandedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD98E5EA256FA264004B308D /* ExpandedButton.swift */; };
 		FD98E5EE25700A4B004B308D /* ListRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD98E5ED25700A4B004B308D /* ListRow.swift */; };
+		FDA7099A2615184400BD08F9 /* RealmManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDA709992615184400BD08F9 /* RealmManager.swift */; };
+		FDC5564E261A5DA80030C20E /* SwiftyBeaver in Frameworks */ = {isa = PBXBuildFile; productRef = FDC5564D261A5DA80030C20E /* SwiftyBeaver */; };
 		FDF2E7A6256DB6C80023AF75 /* KeychainAccess in Frameworks */ = {isa = PBXBuildFile; productRef = FDF2E7A5256DB6C80023AF75 /* KeychainAccess */; };
-		FDF2E7AB256DB82E0023AF75 /* SwiftyBeaver in Frameworks */ = {isa = PBXBuildFile; productRef = FDF2E7AA256DB82E0023AF75 /* SwiftyBeaver */; };
 		FDFCEAF52565B56800CBE3D0 /* Playable.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDFCEAE22565B56800CBE3D0 /* Playable.swift */; };
 		FDFCEAF72565B56800CBE3D0 /* DevicesTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDFCEAE32565B56800CBE3D0 /* DevicesTabView.swift */; };
 		FDFCEAF92565B56800CBE3D0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FDFCEAE42565B56800CBE3D0 /* Assets.xcassets */; };
@@ -60,7 +61,6 @@
 		FD099DE525769C5A00C19A4C /* StreamingServiceSelectionDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StreamingServiceSelectionDetailView.swift; sourceTree = "<group>"; };
 		FD2B481025701D3300C6660B /* Environment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Environment.swift; sourceTree = "<group>"; };
 		FD2B481B2570279D00C6660B /* Color+UISystemColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+UISystemColors.swift"; sourceTree = "<group>"; };
-		FD59FB4725B77E2C00C345E8 /* RadioBrowser */ = {isa = PBXFileReference; lastKnownFileType = folder; name = RadioBrowser; path = "../../../Swift Packages/RadioBrowser"; sourceTree = "<group>"; };
 		FD61FF862572F6C500EF7C52 /* ButtonStyles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonStyles.swift; sourceTree = "<group>"; };
 		FD61FF8B2572FAA700EF7C52 /* StreamingServiceSelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StreamingServiceSelectionView.swift; sourceTree = "<group>"; };
 		FD61FF8E2572FE1C00EF7C52 /* ServiceSetupRadio.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceSetupRadio.swift; sourceTree = "<group>"; };
@@ -70,8 +70,10 @@
 		FD61FFA425742A7600EF7C52 /* Playable+Appearance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Playable+Appearance.swift"; sourceTree = "<group>"; };
 		FD61FFA72574307800EF7C52 /* NavigationBarItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBarItem.swift; sourceTree = "<group>"; };
 		FD74F1F62576A45E0022B4F5 /* ServiceSetupHead.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceSetupHead.swift; sourceTree = "<group>"; };
+		FD8EB890260E7F2400CDD933 /* RadioBrowser */ = {isa = PBXFileReference; lastKnownFileType = folder; name = RadioBrowser; path = "../../../Swift Packages/RadioBrowser"; sourceTree = "<group>"; };
 		FD98E5EA256FA264004B308D /* ExpandedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpandedButton.swift; sourceTree = "<group>"; };
 		FD98E5ED25700A4B004B308D /* ListRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListRow.swift; sourceTree = "<group>"; };
+		FDA709992615184400BD08F9 /* RealmManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmManager.swift; sourceTree = "<group>"; };
 		FDFCEAE22565B56800CBE3D0 /* Playable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Playable.swift; sourceTree = "<group>"; };
 		FDFCEAE32565B56800CBE3D0 /* DevicesTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DevicesTabView.swift; sourceTree = "<group>"; };
 		FDFCEAE42565B56800CBE3D0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -91,8 +93,8 @@
 			files = (
 				FDF2E7A6256DB6C80023AF75 /* KeychainAccess in Frameworks */,
 				FD1CEC10257ED9880044689A /* SwiftUIX in Frameworks */,
-				FDF2E7AB256DB82E0023AF75 /* SwiftyBeaver in Frameworks */,
 				FD59FB4A25B77E5400C345E8 /* RadioBrowser in Frameworks */,
+				FDC5564E261A5DA80030C20E /* SwiftyBeaver in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -255,7 +257,7 @@
 		FD59FB4625B77E1300C345E8 /* Packages */ = {
 			isa = PBXGroup;
 			children = (
-				FD59FB4725B77E2C00C345E8 /* RadioBrowser */,
+				FD8EB890260E7F2400CDD933 /* RadioBrowser */,
 			);
 			path = Packages;
 			sourceTree = "<group>";
@@ -273,6 +275,14 @@
 			children = (
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		FDA709982615182B00BD08F9 /* Realm */ = {
+			isa = PBXGroup;
+			children = (
+				FDA709992615184400BD08F9 /* RealmManager.swift */,
+			);
+			path = Realm;
 			sourceTree = "<group>";
 		};
 		FDF2E7B2256F19B60023AF75 /* Custom Views */ = {
@@ -304,6 +314,7 @@
 				FDF2E7B2256F19B60023AF75 /* Custom Views */,
 				FD05B0C1256D4557000ECA44 /* Extensions */,
 				FD05B0D3256D7551000ECA44 /* Network */,
+				FDA709982615182B00BD08F9 /* Realm */,
 				FDFCEB0D2565BA3800CBE3D0 /* Ressources */,
 			);
 			path = Playable;
@@ -367,9 +378,9 @@
 			name = Playable;
 			packageProductDependencies = (
 				FDF2E7A5256DB6C80023AF75 /* KeychainAccess */,
-				FDF2E7AA256DB82E0023AF75 /* SwiftyBeaver */,
 				FD1CEC0F257ED9880044689A /* SwiftUIX */,
 				FD59FB4925B77E5400C345E8 /* RadioBrowser */,
+				FDC5564D261A5DA80030C20E /* SwiftyBeaver */,
 			);
 			productName = "Playable (iOS)";
 			productReference = FDFCEAE92565B56800CBE3D0 /* Playable.app */;
@@ -402,8 +413,8 @@
 			mainGroup = FDFCEADC2565B56700CBE3D0;
 			packageReferences = (
 				FDF2E7A4256DB6C80023AF75 /* XCRemoteSwiftPackageReference "KeychainAccess" */,
-				FDF2E7A9256DB82E0023AF75 /* XCRemoteSwiftPackageReference "SwiftyBeaver" */,
 				FD1CEC0E257ED9880044689A /* XCRemoteSwiftPackageReference "SwiftUIX" */,
+				FDC5564C261A5DA80030C20E /* XCRemoteSwiftPackageReference "SwiftyBeaver" */,
 			);
 			productRefGroup = FDFCEAEA2565B56800CBE3D0 /* Products */;
 			projectDirPath = "";
@@ -455,6 +466,7 @@
 				FD2B481125701D3300C6660B /* Environment.swift in Sources */,
 				FD61FF962574111400EF7C52 /* StreamingServiceType.swift in Sources */,
 				FD61FFA82574307800EF7C52 /* NavigationBarItem.swift in Sources */,
+				FDA7099A2615184400BD08F9 /* RealmManager.swift in Sources */,
 				FDFCEB112565BD0500CBE3D0 /* ServicesTabView.swift in Sources */,
 				FD099DE625769C5A00C19A4C /* StreamingServiceSelectionDetailView.swift in Sources */,
 				FD98E5EE25700A4B004B308D /* ListRow.swift in Sources */,
@@ -593,7 +605,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0.0;
+				MARKETING_VERSION = 0.1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = me.woodbytes.Playable;
 				PRODUCT_NAME = Playable;
 				SDKROOT = iphoneos;
@@ -618,7 +630,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0.0;
+				MARKETING_VERSION = 0.1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = me.woodbytes.Playable;
 				PRODUCT_NAME = Playable;
 				SDKROOT = iphoneos;
@@ -661,20 +673,20 @@
 				kind = branch;
 			};
 		};
+		FDC5564C261A5DA80030C20E /* XCRemoteSwiftPackageReference "SwiftyBeaver" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SwiftyBeaver/SwiftyBeaver.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.9.3;
+			};
+		};
 		FDF2E7A4256DB6C80023AF75 /* XCRemoteSwiftPackageReference "KeychainAccess" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "git@github.com:kishikawakatsumi/KeychainAccess.git";
 			requirement = {
 				kind = upToNextMajorVersion;
 				minimumVersion = 4.2.0;
-			};
-		};
-		FDF2E7A9256DB82E0023AF75 /* XCRemoteSwiftPackageReference "SwiftyBeaver" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "git@github.com:SwiftyBeaver/SwiftyBeaver.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 1.9.0;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
@@ -689,15 +701,15 @@
 			isa = XCSwiftPackageProductDependency;
 			productName = RadioBrowser;
 		};
+		FDC5564D261A5DA80030C20E /* SwiftyBeaver */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FDC5564C261A5DA80030C20E /* XCRemoteSwiftPackageReference "SwiftyBeaver" */;
+			productName = SwiftyBeaver;
+		};
 		FDF2E7A5256DB6C80023AF75 /* KeychainAccess */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = FDF2E7A4256DB6C80023AF75 /* XCRemoteSwiftPackageReference "KeychainAccess" */;
 			productName = KeychainAccess;
-		};
-		FDF2E7AA256DB82E0023AF75 /* SwiftyBeaver */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = FDF2E7A9256DB82E0023AF75 /* XCRemoteSwiftPackageReference "SwiftyBeaver" */;
-			productName = SwiftyBeaver;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

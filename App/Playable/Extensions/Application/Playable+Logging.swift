@@ -32,7 +32,6 @@ extension Playable {
         log.addDestination(cloud)
         
         log.info("Logging Setup: done")
-        log.info("Radio Browser Version: \(RadioBrowser.version)")
     }
     
 }

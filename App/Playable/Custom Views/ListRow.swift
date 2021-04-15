@@ -58,7 +58,7 @@ struct ListRow<Model: ListRowItem>: View {
                 }
             }
         }
-        .padding(EdgeInsets(top: 3, leading: 0, bottom: 3, trailing: 0))
+        .padding(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0))
     }
 }
 

@@ -19,7 +19,7 @@ struct ServicesTabView: TappableView {
 //                    self.presentingModal = true
 //                }
             }
-            .navigationTitle(tabItemTitle.rawValue)
+            .navigationBarTitle(tabItemTitle.rawValue, displayMode: .inline)
             .navigationBarItems(
                 trailing:
                     NavigationBarItem(titleKey: LocalizedStringKey("Add"), icon: .musicNote, action: {

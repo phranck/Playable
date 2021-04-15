@@ -12,7 +12,7 @@ struct DevicesTabView: TappableView {
         NavigationView {
             VStack {
             }
-            .navigationTitle(tabItemTitle.rawValue)
+            .navigationBarTitle(tabItemTitle.rawValue, displayMode: .inline)
         }
     }
 }

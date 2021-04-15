@@ -22,6 +22,27 @@
 	<string>public.app-category.music</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
+	<key>NSAppTransportSecurity</key>
+	<dict>
+		<key>NSAllowsArbitraryLoads</key>
+		<true/>
+		<key>NSExceptionDomains</key>
+		<dict>
+			<key>radio-browser.info</key>
+			<dict>
+				<key>NSExceptionAllowsInsecureHTTPLoads</key>
+				<true/>
+				<key>NSIncludesSubdomains</key>
+				<true/>
+			</dict>
+		</dict>
+	</dict>
+	<key>NSBonjourServices</key>
+	<array>
+		<string>_linkplay._tcp.</string>
+	</array>
+	<key>NSLocalNetworkUsageDescription</key>
+	<string>Playable uses your local network to play music on devices around you.</string>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
 		<key>UIApplicationSupportsMultipleScenes</key>
@@ -38,12 +59,7 @@
 	<key>UISupportedInterfaceOrientations</key>
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>
+		<string>UIInterfaceOrientationPortraitUpsideDown</string>
 	</array>
-	<key>NSBonjourServices</key>
-	<array>
-		<string>_linkplay._tcp.</string>
-	</array>
-	<key>NSLocalNetworkUsageDescription</key>
-	<string>Playable uses your local network to play music on devices around you.</string>
 </dict>
 </plist>

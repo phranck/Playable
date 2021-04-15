@@ -36,7 +36,7 @@ struct StreamingServiceSelectionView: View {
                     }
                 }
             }
-            .navigationTitle(LocalizedStringKey("Select a Service"))
+            .navigationBarTitle(LocalizedStringKey("Select a Service"), displayMode: .inline)
             .navigationBarItems(
                 trailing:
                     NavigationBarItem(icon: .navigationAbort, action: {
