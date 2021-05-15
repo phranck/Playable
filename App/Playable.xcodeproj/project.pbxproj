@@ -74,6 +74,7 @@
 		FD98E5ED25700A4B004B308D /* ListRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListRow.swift; sourceTree = "<group>"; };
 		FDA709992615184400BD08F9 /* RealmManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmManager.swift; sourceTree = "<group>"; };
 		FDDC38F22638A088003C34D0 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
+		FDF5ABEA26506D0E000C5107 /* RapidAPI */ = {isa = PBXFileReference; lastKnownFileType = folder; name = RapidAPI; path = "../../Swift Packages/RapidAPI"; sourceTree = "<group>"; };
 		FDFCEAE22565B56800CBE3D0 /* Playable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Playable.swift; sourceTree = "<group>"; };
 		FDFCEAE32565B56800CBE3D0 /* DevicesTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DevicesTabView.swift; sourceTree = "<group>"; };
 		FDFCEAE42565B56800CBE3D0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -243,6 +244,7 @@
 			children = (
 				FD32E137264DAD0A001488E8 /* LinkPlay */,
 				FD32E136264DAD05001488E8 /* RadioBrowser */,
+				FDF5ABEA26506D0E000C5107 /* RapidAPI */,
 			);
 			name = Packages;
 			sourceTree = "<group>";

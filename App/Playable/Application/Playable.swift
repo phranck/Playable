@@ -24,15 +24,15 @@ struct Playable: App {
         let realm = RealmManager.sharedInstance
         realm.start()
 
-        radioBrowser.stationsForCountryCode("de") { result in
-            do {
-                let stations = try result.get()
-                realm.addOrUpdate(stations)
-            }
-            catch {
-                log.error(error.localizedDescription)
-            }
-        }
+//        radioBrowser.stationsForCountryCode("de") { result in
+//            do {
+//                let stations = try result.get()
+//                realm.addOrUpdate(stations)
+//            }
+//            catch {
+//                log.error(error.localizedDescription)
+//            }
+//        }
 
         linkPlay.startDiscover()
     }

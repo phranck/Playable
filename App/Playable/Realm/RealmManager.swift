@@ -52,8 +52,9 @@ class RealmManager {
 extension RealmManager {
     
     var radioStations: [RadioStation] {
-        let sortedArticles: Results = realm.objects(RadioStation.self).sorted(byKeyPath: "name", ascending: true)
-        return Array(sortedArticles)
+//        let sortedArticles: Results = realm.objects(RadioStation.self).sorted(byKeyPath: "name", ascending: true)
+//        return Array(sortedArticles)
+        return []
     }
 
 }
