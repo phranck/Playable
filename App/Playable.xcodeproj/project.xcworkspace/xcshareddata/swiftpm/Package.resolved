@@ -3,11 +3,11 @@
     "pins": [
       {
         "package": "KeychainAccess",
-        "repositoryURL": "git@github.com:kishikawakatsumi/KeychainAccess.git",
+        "repositoryURL": "https://github.com/kishikawakatsumi/KeychainAccess.git",
         "state": {
           "branch": null,
-          "revision": "654d52d30f3dd4592e944c3e0bccb53178c992f6",
-          "version": "4.2.1"
+          "revision": "84e546727d66f1adc5439debad16270d0fdd04e7",
+          "version": "4.2.2"
         }
       },
       {
@@ -15,8 +15,8 @@
         "repositoryURL": "https://github.com/realm/realm-cocoa.git",
         "state": {
           "branch": null,
-          "revision": "ae8e646590396dfc13c1abbf8aa2e48c43766dce",
-          "version": "10.7.2"
+          "revision": "b481f2cc637bd101a03dba52ad1bef6eadfdac9f",
+          "version": "10.7.5"
         }
       },
       {
@@ -24,17 +24,17 @@
         "repositoryURL": "https://github.com/realm/realm-core",
         "state": {
           "branch": null,
-          "revision": "bab46acdca91c417a0d4849b8f4992a3c17e29a5",
-          "version": "10.5.5"
+          "revision": "28ed052d10d2245542b4fbdc71d388febb1e9bc4",
+          "version": "10.6.0"
         }
       },
       {
         "package": "SwiftUIX",
-        "repositoryURL": "git@github.com:SwiftUIX/SwiftUIX.git",
+        "repositoryURL": "https://github.com/SwiftUIX/SwiftUIX.git",
         "state": {
-          "branch": "master",
-          "revision": "3aa4cd8749ead1605aee30e1fb13023ade851796",
-          "version": null
+          "branch": null,
+          "revision": "e0fd9ff48354a447d5dccdb4b485a69b63688e48",
+          "version": "0.0.6"
         }
       },
       {
@@ -42,8 +42,8 @@
         "repositoryURL": "https://github.com/SwiftyBeaver/SwiftyBeaver.git",
         "state": {
           "branch": null,
-          "revision": "2c513a2e8fbfbd6495afc4a05941d8e3fdba68e9",
-          "version": "1.9.3"
+          "revision": "5cfd6888447adcc49b80b625281b6177104f011f",
+          "version": "1.9.4"
         }
       }
     ]

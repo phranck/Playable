@@ -36,6 +36,7 @@ struct ContentView: View {
                 }
                 .tag(TabItemTag.settings)
         }
+        .background(.background)
     }
 }
 

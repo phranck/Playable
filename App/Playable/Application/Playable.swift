@@ -7,19 +7,18 @@
 
 import SwiftUI
 import RadioBrowser
+import LinkPlay
+import SwiftyBeaver
+let log = SwiftyBeaver.self
 
 @main
 struct Playable: App {
     @Environment(\.scenePhase) var scenePhase
     
-    let deviceBrowser: DeviceBrowser!
+    let linkPlay = LinkPlay()
     let radioBrowser = RadioBrowser(agent: "Playable", version: RadioBrowser.version)
 
     init() {
-        deviceBrowser = DeviceBrowser()
-        deviceBrowser.start()
-
-        setupLogging()
         setupAppearance()
         
         let realm = RealmManager.sharedInstance
@@ -34,15 +33,18 @@ struct Playable: App {
                 log.error(error.localizedDescription)
             }
         }
+
+        linkPlay.startDiscover()
     }
     
     var body: some Scene {
         WindowGroup {
             ContentView()
                 .preferredColorScheme(.dark)
-                .background(Color.gray)
-                .accentColor(.label)
-                .foregroundColor(.secondaryLabel)
+                .background(.background)
+                .accentColor(.accent)
+                .foregroundColor(.onBackground)
+                .navigationBarColor(.primary)
                 .edgesIgnoringSafeArea(.all)
         }
         .onChange(of: scenePhase) { phase in

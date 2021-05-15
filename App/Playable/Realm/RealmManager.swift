@@ -13,6 +13,8 @@ import RadioBrowser
 class RealmManager {
     static let sharedInstance: RealmManager = RealmManager()
     
+    private init() {}
+    
     private let realm = try! Realm()
     var isSearching: Bool = false
     var searchText: String = ""

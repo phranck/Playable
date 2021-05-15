@@ -17,7 +17,6 @@ protocol ListRowItem: Hashable {
 
 struct ListRow<Model: ListRowItem>: View {
     var model: Model
-    var hasAccessoryView: Bool = true
 
     var body: some View {
         HStack {
@@ -27,8 +26,8 @@ struct ListRow<Model: ListRowItem>: View {
                         .renderingMode(.template)
                         .resizable()
                         .aspectRatio(contentMode: .fit)
-                        .frame(width: 48, height: 48, alignment: .center)
-                        .padding(.trailing, 8)
+                        .frame(width: 42, height: 42, alignment: .center)
+                        .padding(.trailing, 10)
 
                     VStack(alignment: .leading) {
                         Text(model.name)
@@ -37,26 +36,16 @@ struct ListRow<Model: ListRowItem>: View {
                         if let description = model.description {
                             Text(description)
                                 .font(.system(size: 15, weight: .regular, design: .rounded))
-                                .foregroundColor(.secondary)
+                                .foregroundColor(.onSurface.opacity(0.5))
                         }
                     }
                     Spacer()
                 }
                 .padding()
             }
-            .foregroundColor(.primary)
-            .background(Color.secondarySystemBackground)
+            .background(.surface)
+            .foregroundColor(.onSurface)
             .cornerRadius(13, antialiased: true)
-            .shadow(color: Color.systemGray.opacity(0.35), radius: 0, x: 0, y: -1)
-            .shadow(color: Color.black.opacity(0.6), radius: 0, x: 0, y: 1)
-
-            if hasAccessoryView {
-                VStack {
-                    Image(systemName: "chevron.forward")
-                        .font(.system(size: 23, weight: .semibold, design: .rounded))
-                        .foregroundColor(.secondary)
-                }
-            }
         }
         .padding(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0))
     }

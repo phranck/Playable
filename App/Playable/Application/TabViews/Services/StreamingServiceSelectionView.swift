@@ -29,13 +29,14 @@ struct StreamingServiceSelectionView: View {
                                 feedback.impactOccurred()
                                 selectedRowItem = serviceRowItem
                             }, label: {
-                                ListRow(model: serviceRowItem, hasAccessoryView: true)
+                                ListRow(model: serviceRowItem)
                             })
                             .buttonStyle(ListRowButtonStyle())
                         }
                     }
                 }
             }
+            .background(.background)
             .navigationBarTitle(LocalizedStringKey("Select a Service"), displayMode: .inline)
             .navigationBarItems(
                 trailing:

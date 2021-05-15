@@ -5,6 +5,10 @@
 
 import Foundation
 
+protocol URLQueryParameterStringConvertible {
+    var queryParameters: String { get }
+}
+
 extension URL {
     
     func appendingQueryParameters(_ parametersDictionary : Dictionary<String, String>) -> URL {
