@@ -11,12 +11,6 @@ import SwiftUI
 extension Playable {
     
     func setupAppearance() {
-        let navBarAppearance = UINavigationBar.appearance()
-        navBarAppearance.titleTextAttributes = [.font: UIFont(descriptor: UIFontDescriptor.preferredFontDescriptor(withTextStyle: .largeTitle).withDesign(.rounded)!, size: 18)]
-        navBarAppearance.largeTitleTextAttributes = [.font: UIFont(descriptor: UIFontDescriptor.preferredFontDescriptor(withTextStyle: .largeTitle).withDesign(.rounded)!, size: 30)]
-        
-        UIWindow.appearance().backgroundColor = .systemGroupedBackground
-        
         log.info("Appearance Setup: done")
     }
     

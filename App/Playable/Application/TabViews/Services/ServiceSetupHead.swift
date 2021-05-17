@@ -26,6 +26,7 @@ struct ServiceSetupHead: View {
             
             Text(service.description)
                 .font(.system(size: 17, weight: .regular, design: .rounded))
+                .foregroundColor(.secondary)
         }
         .multilineTextAlignment(.center)
     }
@@ -34,6 +35,5 @@ struct ServiceSetupHead: View {
 struct ServiceSetupHead_Previews: PreviewProvider {
     static var previews: some View {
         ServiceSetupHead(service: .deezer)
-            .preferredColorScheme(.dark)
     }
 }

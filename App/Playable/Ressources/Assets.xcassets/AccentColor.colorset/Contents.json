@@ -5,8 +5,8 @@
         "color-space" : "display-p3",
         "components" : {
           "alpha" : "1.000",
-          "blue" : "0.000",
-          "green" : "0.723",
+          "blue" : "0.104",
+          "green" : "0.687",
           "red" : "0.968"
         }
       },
@@ -20,8 +20,13 @@
         }
       ],
       "color" : {
-        "platform" : "ios",
-        "reference" : "systemYellowColor"
+        "color-space" : "display-p3",
+        "components" : {
+          "alpha" : "1.000",
+          "blue" : "0.239",
+          "green" : "0.807",
+          "red" : "0.974"
+        }
       },
       "idiom" : "universal"
     }

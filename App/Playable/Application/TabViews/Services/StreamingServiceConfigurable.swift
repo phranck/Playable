@@ -9,5 +9,5 @@
 import Foundation
 
 protocol StreamingServiceConfigurable {
-    var service: StreamingServiceType { get set }
+    var serviceType: StreamingServiceType { get set }
 }

@@ -9,7 +9,6 @@
 import SwiftUI
 
 struct NavigationBarItem: View {
-    @Environment(\.hapticFeedback) var feedback
     var title: LocalizedStringKey?
     var iconName: String?
     var icon: Image?
@@ -61,7 +60,6 @@ struct NavigationBarItem: View {
 
     var body: some View {
         Button(action: {
-            feedback.impactOccurred()
             action()
         }, label: {
             _label
@@ -98,6 +96,5 @@ struct NavigationItemButton_Previews: PreviewProvider {
         NavigationBarItem(title: "Clircle", iconName: "command.circle.fill") {
             
         }
-        .preferredColorScheme(.dark)
     }
 }

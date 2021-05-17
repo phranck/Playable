@@ -49,10 +49,10 @@ enum StreamingServiceType: String {
     public var iconRenderingMode: Image.TemplateRenderingMode {
         switch self {
             case .radio: return .template
-            case .deezer: return .original
-            case .spotify: return .original
-            case .soundcloud: return .original
-            case .tidal: return .original
+            case .deezer: return .template
+            case .spotify: return .template
+            case .soundcloud: return .template
+            case .tidal: return .template
             case .napster: return .template
         }
     }

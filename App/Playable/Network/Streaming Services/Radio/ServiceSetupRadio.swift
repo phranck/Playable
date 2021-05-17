@@ -7,47 +7,19 @@
 //
 
 import SwiftUI
-import SwiftUIX
 
-struct ServiceSetupRadio: View, StreamingServiceConfigurable {
-    @Environment(\.hapticFeedback) var feedback
-    @Environment(\.presentationMode) var presentationMode
-    
-    @State private var searchTerm: String = ""
-
-    var service: StreamingServiceType
+struct ServiceSetupRadio: View {
+    let serviceType: StreamingServiceType = .radio
     
     var body: some View {
         VStack {
-            ScrollView {
-                Section(header: ServiceSetupHead(service: service), content: {
-                })
-                .navigationBarTitle(service.name, displayMode: .inline)
-                .navigationBarItems(
-                    leading:
-                        NavigationBarItem(icon: .navigationBack) {
-                            presentationMode.wrappedValue.dismiss()
-                        }
-                )
-                .navigationBarItems(
-                    trailing:
-                        NavigationBarItem(icon: .search) {
-                            log.info("Search tapped")
-                        }
-                )
-                .navigationSearchBar {
-                    SearchBar("Placeholder", text: $searchTerm)
-                        .showsCancelButton(false)
-                        .searchBarStyle(.prominent)
-                }
-            }
+            Text("\(serviceType.name) Service Setup")
         }
     }
 }
 
 struct RadioConfiguration_Previews: PreviewProvider {
     static var previews: some View {
-        ServiceSetupRadio(service: .radio)
-            .preferredColorScheme(.dark)
+        ServiceSetupRadio()
     }
 }

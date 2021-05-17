@@ -5,20 +5,20 @@
 
 import SwiftUI
 
-struct DevicesTabView: TappableView {
-    var tabItemTitle: TappableViewTitle { .devices }
+struct PlayingTabView: TappableView {
+    var tabItemTitle: LocalizedStringKey { TappableViewItem.playing.titleKey }
     
     var body: some View {
         NavigationView {
             VStack {
             }
-            .navigationBarTitle(tabItemTitle.rawValue, displayMode: .inline)
+            .navigationBarTitle(tabItemTitle)
         }
     }
 }
 
 struct DevicesView_Previews: PreviewProvider {
     static var previews: some View {
-        DevicesTabView()
+        PlayingTabView()
     }
 }

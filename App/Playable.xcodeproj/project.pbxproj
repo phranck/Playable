@@ -16,15 +16,16 @@
 		FD05B0E9256D7FAC000ECA44 /* Dictionary+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD05B0E8256D7FAC000ECA44 /* Dictionary+Extensions.swift */; };
 		FD05B0F2256D8D40000ECA44 /* ApiClientConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD05B0F1256D8D40000ECA44 /* ApiClientConfiguration.swift */; };
 		FD05B0F6256DA9CC000ECA44 /* URL+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD05B0F5256DA9CC000ECA44 /* URL+Extension.swift */; };
-		FD099DE625769C5A00C19A4C /* StreamingServiceSelectionDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD099DE525769C5A00C19A4C /* StreamingServiceSelectionDetailView.swift */; };
+		FD099DE625769C5A00C19A4C /* StreamingServiceDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD099DE525769C5A00C19A4C /* StreamingServiceDetailView.swift */; };
 		FD2B481125701D3300C6660B /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD2B481025701D3300C6660B /* Environment.swift */; };
 		FD2B481C2570279D00C6660B /* Color+UISystemColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD2B481B2570279D00C6660B /* Color+UISystemColors.swift */; };
 		FD32E139264DAD36001488E8 /* LinkPlay in Frameworks */ = {isa = PBXBuildFile; productRef = FD32E138264DAD36001488E8 /* LinkPlay */; };
 		FD32E13B264DAD36001488E8 /* RadioBrowser in Frameworks */ = {isa = PBXBuildFile; productRef = FD32E13A264DAD36001488E8 /* RadioBrowser */; };
 		FD51323C2635EF02005FB239 /* SwiftUIX in Frameworks */ = {isa = PBXBuildFile; productRef = FD51323B2635EF02005FB239 /* SwiftUIX */; };
 		FD5132412635EF49005FB239 /* KeychainAccess in Frameworks */ = {isa = PBXBuildFile; productRef = FD5132402635EF49005FB239 /* KeychainAccess */; };
+		FD54C10C265248B4002D34AD /* ServiceSetup.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD54C10B265248B4002D34AD /* ServiceSetup.swift */; };
+		FD54C10E2652D45D002D34AD /* NavigationBarTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD54C10D2652D45D002D34AD /* NavigationBarTitleView.swift */; };
 		FD61FF872572F6C500EF7C52 /* ButtonStyles.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD61FF862572F6C500EF7C52 /* ButtonStyles.swift */; };
-		FD61FF8C2572FAA700EF7C52 /* StreamingServiceSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD61FF8B2572FAA700EF7C52 /* StreamingServiceSelectionView.swift */; };
 		FD61FF8F2572FE1D00EF7C52 /* ServiceSetupRadio.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD61FF8E2572FE1C00EF7C52 /* ServiceSetupRadio.swift */; };
 		FD61FF962574111400EF7C52 /* StreamingServiceType.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD61FF952574111400EF7C52 /* StreamingServiceType.swift */; };
 		FD61FF9C257419BE00EF7C52 /* StreamingServiceConfigurable.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD61FF9B257419BE00EF7C52 /* StreamingServiceConfigurable.swift */; };
@@ -32,18 +33,16 @@
 		FD61FFA525742A7600EF7C52 /* Playable+Appearance.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD61FFA425742A7600EF7C52 /* Playable+Appearance.swift */; };
 		FD61FFA82574307800EF7C52 /* NavigationBarItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD61FFA72574307800EF7C52 /* NavigationBarItem.swift */; };
 		FD74F1F72576A45E0022B4F5 /* ServiceSetupHead.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD74F1F62576A45E0022B4F5 /* ServiceSetupHead.swift */; };
-		FD98E5EB256FA264004B308D /* ExpandedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD98E5EA256FA264004B308D /* ExpandedButton.swift */; };
-		FD98E5EE25700A4B004B308D /* ListRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD98E5ED25700A4B004B308D /* ListRow.swift */; };
-		FDA7099A2615184400BD08F9 /* RealmManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDA709992615184400BD08F9 /* RealmManager.swift */; };
+		FD98E5EE25700A4B004B308D /* ListRowItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD98E5ED25700A4B004B308D /* ListRowItem.swift */; };
 		FDC5564E261A5DA80030C20E /* SwiftyBeaver in Frameworks */ = {isa = PBXBuildFile; productRef = FDC5564D261A5DA80030C20E /* SwiftyBeaver */; };
-		FDDC38F32638A088003C34D0 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FDDC38F22638A088003C34D0 /* Colors.xcassets */; };
+		FDF5ABEC26517756000C5107 /* Playable+Logging.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDF5ABEB26517756000C5107 /* Playable+Logging.swift */; };
 		FDFCEAF52565B56800CBE3D0 /* Playable.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDFCEAE22565B56800CBE3D0 /* Playable.swift */; };
-		FDFCEAF72565B56800CBE3D0 /* DevicesTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDFCEAE32565B56800CBE3D0 /* DevicesTabView.swift */; };
+		FDFCEAF72565B56800CBE3D0 /* PlayingTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDFCEAE32565B56800CBE3D0 /* PlayingTabView.swift */; };
 		FDFCEAF92565B56800CBE3D0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FDFCEAE42565B56800CBE3D0 /* Assets.xcassets */; };
 		FDFCEB112565BD0500CBE3D0 /* ServicesTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDFCEB102565BD0500CBE3D0 /* ServicesTabView.swift */; };
 		FDFCEB142565BD4300CBE3D0 /* SettingsTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDFCEB132565BD4300CBE3D0 /* SettingsTabView.swift */; };
 		FDFCEB2B2565CEA100CBE3D0 /* TappableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDFCEB2A2565CEA100CBE3D0 /* TappableView.swift */; };
-		FDFCEB302565D63000CBE3D0 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDFCEB2F2565D63000CBE3D0 /* ContentView.swift */; };
+		FDFCEB302565D63000CBE3D0 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDFCEB2F2565D63000CBE3D0 /* MainView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -56,13 +55,14 @@
 		FD05B0E8256D7FAC000ECA44 /* Dictionary+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Dictionary+Extensions.swift"; sourceTree = "<group>"; };
 		FD05B0F1256D8D40000ECA44 /* ApiClientConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiClientConfiguration.swift; sourceTree = "<group>"; };
 		FD05B0F5256DA9CC000ECA44 /* URL+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URL+Extension.swift"; sourceTree = "<group>"; };
-		FD099DE525769C5A00C19A4C /* StreamingServiceSelectionDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StreamingServiceSelectionDetailView.swift; sourceTree = "<group>"; };
+		FD099DE525769C5A00C19A4C /* StreamingServiceDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StreamingServiceDetailView.swift; sourceTree = "<group>"; };
 		FD2B481025701D3300C6660B /* Environment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Environment.swift; sourceTree = "<group>"; };
 		FD2B481B2570279D00C6660B /* Color+UISystemColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+UISystemColors.swift"; sourceTree = "<group>"; };
 		FD32E136264DAD05001488E8 /* RadioBrowser */ = {isa = PBXFileReference; lastKnownFileType = folder; name = RadioBrowser; path = "../../Swift Packages/RadioBrowser"; sourceTree = "<group>"; };
 		FD32E137264DAD0A001488E8 /* LinkPlay */ = {isa = PBXFileReference; lastKnownFileType = folder; name = LinkPlay; path = "../../Swift Packages/LinkPlay"; sourceTree = "<group>"; };
+		FD54C10B265248B4002D34AD /* ServiceSetup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceSetup.swift; sourceTree = "<group>"; };
+		FD54C10D2652D45D002D34AD /* NavigationBarTitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBarTitleView.swift; sourceTree = "<group>"; };
 		FD61FF862572F6C500EF7C52 /* ButtonStyles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonStyles.swift; sourceTree = "<group>"; };
-		FD61FF8B2572FAA700EF7C52 /* StreamingServiceSelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StreamingServiceSelectionView.swift; sourceTree = "<group>"; };
 		FD61FF8E2572FE1C00EF7C52 /* ServiceSetupRadio.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceSetupRadio.swift; sourceTree = "<group>"; };
 		FD61FF952574111400EF7C52 /* StreamingServiceType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StreamingServiceType.swift; sourceTree = "<group>"; };
 		FD61FF9B257419BE00EF7C52 /* StreamingServiceConfigurable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StreamingServiceConfigurable.swift; sourceTree = "<group>"; };
@@ -70,13 +70,11 @@
 		FD61FFA425742A7600EF7C52 /* Playable+Appearance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Playable+Appearance.swift"; sourceTree = "<group>"; };
 		FD61FFA72574307800EF7C52 /* NavigationBarItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBarItem.swift; sourceTree = "<group>"; };
 		FD74F1F62576A45E0022B4F5 /* ServiceSetupHead.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceSetupHead.swift; sourceTree = "<group>"; };
-		FD98E5EA256FA264004B308D /* ExpandedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpandedButton.swift; sourceTree = "<group>"; };
-		FD98E5ED25700A4B004B308D /* ListRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListRow.swift; sourceTree = "<group>"; };
-		FDA709992615184400BD08F9 /* RealmManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmManager.swift; sourceTree = "<group>"; };
-		FDDC38F22638A088003C34D0 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
+		FD98E5ED25700A4B004B308D /* ListRowItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListRowItem.swift; sourceTree = "<group>"; };
 		FDF5ABEA26506D0E000C5107 /* RapidAPI */ = {isa = PBXFileReference; lastKnownFileType = folder; name = RapidAPI; path = "../../Swift Packages/RapidAPI"; sourceTree = "<group>"; };
+		FDF5ABEB26517756000C5107 /* Playable+Logging.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Playable+Logging.swift"; sourceTree = "<group>"; };
 		FDFCEAE22565B56800CBE3D0 /* Playable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Playable.swift; sourceTree = "<group>"; };
-		FDFCEAE32565B56800CBE3D0 /* DevicesTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DevicesTabView.swift; sourceTree = "<group>"; };
+		FDFCEAE32565B56800CBE3D0 /* PlayingTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayingTabView.swift; sourceTree = "<group>"; };
 		FDFCEAE42565B56800CBE3D0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FDFCEAE92565B56800CBE3D0 /* Playable.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Playable.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FDFCEAEC2565B56800CBE3D0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -84,7 +82,7 @@
 		FDFCEB102565BD0500CBE3D0 /* ServicesTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServicesTabView.swift; sourceTree = "<group>"; };
 		FDFCEB132565BD4300CBE3D0 /* SettingsTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTabView.swift; sourceTree = "<group>"; };
 		FDFCEB2A2565CEA100CBE3D0 /* TappableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TappableView.swift; sourceTree = "<group>"; };
-		FDFCEB2F2565D63000CBE3D0 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		FDFCEB2F2565D63000CBE3D0 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,8 +104,9 @@
 		FD03047825727BAE002CA713 /* Application */ = {
 			isa = PBXGroup;
 			children = (
-				FD05B0E5256D7F8E000ECA44 /* Playable+Bundle.swift */,
 				FD61FFA425742A7600EF7C52 /* Playable+Appearance.swift */,
+				FD05B0E5256D7F8E000ECA44 /* Playable+Bundle.swift */,
+				FDF5ABEB26517756000C5107 /* Playable+Logging.swift */,
 			);
 			path = Application;
 			sourceTree = "<group>";
@@ -156,6 +155,7 @@
 				FD98E5F025700F35004B308D /* Model */,
 				FD05B0EE256D8CC2000ECA44 /* Deezer */,
 				FD05B0ED256D8CBA000ECA44 /* Radio */,
+				FD54C10B265248B4002D34AD /* ServiceSetup.swift */,
 			);
 			path = "Streaming Services";
 			sourceTree = "<group>";
@@ -197,7 +197,7 @@
 		FD060BA925F416BA00440AF9 /* Devices */ = {
 			isa = PBXGroup;
 			children = (
-				FDFCEAE32565B56800CBE3D0 /* DevicesTabView.swift */,
+				FDFCEAE32565B56800CBE3D0 /* PlayingTabView.swift */,
 			);
 			path = Devices;
 			sourceTree = "<group>";
@@ -232,8 +232,7 @@
 				FD74F1F62576A45E0022B4F5 /* ServiceSetupHead.swift */,
 				FDFCEB102565BD0500CBE3D0 /* ServicesTabView.swift */,
 				FD61FF9B257419BE00EF7C52 /* StreamingServiceConfigurable.swift */,
-				FD099DE525769C5A00C19A4C /* StreamingServiceSelectionDetailView.swift */,
-				FD61FF8B2572FAA700EF7C52 /* StreamingServiceSelectionView.swift */,
+				FD099DE525769C5A00C19A4C /* StreamingServiceDetailView.swift */,
 				FD61FF952574111400EF7C52 /* StreamingServiceType.swift */,
 			);
 			path = Services;
@@ -271,20 +270,12 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
-		FDA709982615182B00BD08F9 /* Realm */ = {
-			isa = PBXGroup;
-			children = (
-				FDA709992615184400BD08F9 /* RealmManager.swift */,
-			);
-			path = Realm;
-			sourceTree = "<group>";
-		};
 		FDF2E7B2256F19B60023AF75 /* Custom Views */ = {
 			isa = PBXGroup;
 			children = (
-				FD98E5EA256FA264004B308D /* ExpandedButton.swift */,
-				FD98E5ED25700A4B004B308D /* ListRow.swift */,
+				FD98E5ED25700A4B004B308D /* ListRowItem.swift */,
 				FD61FFA72574307800EF7C52 /* NavigationBarItem.swift */,
+				FD54C10D2652D45D002D34AD /* NavigationBarTitleView.swift */,
 			);
 			path = "Custom Views";
 			sourceTree = "<group>";
@@ -308,7 +299,6 @@
 				FDF2E7B2256F19B60023AF75 /* Custom Views */,
 				FD05B0C1256D4557000ECA44 /* Extensions */,
 				FD05B0D3256D7551000ECA44 /* Network */,
-				FDA709982615182B00BD08F9 /* Realm */,
 				FDFCEB0D2565BA3800CBE3D0 /* Ressources */,
 			);
 			path = Playable;
@@ -325,8 +315,8 @@
 		FDFCEB0C2565BA1B00CBE3D0 /* Application */ = {
 			isa = PBXGroup;
 			children = (
-				FDFCEB2F2565D63000CBE3D0 /* ContentView.swift */,
 				FD2B481025701D3300C6660B /* Environment.swift */,
+				FDFCEB2F2565D63000CBE3D0 /* MainView.swift */,
 				FDFCEAE22565B56800CBE3D0 /* Playable.swift */,
 				FDFCEB162565BD5A00CBE3D0 /* TabViews */,
 			);
@@ -338,7 +328,6 @@
 			children = (
 				FDFCEAEC2565B56800CBE3D0 /* Info.plist */,
 				FDFCEAE42565B56800CBE3D0 /* Assets.xcassets */,
-				FDDC38F22638A088003C34D0 /* Colors.xcassets */,
 			);
 			path = Ressources;
 			sourceTree = "<group>";
@@ -427,7 +416,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				FDFCEAF92565B56800CBE3D0 /* Assets.xcassets in Resources */,
-				FDDC38F32638A088003C34D0 /* Colors.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -438,35 +426,35 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FDFCEAF72565B56800CBE3D0 /* DevicesTabView.swift in Sources */,
+				FDFCEAF72565B56800CBE3D0 /* PlayingTabView.swift in Sources */,
+				FDF5ABEC26517756000C5107 /* Playable+Logging.swift in Sources */,
 				FDFCEB142565BD4300CBE3D0 /* SettingsTabView.swift in Sources */,
 				FD05B0DC256D7F04000ECA44 /* ApiClient.swift in Sources */,
 				FD74F1F72576A45E0022B4F5 /* ServiceSetupHead.swift in Sources */,
 				FD05B0F2256D8D40000ECA44 /* ApiClientConfiguration.swift in Sources */,
 				FD61FF872572F6C500EF7C52 /* ButtonStyles.swift in Sources */,
 				FD61FFA525742A7600EF7C52 /* Playable+Appearance.swift in Sources */,
-				FDFCEB302565D63000CBE3D0 /* ContentView.swift in Sources */,
+				FDFCEB302565D63000CBE3D0 /* MainView.swift in Sources */,
 				FD2B481C2570279D00C6660B /* Color+UISystemColors.swift in Sources */,
 				FDFCEAF52565B56800CBE3D0 /* Playable.swift in Sources */,
 				FD03F37725770EF700463D8E /* ServiceSetupDeezer.swift in Sources */,
 				FDFCEB2B2565CEA100CBE3D0 /* TappableView.swift in Sources */,
-				FD61FF8C2572FAA700EF7C52 /* StreamingServiceSelectionView.swift in Sources */,
 				FD61FFA025741B4700EF7C52 /* Image+CustomImages.swift in Sources */,
 				FD05B0F6256DA9CC000ECA44 /* URL+Extension.swift in Sources */,
 				FD05B0DF256D7F22000ECA44 /* ApiClientTypes.swift in Sources */,
 				FD61FF9C257419BE00EF7C52 /* StreamingServiceConfigurable.swift in Sources */,
+				FD54C10C265248B4002D34AD /* ServiceSetup.swift in Sources */,
 				FD05B0E6256D7F8E000ECA44 /* Playable+Bundle.swift in Sources */,
 				FD05B0E9256D7FAC000ECA44 /* Dictionary+Extensions.swift in Sources */,
 				FD030475257106DD002CA713 /* FavoritesTabView.swift in Sources */,
 				FD2B481125701D3300C6660B /* Environment.swift in Sources */,
 				FD61FF962574111400EF7C52 /* StreamingServiceType.swift in Sources */,
+				FD54C10E2652D45D002D34AD /* NavigationBarTitleView.swift in Sources */,
 				FD61FFA82574307800EF7C52 /* NavigationBarItem.swift in Sources */,
-				FDA7099A2615184400BD08F9 /* RealmManager.swift in Sources */,
 				FDFCEB112565BD0500CBE3D0 /* ServicesTabView.swift in Sources */,
-				FD099DE625769C5A00C19A4C /* StreamingServiceSelectionDetailView.swift in Sources */,
-				FD98E5EE25700A4B004B308D /* ListRow.swift in Sources */,
+				FD099DE625769C5A00C19A4C /* StreamingServiceDetailView.swift in Sources */,
+				FD98E5EE25700A4B004B308D /* ListRowItem.swift in Sources */,
 				FD61FF8F2572FE1D00EF7C52 /* ServiceSetupRadio.swift in Sources */,
-				FD98E5EB256FA264004B308D /* ExpandedButton.swift in Sources */,
 				FD05B0E3256D7F75000ECA44 /* String+Crypto.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -590,7 +578,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = Playable.entitlements;
+				CODE_SIGN_ENTITLEMENTS = Playable/Playable.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2Z5E3BGZR8;
 				ENABLE_PREVIEWS = YES;
@@ -615,7 +603,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = Playable.entitlements;
+				CODE_SIGN_ENTITLEMENTS = Playable/Playable.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2Z5E3BGZR8;
 				ENABLE_PREVIEWS = YES;

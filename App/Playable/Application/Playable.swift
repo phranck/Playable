@@ -8,8 +8,6 @@
 import SwiftUI
 import RadioBrowser
 import LinkPlay
-import SwiftyBeaver
-let log = SwiftyBeaver.self
 
 @main
 struct Playable: App {
@@ -20,31 +18,14 @@ struct Playable: App {
 
     init() {
         setupAppearance()
-        
-        let realm = RealmManager.sharedInstance
-        realm.start()
-
-//        radioBrowser.stationsForCountryCode("de") { result in
-//            do {
-//                let stations = try result.get()
-//                realm.addOrUpdate(stations)
-//            }
-//            catch {
-//                log.error(error.localizedDescription)
-//            }
-//        }
+        setupLogging()
 
         linkPlay.startDiscover()
     }
     
     var body: some Scene {
         WindowGroup {
-            ContentView()
-                .preferredColorScheme(.dark)
-                .background(.background)
-                .accentColor(.accent)
-                .foregroundColor(.onBackground)
-                .navigationBarColor(.primary)
+            MainView()
                 .edgesIgnoringSafeArea(.all)
         }
         .onChange(of: scenePhase) { phase in

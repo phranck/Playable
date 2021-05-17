@@ -7,36 +7,19 @@
 //
 
 import SwiftUI
-import SwiftUIX
 
-struct ServiceSetupDeezer: View, StreamingServiceConfigurable {
-    @Environment(\.hapticFeedback) var feedback
-    @Environment(\.presentationMode) var presentationMode
-
-    var service: StreamingServiceType
+struct ServiceSetupDeezer: View {
+    let serviceType: StreamingServiceType = .deezer
 
     var body: some View {
         VStack {
-            ScrollView {
-                Section(header: ServiceSetupHead(service: service), content: {
-                })
-                
-            }
-            Spacer()
+            Text("\(serviceType.name) Service Setup")
         }
-        .navigationBarTitle(service.name, displayMode: .inline)
-        .navigationBarItems(
-            leading:
-                NavigationBarItem(icon: .navigationBack) {
-                    presentationMode.wrappedValue.dismiss()
-                }
-        )
     }
 }
 
 struct ServiceSetupDeezer_Previews: PreviewProvider {
     static var previews: some View {
-        ServiceSetupDeezer(service: .deezer)
-            .preferredColorScheme(.dark)
+        ServiceSetupDeezer()
     }
 }

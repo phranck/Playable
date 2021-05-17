@@ -6,31 +6,21 @@
 import SwiftUI
 
 struct ServicesTabView: TappableView {
-    var tabItemTitle: TappableViewTitle { .services }
-    @State private var presentingModal = false
-    
+    var tabItemTitle: LocalizedStringKey { TappableViewItem.services.titleKey }
+
+    @Environment(\.hapticFeedback) var feedback
+
     var body: some View {
         NavigationView {
-            VStack {
-                Spacer()
-//                ExpandedButton(
-//                    label: LocalizedStringKey("Select a Service"),
-//                    icon: .musicNote) {
-//                    self.presentingModal = true
-//                }
+            ScrollView(.vertical, showsIndicators: false) {
+                ForEach(services, id: \.self) { serviceItemModel in
+                    NavigationLink(destination: StreamingServiceDetailView(serviceType: serviceItemModel.type)) {
+                        ListRowItem(model: serviceItemModel)
+                    }
+                    .buttonStyle(ListRowButtonStyle())
+                }
             }
-            .navigationBarTitle(tabItemTitle.rawValue, displayMode: .inline)
-            .navigationBarItems(
-                trailing:
-                    NavigationBarItem(titleKey: LocalizedStringKey("Add"), icon: .musicNote, action: {
-                        self.presentingModal = true
-                    })
-                
-            )
-            .fullScreenCover(isPresented: $presentingModal, content: {
-                StreamingServiceSelectionView(presentedAsModal: $presentingModal)
-                    .preferredColorScheme(.dark)
-            })
+            .navigationBarTitle(tabItemTitle)
         }
     }
 }
@@ -38,6 +28,29 @@ struct ServicesTabView: TappableView {
 struct ServicesView_Previews: PreviewProvider {
     static var previews: some View {
         ServicesTabView()
-            .preferredColorScheme(.dark)
     }
 }
+
+// MARK: - Private Helper
+
+struct StreamingServiceRowItem: ListRowItemModel {
+    var type: StreamingServiceType
+    var name: String {
+        type.name
+    }
+    var description: LocalizedStringKey {
+        type.description
+    }
+    var iconName: String {
+        type.iconName
+    }
+}
+
+private let services: [StreamingServiceRowItem] = [
+    StreamingServiceRowItem(type: .radio),
+    StreamingServiceRowItem(type: .deezer),
+    StreamingServiceRowItem(type: .spotify),
+    StreamingServiceRowItem(type: .soundcloud),
+    StreamingServiceRowItem(type: .tidal),
+    StreamingServiceRowItem(type: .napster),
+]

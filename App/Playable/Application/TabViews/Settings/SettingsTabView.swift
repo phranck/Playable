@@ -6,13 +6,13 @@
 import SwiftUI
 
 struct SettingsTabView: TappableView {
-    var tabItemTitle: TappableViewTitle { .settings }
+    var tabItemTitle: LocalizedStringKey { TappableViewItem.settings.titleKey }
     
     var body: some View {
         NavigationView {
             VStack {
             }
-            .navigationBarTitle(tabItemTitle.rawValue, displayMode: .inline)
+            .navigationBarTitle(tabItemTitle)
         }
     }
 }
