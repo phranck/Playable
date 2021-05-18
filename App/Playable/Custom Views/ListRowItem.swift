@@ -46,8 +46,8 @@ struct ListRowItem<Model: ListRowItemModel>: View {
                 }
                 
                 Spacer()
-                
-                Image(systemName: .chevronRight)
+
+                Image(systemName: "chevron.right")
                     .foregroundColor(.secondaryLabel)
             }
             .padding(10)

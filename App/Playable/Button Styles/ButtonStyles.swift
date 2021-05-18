@@ -23,7 +23,7 @@ struct NavigationBarItemStyle: ButtonStyle {
             .padding(EdgeInsets(top: 5, leading: 9, bottom: 5, trailing: 9))
             .font(.system(size: 17, weight: .medium, design: .rounded))
             .foregroundColor(.accentColor)
-            .background(.secondarySystemBackground)
+            .background(Color.secondarySystemBackground)
             .cornerRadius(9, antialiased: true)
             .opacity(configuration.isPressed ? 0.8 : 1)
             .scaleEffect(configuration.isPressed ? 0.97 : 1)

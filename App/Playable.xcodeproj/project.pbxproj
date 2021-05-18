@@ -17,14 +17,14 @@
 		FD05B0F2256D8D40000ECA44 /* ApiClientConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD05B0F1256D8D40000ECA44 /* ApiClientConfiguration.swift */; };
 		FD05B0F6256DA9CC000ECA44 /* URL+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD05B0F5256DA9CC000ECA44 /* URL+Extension.swift */; };
 		FD099DE625769C5A00C19A4C /* StreamingServiceDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD099DE525769C5A00C19A4C /* StreamingServiceDetailView.swift */; };
+		FD25AEAC2654717C00F10FE2 /* URLImageStore in Frameworks */ = {isa = PBXBuildFile; productRef = FD25AEAB2654717C00F10FE2 /* URLImageStore */; };
+		FD25AEAE2654717C00F10FE2 /* URLImage in Frameworks */ = {isa = PBXBuildFile; productRef = FD25AEAD2654717C00F10FE2 /* URLImage */; };
 		FD2B481125701D3300C6660B /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD2B481025701D3300C6660B /* Environment.swift */; };
 		FD2B481C2570279D00C6660B /* Color+UISystemColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD2B481B2570279D00C6660B /* Color+UISystemColors.swift */; };
 		FD32E139264DAD36001488E8 /* LinkPlay in Frameworks */ = {isa = PBXBuildFile; productRef = FD32E138264DAD36001488E8 /* LinkPlay */; };
 		FD32E13B264DAD36001488E8 /* RadioBrowser in Frameworks */ = {isa = PBXBuildFile; productRef = FD32E13A264DAD36001488E8 /* RadioBrowser */; };
-		FD51323C2635EF02005FB239 /* SwiftUIX in Frameworks */ = {isa = PBXBuildFile; productRef = FD51323B2635EF02005FB239 /* SwiftUIX */; };
 		FD5132412635EF49005FB239 /* KeychainAccess in Frameworks */ = {isa = PBXBuildFile; productRef = FD5132402635EF49005FB239 /* KeychainAccess */; };
 		FD54C10C265248B4002D34AD /* ServiceSetup.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD54C10B265248B4002D34AD /* ServiceSetup.swift */; };
-		FD54C10E2652D45D002D34AD /* NavigationBarTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD54C10D2652D45D002D34AD /* NavigationBarTitleView.swift */; };
 		FD61FF872572F6C500EF7C52 /* ButtonStyles.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD61FF862572F6C500EF7C52 /* ButtonStyles.swift */; };
 		FD61FF8F2572FE1D00EF7C52 /* ServiceSetupRadio.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD61FF8E2572FE1C00EF7C52 /* ServiceSetupRadio.swift */; };
 		FD61FF962574111400EF7C52 /* StreamingServiceType.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD61FF952574111400EF7C52 /* StreamingServiceType.swift */; };
@@ -61,7 +61,6 @@
 		FD32E136264DAD05001488E8 /* RadioBrowser */ = {isa = PBXFileReference; lastKnownFileType = folder; name = RadioBrowser; path = "../../Swift Packages/RadioBrowser"; sourceTree = "<group>"; };
 		FD32E137264DAD0A001488E8 /* LinkPlay */ = {isa = PBXFileReference; lastKnownFileType = folder; name = LinkPlay; path = "../../Swift Packages/LinkPlay"; sourceTree = "<group>"; };
 		FD54C10B265248B4002D34AD /* ServiceSetup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceSetup.swift; sourceTree = "<group>"; };
-		FD54C10D2652D45D002D34AD /* NavigationBarTitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBarTitleView.swift; sourceTree = "<group>"; };
 		FD61FF862572F6C500EF7C52 /* ButtonStyles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonStyles.swift; sourceTree = "<group>"; };
 		FD61FF8E2572FE1C00EF7C52 /* ServiceSetupRadio.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceSetupRadio.swift; sourceTree = "<group>"; };
 		FD61FF952574111400EF7C52 /* StreamingServiceType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StreamingServiceType.swift; sourceTree = "<group>"; };
@@ -90,11 +89,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FD25AEAC2654717C00F10FE2 /* URLImageStore in Frameworks */,
 				FD32E13B264DAD36001488E8 /* RadioBrowser in Frameworks */,
 				FD32E139264DAD36001488E8 /* LinkPlay in Frameworks */,
 				FD5132412635EF49005FB239 /* KeychainAccess in Frameworks */,
+				FD25AEAE2654717C00F10FE2 /* URLImage in Frameworks */,
 				FDC5564E261A5DA80030C20E /* SwiftyBeaver in Frameworks */,
-				FD51323C2635EF02005FB239 /* SwiftUIX in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -152,7 +152,6 @@
 		FD05B0EC256D8CAD000ECA44 /* Streaming Services */ = {
 			isa = PBXGroup;
 			children = (
-				FD98E5F025700F35004B308D /* Model */,
 				FD05B0EE256D8CC2000ECA44 /* Deezer */,
 				FD05B0ED256D8CBA000ECA44 /* Radio */,
 				FD54C10B265248B4002D34AD /* ServiceSetup.swift */,
@@ -171,17 +170,9 @@
 		FD05B0EE256D8CC2000ECA44 /* Deezer */ = {
 			isa = PBXGroup;
 			children = (
-				FD05B0F0256D8CF0000ECA44 /* Model */,
 				FD03F37625770EF700463D8E /* ServiceSetupDeezer.swift */,
 			);
 			path = Deezer;
-			sourceTree = "<group>";
-		};
-		FD05B0F0256D8CF0000ECA44 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
 			sourceTree = "<group>";
 		};
 		FD060BA725F4167A00440AF9 /* API */ = {
@@ -263,19 +254,11 @@
 			path = "Button Styles";
 			sourceTree = "<group>";
 		};
-		FD98E5F025700F35004B308D /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
 		FDF2E7B2256F19B60023AF75 /* Custom Views */ = {
 			isa = PBXGroup;
 			children = (
 				FD98E5ED25700A4B004B308D /* ListRowItem.swift */,
 				FD61FFA72574307800EF7C52 /* NavigationBarItem.swift */,
-				FD54C10D2652D45D002D34AD /* NavigationBarTitleView.swift */,
 			);
 			path = "Custom Views";
 			sourceTree = "<group>";
@@ -362,10 +345,11 @@
 			name = Playable;
 			packageProductDependencies = (
 				FDC5564D261A5DA80030C20E /* SwiftyBeaver */,
-				FD51323B2635EF02005FB239 /* SwiftUIX */,
 				FD5132402635EF49005FB239 /* KeychainAccess */,
 				FD32E138264DAD36001488E8 /* LinkPlay */,
 				FD32E13A264DAD36001488E8 /* RadioBrowser */,
+				FD25AEAB2654717C00F10FE2 /* URLImageStore */,
+				FD25AEAD2654717C00F10FE2 /* URLImage */,
 			);
 			productName = "Playable (iOS)";
 			productReference = FDFCEAE92565B56800CBE3D0 /* Playable.app */;
@@ -398,8 +382,8 @@
 			mainGroup = FDFCEADC2565B56700CBE3D0;
 			packageReferences = (
 				FDC5564C261A5DA80030C20E /* XCRemoteSwiftPackageReference "SwiftyBeaver" */,
-				FD51323A2635EF02005FB239 /* XCRemoteSwiftPackageReference "SwiftUIX" */,
 				FD51323F2635EF49005FB239 /* XCRemoteSwiftPackageReference "KeychainAccess" */,
+				FD25AEAA2654717C00F10FE2 /* XCRemoteSwiftPackageReference "url-image" */,
 			);
 			productRefGroup = FDFCEAEA2565B56800CBE3D0 /* Products */;
 			projectDirPath = "";
@@ -449,7 +433,6 @@
 				FD030475257106DD002CA713 /* FavoritesTabView.swift in Sources */,
 				FD2B481125701D3300C6660B /* Environment.swift in Sources */,
 				FD61FF962574111400EF7C52 /* StreamingServiceType.swift in Sources */,
-				FD54C10E2652D45D002D34AD /* NavigationBarTitleView.swift in Sources */,
 				FD61FFA82574307800EF7C52 /* NavigationBarItem.swift in Sources */,
 				FDFCEB112565BD0500CBE3D0 /* ServicesTabView.swift in Sources */,
 				FD099DE625769C5A00C19A4C /* StreamingServiceDetailView.swift in Sources */,
@@ -648,12 +631,12 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		FD51323A2635EF02005FB239 /* XCRemoteSwiftPackageReference "SwiftUIX" */ = {
+		FD25AEAA2654717C00F10FE2 /* XCRemoteSwiftPackageReference "url-image" */ = {
 			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/SwiftUIX/SwiftUIX.git";
+			repositoryURL = "https://github.com/dmytro-anokhin/url-image";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 0.0.6;
+				minimumVersion = 3.0.1;
 			};
 		};
 		FD51323F2635EF49005FB239 /* XCRemoteSwiftPackageReference "KeychainAccess" */ = {
@@ -675,6 +658,16 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		FD25AEAB2654717C00F10FE2 /* URLImageStore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FD25AEAA2654717C00F10FE2 /* XCRemoteSwiftPackageReference "url-image" */;
+			productName = URLImageStore;
+		};
+		FD25AEAD2654717C00F10FE2 /* URLImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FD25AEAA2654717C00F10FE2 /* XCRemoteSwiftPackageReference "url-image" */;
+			productName = URLImage;
+		};
 		FD32E138264DAD36001488E8 /* LinkPlay */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = LinkPlay;
@@ -682,11 +675,6 @@
 		FD32E13A264DAD36001488E8 /* RadioBrowser */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = RadioBrowser;
-		};
-		FD51323B2635EF02005FB239 /* SwiftUIX */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = FD51323A2635EF02005FB239 /* XCRemoteSwiftPackageReference "SwiftUIX" */;
-			productName = SwiftUIX;
 		};
 		FD5132402635EF49005FB239 /* KeychainAccess */ = {
 			isa = XCSwiftPackageProductDependency;

@@ -25,7 +25,16 @@ struct ServiceSetup: View, StreamingServiceConfigurable {
         .navigationBarTitleDisplayMode(.inline)
         .toolbar {
             ToolbarItem(placement: .principal) {
-                NavigationBarTitleView(service: serviceType)
+                HStack {
+                    serviceType.icon
+                        .renderingMode(serviceType.iconRenderingMode)
+                        .resizable()
+                        .scaledToFit()
+                        .frame(width: 20)
+                    
+                    Text(serviceType.name)
+                        .font(.headline)
+                }
             }
         }
     }
