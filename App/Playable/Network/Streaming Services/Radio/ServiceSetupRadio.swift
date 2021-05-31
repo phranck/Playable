@@ -7,92 +7,73 @@
 //
 
 import SwiftUI
-import RadioBrowser
-import URLImage
+import PlayableBrowser
+import SDWebImageSwiftUI
 
 struct ServiceSetupRadio: View {
     let serviceType: StreamingServiceType = .radio
     
-    @ObservedObject var radioBrowser = RadioBrowser()
+    @ObservedObject var radioBrowser = PlayableBrowser(agent: "Playable", version: PlayableBrowser.version)
     
     init() {
-        let locale = Locale.current
-        let regionCode = locale.regionCode ?? "DE"
-        
-        self.radioBrowser.stationsForCountryCode(regionCode)
+        let regionCode = Locale.current.regionCode ?? "AT"
+        self.radioBrowser.stationsBy(countryCode: "AT")
     }
     
     var body: some View {
         ScrollView(.vertical, showsIndicators: false) {
-            ForEach(radioBrowser.radioStations, id: \.self) { station in
-                NavigationLink(destination: EmptyView()) {
-                    ZStack {
-                        RoundedRectangle(cornerRadius: 8)
-                            .foregroundColor(.secondarySystemBackground)
-                        
-                        HStack {
-                            URLImage(URL(string: station.iconUrlString!)!) {
-                                // This view is displayed before download starts
-                                EmptyView()
-                            }
-                            inProgress: { progress in
-                                Image(systemName: "arrow.triangle.2.circlepath")
-                                    .resizable()
-                                    .aspectRatio(contentMode: .fit)
-                                    .frame(width: 56, height: 56, alignment: .center)
-                                    .cornerRadius(6)
-                                    .padding(.trailing, 8)
-                                    .foregroundColor(.secondaryLabel)
-                                    .rotationEffect(.degrees(360))
-                                    .animation(Animation.linear)
-                            }
-                            failure: { error, retry in
-                                Image(systemName: "waveform.circle.fill")
-                                    .resizable()
-                                    .aspectRatio(contentMode: .fit)
-                                    .frame(width: 56, height: 56, alignment: .center)
-                                    .cornerRadius(6)
-                                    .padding(.trailing, 8)
-                                    .foregroundColor(.secondaryLabel)
-                            }
-                            content: { image in
-                                image
-                                    .resizable()
-                                    .aspectRatio(contentMode: .fit)
-                                    .frame(width: 56, height: 56, alignment: .center)
-                                    .cornerRadius(6)
-                                    .padding(.trailing, 8)
-                                    .foregroundColor(.label)
-                            }
-
-                            VStack(alignment: .leading) {
-                                Text(station.name)
-                                    .font(.system(size: 16, weight: .regular, design: .rounded))
-                                    .foregroundColor(.label)
-
-                                Spacer()
-                            }
-                            
-                            Spacer()
-
-                            Image(systemName: "chevron.right")
-                                .foregroundColor(.secondaryLabel)
-                        }
-                        .padding(10)
-                    }
-                    .padding([.leading, .trailing], 10)
-                }
-                .buttonStyle(ListRowButtonStyle())
-            }
-            
+            ForEach(radioBrowser.radioStations, id: \.self, content: RadioStationListRow.init)
         }
+        .padding([.leading, .trailing], 8)
     }
+
 }
 
-struct RadioConfiguration_Previews: PreviewProvider {
+struct RadioStationListRow: View {
+    let station: RadioStation
     
-    static var previews: some View {
-        ServiceSetupRadio()
+    var body: some View {
+        ZStack {
+            RoundedRectangle(cornerRadius: 18, style: .continuous)
+                .foregroundColor(.secondarySystemBackground)
+            
+            HStack {
+                stationCoverImage
+
+//                VStack(alignment: .leading, spacing: 10) {
+//                    Text(station.name)
+//                        .font(.system(size: 18, weight: .semibold, design: .rounded))
+//                        .foregroundColor(.label)
+//                        .lineLimit(2)
+//
+//                    if let description = station.description {
+//                        Text(description)
+//                            .font(.system(size: 15, weight: .regular, design: .rounded))
+//                            .foregroundColor(.secondaryLabel)
+//                            .lineLimit(3)
+//                            .truncationMode(.tail)
+//                    }
+//
+                    Spacer()
+//                }
+            }
+        }
     }
     
+    var stationCoverImage: some View {
+        Group {
+            if let coverUrl = station.coverUrl {
+                WebImage(url: URL(string: coverUrl))
+                    .placeholder(Image(systemName: "photo"))
+                    .resizable()
+                    .indicator(.activity)
+                    .aspectRatio(contentMode: .fit)
+                    .frame(width: 64, height: 64, alignment: .center)
+                    .cornerRadius(12)
+                    .padding(10)
+            } else {
+                Image(systemName: "photo")
+            }
+        }
+    }
 }

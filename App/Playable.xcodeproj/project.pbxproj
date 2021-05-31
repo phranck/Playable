@@ -17,14 +17,13 @@
 		FD05B0F2256D8D40000ECA44 /* ApiClientConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD05B0F1256D8D40000ECA44 /* ApiClientConfiguration.swift */; };
 		FD05B0F6256DA9CC000ECA44 /* URL+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD05B0F5256DA9CC000ECA44 /* URL+Extension.swift */; };
 		FD099DE625769C5A00C19A4C /* StreamingServiceDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD099DE525769C5A00C19A4C /* StreamingServiceDetailView.swift */; };
-		FD25AEAC2654717C00F10FE2 /* URLImageStore in Frameworks */ = {isa = PBXBuildFile; productRef = FD25AEAB2654717C00F10FE2 /* URLImageStore */; };
-		FD25AEAE2654717C00F10FE2 /* URLImage in Frameworks */ = {isa = PBXBuildFile; productRef = FD25AEAD2654717C00F10FE2 /* URLImage */; };
+		FD1C3D542655AA72000CB9DA /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = FD1C3D532655AA72000CB9DA /* SDWebImageSwiftUI */; };
 		FD2B481125701D3300C6660B /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD2B481025701D3300C6660B /* Environment.swift */; };
 		FD2B481C2570279D00C6660B /* Color+UISystemColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD2B481B2570279D00C6660B /* Color+UISystemColors.swift */; };
 		FD32E139264DAD36001488E8 /* LinkPlay in Frameworks */ = {isa = PBXBuildFile; productRef = FD32E138264DAD36001488E8 /* LinkPlay */; };
-		FD32E13B264DAD36001488E8 /* RadioBrowser in Frameworks */ = {isa = PBXBuildFile; productRef = FD32E13A264DAD36001488E8 /* RadioBrowser */; };
-		FD5132412635EF49005FB239 /* KeychainAccess in Frameworks */ = {isa = PBXBuildFile; productRef = FD5132402635EF49005FB239 /* KeychainAccess */; };
 		FD54C10C265248B4002D34AD /* ServiceSetup.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD54C10B265248B4002D34AD /* ServiceSetup.swift */; };
+		FD574164266418220060ABEB /* PlayableBrowser in Resources */ = {isa = PBXBuildFile; fileRef = FD574163266418220060ABEB /* PlayableBrowser */; };
+		FD574166266419000060ABEB /* PlayableBrowser in Frameworks */ = {isa = PBXBuildFile; productRef = FD574165266419000060ABEB /* PlayableBrowser */; };
 		FD61FF872572F6C500EF7C52 /* ButtonStyles.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD61FF862572F6C500EF7C52 /* ButtonStyles.swift */; };
 		FD61FF8F2572FE1D00EF7C52 /* ServiceSetupRadio.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD61FF8E2572FE1C00EF7C52 /* ServiceSetupRadio.swift */; };
 		FD61FF962574111400EF7C52 /* StreamingServiceType.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD61FF952574111400EF7C52 /* StreamingServiceType.swift */; };
@@ -58,9 +57,9 @@
 		FD099DE525769C5A00C19A4C /* StreamingServiceDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StreamingServiceDetailView.swift; sourceTree = "<group>"; };
 		FD2B481025701D3300C6660B /* Environment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Environment.swift; sourceTree = "<group>"; };
 		FD2B481B2570279D00C6660B /* Color+UISystemColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+UISystemColors.swift"; sourceTree = "<group>"; };
-		FD32E136264DAD05001488E8 /* RadioBrowser */ = {isa = PBXFileReference; lastKnownFileType = folder; name = RadioBrowser; path = "../../Swift Packages/RadioBrowser"; sourceTree = "<group>"; };
 		FD32E137264DAD0A001488E8 /* LinkPlay */ = {isa = PBXFileReference; lastKnownFileType = folder; name = LinkPlay; path = "../../Swift Packages/LinkPlay"; sourceTree = "<group>"; };
 		FD54C10B265248B4002D34AD /* ServiceSetup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceSetup.swift; sourceTree = "<group>"; };
+		FD574163266418220060ABEB /* PlayableBrowser */ = {isa = PBXFileReference; lastKnownFileType = folder; name = PlayableBrowser; path = "../../Swift Packages/PlayableBrowser"; sourceTree = "<group>"; };
 		FD61FF862572F6C500EF7C52 /* ButtonStyles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonStyles.swift; sourceTree = "<group>"; };
 		FD61FF8E2572FE1C00EF7C52 /* ServiceSetupRadio.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceSetupRadio.swift; sourceTree = "<group>"; };
 		FD61FF952574111400EF7C52 /* StreamingServiceType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StreamingServiceType.swift; sourceTree = "<group>"; };
@@ -89,11 +88,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FD25AEAC2654717C00F10FE2 /* URLImageStore in Frameworks */,
-				FD32E13B264DAD36001488E8 /* RadioBrowser in Frameworks */,
+				FD1C3D542655AA72000CB9DA /* SDWebImageSwiftUI in Frameworks */,
+				FD574166266419000060ABEB /* PlayableBrowser in Frameworks */,
 				FD32E139264DAD36001488E8 /* LinkPlay in Frameworks */,
-				FD5132412635EF49005FB239 /* KeychainAccess in Frameworks */,
-				FD25AEAE2654717C00F10FE2 /* URLImage in Frameworks */,
 				FDC5564E261A5DA80030C20E /* SwiftyBeaver in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -233,7 +230,7 @@
 			isa = PBXGroup;
 			children = (
 				FD32E137264DAD0A001488E8 /* LinkPlay */,
-				FD32E136264DAD05001488E8 /* RadioBrowser */,
+				FD574163266418220060ABEB /* PlayableBrowser */,
 				FDF5ABEA26506D0E000C5107 /* RapidAPI */,
 			);
 			name = Packages;
@@ -345,11 +342,9 @@
 			name = Playable;
 			packageProductDependencies = (
 				FDC5564D261A5DA80030C20E /* SwiftyBeaver */,
-				FD5132402635EF49005FB239 /* KeychainAccess */,
 				FD32E138264DAD36001488E8 /* LinkPlay */,
-				FD32E13A264DAD36001488E8 /* RadioBrowser */,
-				FD25AEAB2654717C00F10FE2 /* URLImageStore */,
-				FD25AEAD2654717C00F10FE2 /* URLImage */,
+				FD1C3D532655AA72000CB9DA /* SDWebImageSwiftUI */,
+				FD574165266419000060ABEB /* PlayableBrowser */,
 			);
 			productName = "Playable (iOS)";
 			productReference = FDFCEAE92565B56800CBE3D0 /* Playable.app */;
@@ -382,8 +377,7 @@
 			mainGroup = FDFCEADC2565B56700CBE3D0;
 			packageReferences = (
 				FDC5564C261A5DA80030C20E /* XCRemoteSwiftPackageReference "SwiftyBeaver" */,
-				FD51323F2635EF49005FB239 /* XCRemoteSwiftPackageReference "KeychainAccess" */,
-				FD25AEAA2654717C00F10FE2 /* XCRemoteSwiftPackageReference "url-image" */,
+				FD1C3D522655AA72000CB9DA /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */,
 			);
 			productRefGroup = FDFCEAEA2565B56800CBE3D0 /* Products */;
 			projectDirPath = "";
@@ -400,6 +394,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FDFCEAF92565B56800CBE3D0 /* Assets.xcassets in Resources */,
+				FD574164266418220060ABEB /* PlayableBrowser in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -496,6 +491,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -549,6 +545,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SWIFT_COMPILATION_MODE = wholemodule;
@@ -631,20 +628,12 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		FD25AEAA2654717C00F10FE2 /* XCRemoteSwiftPackageReference "url-image" */ = {
+		FD1C3D522655AA72000CB9DA /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */ = {
 			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/dmytro-anokhin/url-image";
+			repositoryURL = "https://github.com/SDWebImage/SDWebImageSwiftUI.git";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 3.0.1;
-			};
-		};
-		FD51323F2635EF49005FB239 /* XCRemoteSwiftPackageReference "KeychainAccess" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/kishikawakatsumi/KeychainAccess.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 4.2.2;
+				minimumVersion = 2.0.2;
 			};
 		};
 		FDC5564C261A5DA80030C20E /* XCRemoteSwiftPackageReference "SwiftyBeaver" */ = {
@@ -658,28 +647,18 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		FD25AEAB2654717C00F10FE2 /* URLImageStore */ = {
+		FD1C3D532655AA72000CB9DA /* SDWebImageSwiftUI */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = FD25AEAA2654717C00F10FE2 /* XCRemoteSwiftPackageReference "url-image" */;
-			productName = URLImageStore;
-		};
-		FD25AEAD2654717C00F10FE2 /* URLImage */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = FD25AEAA2654717C00F10FE2 /* XCRemoteSwiftPackageReference "url-image" */;
-			productName = URLImage;
+			package = FD1C3D522655AA72000CB9DA /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */;
+			productName = SDWebImageSwiftUI;
 		};
 		FD32E138264DAD36001488E8 /* LinkPlay */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = LinkPlay;
 		};
-		FD32E13A264DAD36001488E8 /* RadioBrowser */ = {
+		FD574165266419000060ABEB /* PlayableBrowser */ = {
 			isa = XCSwiftPackageProductDependency;
-			productName = RadioBrowser;
-		};
-		FD5132402635EF49005FB239 /* KeychainAccess */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = FD51323F2635EF49005FB239 /* XCRemoteSwiftPackageReference "KeychainAccess" */;
-			productName = KeychainAccess;
+			productName = PlayableBrowser;
 		};
 		FDC5564D261A5DA80030C20E /* SwiftyBeaver */ = {
 			isa = XCSwiftPackageProductDependency;

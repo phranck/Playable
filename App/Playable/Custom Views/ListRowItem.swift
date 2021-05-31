@@ -21,7 +21,7 @@ struct ListRowItem<Model: ListRowItemModel>: View {
 
     var body: some View {
         ZStack {
-            RoundedRectangle(cornerRadius: 8)
+            RoundedRectangle(cornerRadius: 16, style: .continuous)
                 .foregroundColor(.secondarySystemBackground)
 
             HStack {
@@ -33,7 +33,7 @@ struct ListRowItem<Model: ListRowItemModel>: View {
                     .padding(.trailing, 8)
                     .foregroundColor(.label)
 
-                VStack(alignment: .leading) {
+                VStack(alignment: .leading, spacing: 4) {
                     Text(model.name)
                         .font(.system(size: 22, weight: .bold, design: .rounded))
                         .foregroundColor(.label)

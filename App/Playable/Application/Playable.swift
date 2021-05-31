@@ -6,7 +6,6 @@
 //
 
 import SwiftUI
-import RadioBrowser
 import LinkPlay
 
 @main
@@ -14,7 +13,6 @@ struct Playable: App {
     @Environment(\.scenePhase) var scenePhase
     
     let linkPlay = LinkPlay()
-    let radioBrowser = RadioBrowser(agent: "Playable", version: RadioBrowser.version)
 
     init() {
         setupAppearance()

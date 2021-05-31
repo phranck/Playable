@@ -12,7 +12,7 @@ struct ServiceSetup: View, StreamingServiceConfigurable {
     var serviceType: StreamingServiceType
 
     var body: some View {
-        Group {
+        VStack {
             switch self.serviceType {
                 case .radio: ServiceSetupRadio()
                 case .deezer: ServiceSetupDeezer()
@@ -26,17 +26,21 @@ struct ServiceSetup: View, StreamingServiceConfigurable {
         .toolbar {
             ToolbarItem(placement: .principal) {
                 HStack {
-                    serviceType.icon
-                        .renderingMode(serviceType.iconRenderingMode)
-                        .resizable()
-                        .scaledToFit()
-                        .frame(width: 20)
+                    serviceTypeIcon
                     
                     Text(serviceType.name)
                         .font(.headline)
                 }
             }
         }
+    }
+    
+    var serviceTypeIcon: some View {
+        serviceType.icon
+            .renderingMode(serviceType.iconRenderingMode)
+            .resizable()
+            .scaledToFit()
+            .frame(width: 20)
     }
     
 }
