@@ -1,8 +1,5 @@
-# Linkplay HTTP-API Guide
-Date of documentation: 15.05.2016  
-Date of translation: 09.05.2020
-
-This documentation is a translation based on [iEAST API Guide](https://www.dropbox.com/s/yogm7yu4iw4v754/20160516-manuel-api-sonoe-ieast.pdf?dl=0). 
+# Arylic WIFI Audio HTTP API
+Date of documentation: 23.07.2021  
 
 This documentation describes the API of boards which are produced by a company called [Linkplay](https://linkplay.com). Their boards are so called white label solutions, which means that hundrets of brands are using it in its own products. There are many [well known brands](https://linkplay.com) which uses Linkplay as the core. In theory most of them should be controllable with the API described below.
 

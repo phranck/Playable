@@ -6,51 +6,62 @@
 import SwiftUI
 
 struct ServicesTabView: TappableView {
-    var tabItemTitle: LocalizedStringKey { TappableViewItem.services.titleKey }
+    static var tabItemTitle: LocalizedStringKey { TappableViewItem.services.titleKey }
+
+    private let services: [ServiceItem] = [
+        ServiceItem(type: .radio),
+        ServiceItem(type: .deezer),
+        ServiceItem(type: .spotify),
+        ServiceItem(type: .soundcloud),
+        ServiceItem(type: .tidal),
+        ServiceItem(type: .napster),
+    ]
 
     @Environment(\.hapticFeedback) var feedback
+    var gridItems: [GridItem] = [GridItem()]
+    @State private var isSheetActive = false
 
     var body: some View {
-        NavigationView {
-            ScrollView(.vertical, showsIndicators: false) {
-                ForEach(services, id: \.self) { serviceItemModel in
-                    NavigationLink(destination: StreamingServiceDetailView(serviceType: serviceItemModel.type)) {
-                        ListRowItem(model: serviceItemModel)
+//        ScrollView {
+            VStack {
+                ScrollView(.horizontal, showsIndicators: false) {
+                    LazyHGrid(rows: gridItems, alignment: .top, spacing: 0) {
+                        ForEach((1...services.count), id: \.self) { idx in
+                            ServiceGridItem(model: services[idx-1])
+                                .buttonStyle(ListRowButtonStyle())
+                                .onTapGesture {
+                                    showSheet()
+                                }
+                                .sheet(isPresented: $isSheetActive, content: {
+                                    Text(services[idx-1].name)
+                                })
+                        }
                     }
-                    .buttonStyle(ListRowButtonStyle())
+                }
+                
+                HStack {
+                    Text("Favorites")
+                        .font(.title)
+                        .fontWeight(.bold)
+                        .padding([.top, .leading], 16)
+                    Spacer()
+                }
+
+                ScrollView() {
+                    
                 }
             }
-            .navigationBarTitle(tabItemTitle)
-        }
+//        }
+    }
+    
+    func showSheet() {
+        isSheetActive = true
     }
 }
 
 struct ServicesView_Previews: PreviewProvider {
     static var previews: some View {
         ServicesTabView()
+            .preferredColorScheme(.dark)
     }
 }
-
-// MARK: - Private Helper
-
-struct StreamingServiceRowItem: ListRowItemModel {
-    var type: StreamingServiceType
-    var name: String {
-        type.name
-    }
-    var description: LocalizedStringKey {
-        type.description
-    }
-    var iconName: String {
-        type.iconName
-    }
-}
-
-private let services: [StreamingServiceRowItem] = [
-    StreamingServiceRowItem(type: .radio),
-    StreamingServiceRowItem(type: .deezer),
-    StreamingServiceRowItem(type: .spotify),
-    StreamingServiceRowItem(type: .soundcloud),
-    StreamingServiceRowItem(type: .tidal),
-    StreamingServiceRowItem(type: .napster),
-]

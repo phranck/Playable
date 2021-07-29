@@ -7,73 +7,62 @@
 //
 
 import SwiftUI
-import PlayableBrowser
-import SDWebImageSwiftUI
+import RadioBrowser
 
 struct ServiceSetupRadio: View {
-    let serviceType: StreamingServiceType = .radio
+    let serviceType: ServiceType = .radio
     
-    @ObservedObject var radioBrowser = PlayableBrowser(agent: "Playable", version: PlayableBrowser.version)
+    @ObservedObject var radioBrowser = RadioBrowser()
     
     init() {
-        let regionCode = Locale.current.regionCode ?? "AT"
-        self.radioBrowser.stationsBy(countryCode: "AT")
     }
     
     var body: some View {
-        ScrollView(.vertical, showsIndicators: false) {
-            ForEach(radioBrowser.radioStations, id: \.self, content: RadioStationListRow.init)
-        }
-        .padding([.leading, .trailing], 8)
+        EmptyView()
     }
 
 }
 
-struct RadioStationListRow: View {
-    let station: RadioStation
-    
-    var body: some View {
-        ZStack {
-            RoundedRectangle(cornerRadius: 18, style: .continuous)
-                .foregroundColor(.secondarySystemBackground)
-            
-            HStack {
-                stationCoverImage
-
+//struct RadioStationListRow: View {
+//    let station: RadioStation
+//
+//    var body: some View {
+////        ZStack {
+////            RoundedRectangle(cornerRadius: 18, style: .continuous)
+////                .foregroundColor(.secondarySystemBackground)
+//
+//            HStack {
+//                WebImage(url: URL(string: station.coverUrl!))
+//                    .placeholder(Image(systemName: "photo"))
+//                    .resizable()
+//                    .indicator(.activity)
+//                    .aspectRatio(contentMode: .fill)
+//                    .frame(width: 64, height: 64, alignment: .center)
+////                    .cornerRadius(12.5)
+////                    .padding(10)
+//                    .background(Color.label.opacity(0.1))
+//                    .clipShape(SuperEllipseShape())
+//
 //                VStack(alignment: .leading, spacing: 10) {
 //                    Text(station.name)
-//                        .font(.system(size: 18, weight: .semibold, design: .rounded))
+//                        .font(.system(size: 16, weight: .regular, design: .rounded))
 //                        .foregroundColor(.label)
 //                        .lineLimit(2)
 //
-//                    if let description = station.description {
-//                        Text(description)
-//                            .font(.system(size: 15, weight: .regular, design: .rounded))
-//                            .foregroundColor(.secondaryLabel)
-//                            .lineLimit(3)
-//                            .truncationMode(.tail)
-//                    }
-//
-                    Spacer()
+//                    Spacer()
 //                }
-            }
-        }
-    }
-    
-    var stationCoverImage: some View {
-        Group {
-            if let coverUrl = station.coverUrl {
-                WebImage(url: URL(string: coverUrl))
-                    .placeholder(Image(systemName: "photo"))
-                    .resizable()
-                    .indicator(.activity)
-                    .aspectRatio(contentMode: .fit)
-                    .frame(width: 64, height: 64, alignment: .center)
-                    .cornerRadius(12)
-                    .padding(10)
-            } else {
-                Image(systemName: "photo")
-            }
-        }
-    }
-}
+//                Spacer()
+//            }
+//            .padding(10)
+////        }
+////        .frame(height: 64)
+//    }
+//}
+//
+//struct RadioStationListRow_Previews: PreviewProvider {
+//    static var previews: some View {
+//        RadioStationListRow(
+//            station: RadioStation(id: 1, name: "Radio Halligalli", streamUrl: "")
+//        )
+//    }
+//}

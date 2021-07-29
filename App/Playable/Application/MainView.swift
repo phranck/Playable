@@ -8,47 +8,85 @@
 import SwiftUI
 
 struct MainView: View {
-    @State private var selectedTab = TappableViewItem.services
+//    // https://github.com/BLCKBIRDS/CustomTabBarInSwiftUI/blob/master/CustomTabBarInSwiftUI/CustomTabBar/ContentView.swift
+//    @State var selection: Int = 0
+//
+//    var body: some View {
+//        GeometryReader { gemetry in
+//            VStack {
+//                Spacer()
+//                Text("Hello World...")
+//                Spacer()
+//                HStack {
+//                    Spacer(minLength: 16)
+//
+//                    HStack {
+//
+//                    }
+//                    .frame(
+//                        width: gemetry.size.width-32,
+//                        height: 72,
+//                        alignment: .bottom
+//                    )
+//                    .background(Color.systemGray)
+//                    .cornerRadius(28)
+//
+//                    Spacer(minLength: 16)
+//                }
+//                .padding(.bottom, 16)
+//            }
+//            .edgesIgnoringSafeArea(.vertical)
+////            .padding(.bottom, 20)
+//        }
+//    }
+        
+        
+        @State private var selectedTab = TappableViewItem.devices
 
     var body: some View {
         TabView(selection: $selectedTab) {
-            PlayingTabView()
-                .tabItem {
-                    Label(
-                        TappableViewItem.playing.titleKey,
-                        systemImage: TappableViewItem.playing.systemImageName
+            NavigationView {
+                DevicesTabView()
+                    .navigationBarTitle(
+                        Text(DevicesTabView.tabItemTitle)
                     )
-                }
-                .tag(TappableViewItem.playing)
-                .foregroundColor(.label)
+            }
+            .tabItem {
+                Label(
+                    TappableViewItem.devices.titleKey,
+                    systemImage: TappableViewItem.devices.systemImageName
+                )
+            }
+            .tag(TappableViewItem.devices)
 
-            FavoritesTabView()
-                .tabItem {
-                    Label(
-                        TappableViewItem.favorites.titleKey,
-                        systemImage: TappableViewItem.favorites.systemImageName
+            NavigationView {
+                ServicesTabView()
+                    .navigationBarTitle(
+                        Text(ServicesTabView.tabItemTitle)
                     )
-                }
-                .tag(TappableViewItem.favorites)
+            }
+            .tabItem {
+                Label(
+                    TappableViewItem.services.titleKey,
+                    systemImage: TappableViewItem.services.systemImageName
+                )
+            }
+            .tag(TappableViewItem.services)
 
-            ServicesTabView()
-                .tabItem {
-                    Label(
-                        TappableViewItem.services.titleKey,
-                        systemImage: TappableViewItem.services.systemImageName
-                    )
-                }
-                .tag(TappableViewItem.services)
-
-            SettingsTabView()
-                .tabItem {
-                    Label(
-                        TappableViewItem.settings.titleKey,
-                        systemImage: TappableViewItem.settings.systemImageName
-                    )
-                }
-                .tag(TappableViewItem.settings)
+//            NavigationView {
+//                SettingsTabView()
+//                    .navigationBarTitle(SettingsTabView.tabItemTitle)
+//            }
+//            .tabItem {
+//                Label(
+//                    TappableViewItem.settings.titleKey,
+//                    systemImage: TappableViewItem.settings.systemImageName
+//                )
+//            }
+//            .tag(TappableViewItem.settings)
         }
+        .navigationBarTitleDisplayMode(.large)
+        .symbolRenderingMode(.hierarchical)
     }
 }
 

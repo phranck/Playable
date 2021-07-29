@@ -7,15 +7,13 @@
 //
 
 import SwiftUI
+import LinkPlay
 
 extension EnvironmentValues {
     var hapticFeedback: UIImpactFeedbackGenerator {
         get {
             return self[Feedback.self]
         }
-//        set {
-//            self[Feedback.self] = newValue
-//        }
     }
 }
 

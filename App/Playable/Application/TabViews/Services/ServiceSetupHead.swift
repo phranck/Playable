@@ -9,7 +9,7 @@
 import SwiftUI
 
 struct ServiceSetupHead: View {
-    var service: StreamingServiceType
+    var service: ServiceType
     
     var body: some View {
         VStack(alignment: .center) {

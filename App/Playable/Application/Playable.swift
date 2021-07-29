@@ -12,13 +12,13 @@ import LinkPlay
 struct Playable: App {
     @Environment(\.scenePhase) var scenePhase
     
-    let linkPlay = LinkPlay()
+    let linkPlay = LinkPlay.shared
 
     init() {
         setupAppearance()
         setupLogging()
 
-        linkPlay.startDiscover()
+        linkPlay.startBrowsing()
     }
     
     var body: some Scene {

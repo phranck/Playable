@@ -6,13 +6,10 @@
 import SwiftUI
 
 struct FavoritesTabView: TappableView {
-    var tabItemTitle: LocalizedStringKey { TappableViewItem.favorites.titleKey }
+    static var tabItemTitle: LocalizedStringKey { TappableViewItem.favorites.titleKey }
     
     var body: some View {
-        NavigationView {
-            VStack {
-            }
-            .navigationBarTitle(tabItemTitle)
+        VStack {
         }
     }
 }

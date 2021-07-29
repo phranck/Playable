@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 54;
+	objectVersion = 55;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -16,27 +16,25 @@
 		FD05B0E9256D7FAC000ECA44 /* Dictionary+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD05B0E8256D7FAC000ECA44 /* Dictionary+Extensions.swift */; };
 		FD05B0F2256D8D40000ECA44 /* ApiClientConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD05B0F1256D8D40000ECA44 /* ApiClientConfiguration.swift */; };
 		FD05B0F6256DA9CC000ECA44 /* URL+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD05B0F5256DA9CC000ECA44 /* URL+Extension.swift */; };
-		FD099DE625769C5A00C19A4C /* StreamingServiceDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD099DE525769C5A00C19A4C /* StreamingServiceDetailView.swift */; };
-		FD1C3D542655AA72000CB9DA /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = FD1C3D532655AA72000CB9DA /* SDWebImageSwiftUI */; };
+		FD099DE625769C5A00C19A4C /* ServiceDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD099DE525769C5A00C19A4C /* ServiceDetailView.swift */; };
 		FD2B481125701D3300C6660B /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD2B481025701D3300C6660B /* Environment.swift */; };
 		FD2B481C2570279D00C6660B /* Color+UISystemColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD2B481B2570279D00C6660B /* Color+UISystemColors.swift */; };
-		FD32E139264DAD36001488E8 /* LinkPlay in Frameworks */ = {isa = PBXBuildFile; productRef = FD32E138264DAD36001488E8 /* LinkPlay */; };
 		FD54C10C265248B4002D34AD /* ServiceSetup.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD54C10B265248B4002D34AD /* ServiceSetup.swift */; };
-		FD574164266418220060ABEB /* PlayableBrowser in Resources */ = {isa = PBXBuildFile; fileRef = FD574163266418220060ABEB /* PlayableBrowser */; };
-		FD574166266419000060ABEB /* PlayableBrowser in Frameworks */ = {isa = PBXBuildFile; productRef = FD574165266419000060ABEB /* PlayableBrowser */; };
+		FD588F5C26A5D2F600D8D9CD /* RadioBrowser in Resources */ = {isa = PBXBuildFile; fileRef = FD588F5B26A5D2F600D8D9CD /* RadioBrowser */; };
+		FD588F5F26A5D34700D8D9CD /* RadioBrowser in Frameworks */ = {isa = PBXBuildFile; productRef = FD588F5E26A5D34700D8D9CD /* RadioBrowser */; };
 		FD61FF872572F6C500EF7C52 /* ButtonStyles.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD61FF862572F6C500EF7C52 /* ButtonStyles.swift */; };
 		FD61FF8F2572FE1D00EF7C52 /* ServiceSetupRadio.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD61FF8E2572FE1C00EF7C52 /* ServiceSetupRadio.swift */; };
-		FD61FF962574111400EF7C52 /* StreamingServiceType.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD61FF952574111400EF7C52 /* StreamingServiceType.swift */; };
-		FD61FF9C257419BE00EF7C52 /* StreamingServiceConfigurable.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD61FF9B257419BE00EF7C52 /* StreamingServiceConfigurable.swift */; };
+		FD61FF962574111400EF7C52 /* ServiceType.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD61FF952574111400EF7C52 /* ServiceType.swift */; };
 		FD61FFA025741B4700EF7C52 /* Image+CustomImages.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD61FF9F25741B4700EF7C52 /* Image+CustomImages.swift */; };
 		FD61FFA525742A7600EF7C52 /* Playable+Appearance.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD61FFA425742A7600EF7C52 /* Playable+Appearance.swift */; };
-		FD61FFA82574307800EF7C52 /* NavigationBarItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD61FFA72574307800EF7C52 /* NavigationBarItem.swift */; };
+		FD620E2E26B1E04900CEE019 /* LinkPlay in Frameworks */ = {isa = PBXBuildFile; productRef = FD620E2D26B1E04900CEE019 /* LinkPlay */; };
+		FD6C30FD26A1F3FE00BB89BD /* ServiceItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD6C30FC26A1F3FE00BB89BD /* ServiceItem.swift */; };
 		FD74F1F72576A45E0022B4F5 /* ServiceSetupHead.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD74F1F62576A45E0022B4F5 /* ServiceSetupHead.swift */; };
-		FD98E5EE25700A4B004B308D /* ListRowItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD98E5ED25700A4B004B308D /* ListRowItem.swift */; };
+		FD98E5EE25700A4B004B308D /* ServiceGridItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD98E5ED25700A4B004B308D /* ServiceGridItem.swift */; };
 		FDC5564E261A5DA80030C20E /* SwiftyBeaver in Frameworks */ = {isa = PBXBuildFile; productRef = FDC5564D261A5DA80030C20E /* SwiftyBeaver */; };
 		FDF5ABEC26517756000C5107 /* Playable+Logging.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDF5ABEB26517756000C5107 /* Playable+Logging.swift */; };
 		FDFCEAF52565B56800CBE3D0 /* Playable.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDFCEAE22565B56800CBE3D0 /* Playable.swift */; };
-		FDFCEAF72565B56800CBE3D0 /* PlayingTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDFCEAE32565B56800CBE3D0 /* PlayingTabView.swift */; };
+		FDFCEAF72565B56800CBE3D0 /* DevicesTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDFCEAE32565B56800CBE3D0 /* DevicesTabView.swift */; };
 		FDFCEAF92565B56800CBE3D0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FDFCEAE42565B56800CBE3D0 /* Assets.xcassets */; };
 		FDFCEB112565BD0500CBE3D0 /* ServicesTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDFCEB102565BD0500CBE3D0 /* ServicesTabView.swift */; };
 		FDFCEB142565BD4300CBE3D0 /* SettingsTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDFCEB132565BD4300CBE3D0 /* SettingsTabView.swift */; };
@@ -54,25 +52,23 @@
 		FD05B0E8256D7FAC000ECA44 /* Dictionary+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Dictionary+Extensions.swift"; sourceTree = "<group>"; };
 		FD05B0F1256D8D40000ECA44 /* ApiClientConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiClientConfiguration.swift; sourceTree = "<group>"; };
 		FD05B0F5256DA9CC000ECA44 /* URL+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URL+Extension.swift"; sourceTree = "<group>"; };
-		FD099DE525769C5A00C19A4C /* StreamingServiceDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StreamingServiceDetailView.swift; sourceTree = "<group>"; };
+		FD099DE525769C5A00C19A4C /* ServiceDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceDetailView.swift; sourceTree = "<group>"; };
 		FD2B481025701D3300C6660B /* Environment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Environment.swift; sourceTree = "<group>"; };
 		FD2B481B2570279D00C6660B /* Color+UISystemColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+UISystemColors.swift"; sourceTree = "<group>"; };
-		FD32E137264DAD0A001488E8 /* LinkPlay */ = {isa = PBXFileReference; lastKnownFileType = folder; name = LinkPlay; path = "../../Swift Packages/LinkPlay"; sourceTree = "<group>"; };
 		FD54C10B265248B4002D34AD /* ServiceSetup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceSetup.swift; sourceTree = "<group>"; };
-		FD574163266418220060ABEB /* PlayableBrowser */ = {isa = PBXFileReference; lastKnownFileType = folder; name = PlayableBrowser; path = "../../Swift Packages/PlayableBrowser"; sourceTree = "<group>"; };
+		FD588F5B26A5D2F600D8D9CD /* RadioBrowser */ = {isa = PBXFileReference; lastKnownFileType = folder; name = RadioBrowser; path = "../../Swift Packages/RadioBrowser"; sourceTree = "<group>"; };
 		FD61FF862572F6C500EF7C52 /* ButtonStyles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonStyles.swift; sourceTree = "<group>"; };
 		FD61FF8E2572FE1C00EF7C52 /* ServiceSetupRadio.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceSetupRadio.swift; sourceTree = "<group>"; };
-		FD61FF952574111400EF7C52 /* StreamingServiceType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StreamingServiceType.swift; sourceTree = "<group>"; };
-		FD61FF9B257419BE00EF7C52 /* StreamingServiceConfigurable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StreamingServiceConfigurable.swift; sourceTree = "<group>"; };
+		FD61FF952574111400EF7C52 /* ServiceType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceType.swift; sourceTree = "<group>"; };
 		FD61FF9F25741B4700EF7C52 /* Image+CustomImages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Image+CustomImages.swift"; sourceTree = "<group>"; };
 		FD61FFA425742A7600EF7C52 /* Playable+Appearance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Playable+Appearance.swift"; sourceTree = "<group>"; };
-		FD61FFA72574307800EF7C52 /* NavigationBarItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBarItem.swift; sourceTree = "<group>"; };
+		FD620E2C26B1E03600CEE019 /* LinkPlay */ = {isa = PBXFileReference; lastKnownFileType = folder; name = LinkPlay; path = "../../Swift Packages/LinkPlay"; sourceTree = "<group>"; };
+		FD6C30FC26A1F3FE00BB89BD /* ServiceItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceItem.swift; sourceTree = "<group>"; };
 		FD74F1F62576A45E0022B4F5 /* ServiceSetupHead.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceSetupHead.swift; sourceTree = "<group>"; };
-		FD98E5ED25700A4B004B308D /* ListRowItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListRowItem.swift; sourceTree = "<group>"; };
-		FDF5ABEA26506D0E000C5107 /* RapidAPI */ = {isa = PBXFileReference; lastKnownFileType = folder; name = RapidAPI; path = "../../Swift Packages/RapidAPI"; sourceTree = "<group>"; };
+		FD98E5ED25700A4B004B308D /* ServiceGridItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceGridItem.swift; sourceTree = "<group>"; };
 		FDF5ABEB26517756000C5107 /* Playable+Logging.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Playable+Logging.swift"; sourceTree = "<group>"; };
 		FDFCEAE22565B56800CBE3D0 /* Playable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Playable.swift; sourceTree = "<group>"; };
-		FDFCEAE32565B56800CBE3D0 /* PlayingTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayingTabView.swift; sourceTree = "<group>"; };
+		FDFCEAE32565B56800CBE3D0 /* DevicesTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DevicesTabView.swift; sourceTree = "<group>"; };
 		FDFCEAE42565B56800CBE3D0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FDFCEAE92565B56800CBE3D0 /* Playable.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Playable.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FDFCEAEC2565B56800CBE3D0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -88,9 +84,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FD1C3D542655AA72000CB9DA /* SDWebImageSwiftUI in Frameworks */,
-				FD574166266419000060ABEB /* PlayableBrowser in Frameworks */,
-				FD32E139264DAD36001488E8 /* LinkPlay in Frameworks */,
+				FD588F5F26A5D34700D8D9CD /* RadioBrowser in Frameworks */,
+				FD620E2E26B1E04900CEE019 /* LinkPlay in Frameworks */,
 				FDC5564E261A5DA80030C20E /* SwiftyBeaver in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -185,7 +180,7 @@
 		FD060BA925F416BA00440AF9 /* Devices */ = {
 			isa = PBXGroup;
 			children = (
-				FDFCEAE32565B56800CBE3D0 /* PlayingTabView.swift */,
+				FDFCEAE32565B56800CBE3D0 /* DevicesTabView.swift */,
 			);
 			path = Devices;
 			sourceTree = "<group>";
@@ -217,21 +212,29 @@
 		FD2B481725701FBE00C6660B /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				FD2B701926A1F83B0087AAD0 /* DetailView */,
+				FD6C30FB26A1F3DB00BB89BD /* Model */,
+				FD98E5ED25700A4B004B308D /* ServiceGridItem.swift */,
 				FD74F1F62576A45E0022B4F5 /* ServiceSetupHead.swift */,
 				FDFCEB102565BD0500CBE3D0 /* ServicesTabView.swift */,
-				FD61FF9B257419BE00EF7C52 /* StreamingServiceConfigurable.swift */,
-				FD099DE525769C5A00C19A4C /* StreamingServiceDetailView.swift */,
-				FD61FF952574111400EF7C52 /* StreamingServiceType.swift */,
+				FD61FF952574111400EF7C52 /* ServiceType.swift */,
 			);
 			path = Services;
+			sourceTree = "<group>";
+		};
+		FD2B701926A1F83B0087AAD0 /* DetailView */ = {
+			isa = PBXGroup;
+			children = (
+				FD099DE525769C5A00C19A4C /* ServiceDetailView.swift */,
+			);
+			path = DetailView;
 			sourceTree = "<group>";
 		};
 		FD32E11D264DACEC001488E8 /* Packages */ = {
 			isa = PBXGroup;
 			children = (
-				FD32E137264DAD0A001488E8 /* LinkPlay */,
-				FD574163266418220060ABEB /* PlayableBrowser */,
-				FDF5ABEA26506D0E000C5107 /* RapidAPI */,
+				FD620E2C26B1E03600CEE019 /* LinkPlay */,
+				FD588F5B26A5D2F600D8D9CD /* RadioBrowser */,
 			);
 			name = Packages;
 			sourceTree = "<group>";
@@ -251,11 +254,17 @@
 			path = "Button Styles";
 			sourceTree = "<group>";
 		};
+		FD6C30FB26A1F3DB00BB89BD /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				FD6C30FC26A1F3FE00BB89BD /* ServiceItem.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		FDF2E7B2256F19B60023AF75 /* Custom Views */ = {
 			isa = PBXGroup;
 			children = (
-				FD98E5ED25700A4B004B308D /* ListRowItem.swift */,
-				FD61FFA72574307800EF7C52 /* NavigationBarItem.swift */,
 			);
 			path = "Custom Views";
 			sourceTree = "<group>";
@@ -273,7 +282,6 @@
 		FDFCEAE12565B56800CBE3D0 /* Playable */ = {
 			isa = PBXGroup;
 			children = (
-				FDFCEB052565B5B000CBE3D0 /* Playable.entitlements */,
 				FDFCEB0C2565BA1B00CBE3D0 /* Application */,
 				FD61FF852572F6AE00EF7C52 /* Button Styles */,
 				FDF2E7B2256F19B60023AF75 /* Custom Views */,
@@ -306,8 +314,9 @@
 		FDFCEB0D2565BA3800CBE3D0 /* Ressources */ = {
 			isa = PBXGroup;
 			children = (
-				FDFCEAEC2565B56800CBE3D0 /* Info.plist */,
 				FDFCEAE42565B56800CBE3D0 /* Assets.xcassets */,
+				FDFCEAEC2565B56800CBE3D0 /* Info.plist */,
+				FDFCEB052565B5B000CBE3D0 /* Playable.entitlements */,
 			);
 			path = Ressources;
 			sourceTree = "<group>";
@@ -342,9 +351,8 @@
 			name = Playable;
 			packageProductDependencies = (
 				FDC5564D261A5DA80030C20E /* SwiftyBeaver */,
-				FD32E138264DAD36001488E8 /* LinkPlay */,
-				FD1C3D532655AA72000CB9DA /* SDWebImageSwiftUI */,
-				FD574165266419000060ABEB /* PlayableBrowser */,
+				FD588F5E26A5D34700D8D9CD /* RadioBrowser */,
+				FD620E2D26B1E04900CEE019 /* LinkPlay */,
 			);
 			productName = "Playable (iOS)";
 			productReference = FDFCEAE92565B56800CBE3D0 /* Playable.app */;
@@ -367,7 +375,7 @@
 				};
 			};
 			buildConfigurationList = FDFCEAE02565B56700CBE3D0 /* Build configuration list for PBXProject "Playable" */;
-			compatibilityVersion = "Xcode 12.0";
+			compatibilityVersion = "Xcode 13.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -377,7 +385,6 @@
 			mainGroup = FDFCEADC2565B56700CBE3D0;
 			packageReferences = (
 				FDC5564C261A5DA80030C20E /* XCRemoteSwiftPackageReference "SwiftyBeaver" */,
-				FD1C3D522655AA72000CB9DA /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */,
 			);
 			productRefGroup = FDFCEAEA2565B56800CBE3D0 /* Products */;
 			projectDirPath = "";
@@ -394,7 +401,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FDFCEAF92565B56800CBE3D0 /* Assets.xcassets in Resources */,
-				FD574164266418220060ABEB /* PlayableBrowser in Resources */,
+				FD588F5C26A5D2F600D8D9CD /* RadioBrowser in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -405,7 +412,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FDFCEAF72565B56800CBE3D0 /* PlayingTabView.swift in Sources */,
+				FDFCEAF72565B56800CBE3D0 /* DevicesTabView.swift in Sources */,
 				FDF5ABEC26517756000C5107 /* Playable+Logging.swift in Sources */,
 				FDFCEB142565BD4300CBE3D0 /* SettingsTabView.swift in Sources */,
 				FD05B0DC256D7F04000ECA44 /* ApiClient.swift in Sources */,
@@ -421,18 +428,17 @@
 				FD61FFA025741B4700EF7C52 /* Image+CustomImages.swift in Sources */,
 				FD05B0F6256DA9CC000ECA44 /* URL+Extension.swift in Sources */,
 				FD05B0DF256D7F22000ECA44 /* ApiClientTypes.swift in Sources */,
-				FD61FF9C257419BE00EF7C52 /* StreamingServiceConfigurable.swift in Sources */,
 				FD54C10C265248B4002D34AD /* ServiceSetup.swift in Sources */,
 				FD05B0E6256D7F8E000ECA44 /* Playable+Bundle.swift in Sources */,
 				FD05B0E9256D7FAC000ECA44 /* Dictionary+Extensions.swift in Sources */,
 				FD030475257106DD002CA713 /* FavoritesTabView.swift in Sources */,
 				FD2B481125701D3300C6660B /* Environment.swift in Sources */,
-				FD61FF962574111400EF7C52 /* StreamingServiceType.swift in Sources */,
-				FD61FFA82574307800EF7C52 /* NavigationBarItem.swift in Sources */,
+				FD61FF962574111400EF7C52 /* ServiceType.swift in Sources */,
 				FDFCEB112565BD0500CBE3D0 /* ServicesTabView.swift in Sources */,
-				FD099DE625769C5A00C19A4C /* StreamingServiceDetailView.swift in Sources */,
-				FD98E5EE25700A4B004B308D /* ListRowItem.swift in Sources */,
+				FD099DE625769C5A00C19A4C /* ServiceDetailView.swift in Sources */,
+				FD98E5EE25700A4B004B308D /* ServiceGridItem.swift in Sources */,
 				FD61FF8F2572FE1D00EF7C52 /* ServiceSetupRadio.swift in Sources */,
+				FD6C30FD26A1F3FE00BB89BD /* ServiceItem.swift in Sources */,
 				FD05B0E3256D7F75000ECA44 /* String+Crypto.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -558,12 +564,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = Playable/Playable.entitlements;
+				CODE_SIGN_ENTITLEMENTS = Playable/Ressources/Playable.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2Z5E3BGZR8;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = Playable/Ressources/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -583,12 +589,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = Playable/Playable.entitlements;
+				CODE_SIGN_ENTITLEMENTS = Playable/Ressources/Playable.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2Z5E3BGZR8;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = Playable/Ressources/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -628,14 +634,6 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		FD1C3D522655AA72000CB9DA /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/SDWebImage/SDWebImageSwiftUI.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 2.0.2;
-			};
-		};
 		FDC5564C261A5DA80030C20E /* XCRemoteSwiftPackageReference "SwiftyBeaver" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/SwiftyBeaver/SwiftyBeaver.git";
@@ -647,18 +645,13 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		FD1C3D532655AA72000CB9DA /* SDWebImageSwiftUI */ = {
+		FD588F5E26A5D34700D8D9CD /* RadioBrowser */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = FD1C3D522655AA72000CB9DA /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */;
-			productName = SDWebImageSwiftUI;
+			productName = RadioBrowser;
 		};
-		FD32E138264DAD36001488E8 /* LinkPlay */ = {
+		FD620E2D26B1E04900CEE019 /* LinkPlay */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = LinkPlay;
-		};
-		FD574165266419000060ABEB /* PlayableBrowser */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = PlayableBrowser;
 		};
 		FDC5564D261A5DA80030C20E /* SwiftyBeaver */ = {
 			isa = XCSwiftPackageProductDependency;

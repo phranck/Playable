@@ -13,7 +13,7 @@ struct ListRowButtonStyle: ButtonStyle {
         return configuration.label
             .opacity(configuration.isPressed ? 0.8 : 1)
             .scaleEffect(configuration.isPressed ? 0.95 : 1)
-            .animation(.easeInOut(duration: 0.1))
+            .animation(.easeInOut(duration: 0.1), value: 1)
     }
 }
 
@@ -27,6 +27,6 @@ struct NavigationBarItemStyle: ButtonStyle {
             .cornerRadius(9, antialiased: true)
             .opacity(configuration.isPressed ? 0.8 : 1)
             .scaleEffect(configuration.isPressed ? 0.97 : 1)
-            .animation(.easeInOut(duration: 0.075))
+            .animation(.easeInOut(duration: 0.075), value: 1)
     }
 }

@@ -9,7 +9,7 @@
 import SwiftUI
 
 struct ServiceSetupDeezer: View {
-    let serviceType: StreamingServiceType = .deezer
+    let serviceType: ServiceType = .deezer
 
     var body: some View {
         VStack {

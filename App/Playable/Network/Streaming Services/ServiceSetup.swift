@@ -8,8 +8,12 @@
 
 import SwiftUI
 
+protocol StreamingServiceConfigurable {
+    var serviceType: ServiceType { get set }
+}
+
 struct ServiceSetup: View, StreamingServiceConfigurable {
-    var serviceType: StreamingServiceType
+    var serviceType: ServiceType
 
     var body: some View {
         VStack {
