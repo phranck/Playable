@@ -1,4 +1,3 @@
-//
 // Playable - 🎧
 // This file is part of the Playable project.
 // Copyright (c) 2015-2022 Woodbytes, <phranck@mac.com>
@@ -10,7 +9,15 @@
 import SwiftUI
 import UserNotifications
 
-public extension NSApplication {
+#if os(macOS)
+public typealias Application = NSApplication
+public typealias ApplicationDelegate = NSApplicationDelegate
+#else
+public typealias Application = UIApplication
+public typealias ApplicationDelegate = UIApplicationDelegate
+#endif
+
+public extension Application {
     static func registerForRemoteNotifications(completion: @escaping (Result<Bool, Error>) -> Void ) {
         let notificationCenter = UNUserNotificationCenter.current()
 

@@ -10,7 +10,6 @@
 		FD3D8FB829388A6A006BD359 /* PlayableApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD3D8FB729388A6A006BD359 /* PlayableApp.swift */; };
 		FD3D8FBC29388A6B006BD359 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FD3D8FBB29388A6B006BD359 /* Assets.xcassets */; };
 		FD5011FE29388CF300DFD5A6 /* SwiftyBeaver in Frameworks */ = {isa = PBXBuildFile; productRef = FD5011FD29388CF300DFD5A6 /* SwiftyBeaver */; };
-		FD50120129388D4200DFD5A6 /* swiftlint in Frameworks */ = {isa = PBXBuildFile; productRef = FD50120029388D4200DFD5A6 /* swiftlint */; };
 		FD50120729388D9C00DFD5A6 /* SystemColors in Frameworks */ = {isa = PBXBuildFile; productRef = FD50120629388D9C00DFD5A6 /* SystemColors */; };
 		FD5F4A8029773BDF0027B5CF /* ParseSwift in Frameworks */ = {isa = PBXBuildFile; productRef = FD5F4A7F29773BDF0027B5CF /* ParseSwift */; };
 		FD5F4A8229773C1F0027B5CF /* PlayableFoundation in Frameworks */ = {isa = PBXBuildFile; productRef = FD5F4A8129773C1F0027B5CF /* PlayableFoundation */; };
@@ -19,6 +18,12 @@
 		FDAB73FB2970A6670093B7FE /* PlayableAppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDAB73FA2970A6670093B7FE /* PlayableAppDelegate.swift */; };
 		FDB4ABEA2974665D00BDDF7C /* SFSafeSymbols in Frameworks */ = {isa = PBXBuildFile; productRef = FDB4ABE92974665D00BDDF7C /* SFSafeSymbols */; };
 		FDD3C5FF2970ADC70039FF24 /* NotificationCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDD3C5FE2970ADC70039FF24 /* NotificationCoordinator.swift */; };
+		FDF6B2852979B2FF00CC5C8E /* IONavigation in Frameworks */ = {isa = PBXBuildFile; productRef = FDF6B2842979B2FF00CC5C8E /* IONavigation */; };
+		FDF6B2872979B4DD00CC5C8E /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDF6B2862979B4DD00CC5C8E /* MainView.swift */; };
+		FDF6B2892979B4F600CC5C8E /* NavigationItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDF6B2882979B4F600CC5C8E /* NavigationItemView.swift */; };
+		FDF6B28B2979B4FC00CC5C8E /* ChannelGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDF6B28A2979B4FC00CC5C8E /* ChannelGridView.swift */; };
+		FDF6B28D2979B4FF00CC5C8E /* ChannelGridItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDF6B28C2979B4FF00CC5C8E /* ChannelGridItem.swift */; };
+		FDF6B2902979E39E00CC5C8E /* Conditional.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDF6B28F2979E39E00CC5C8E /* Conditional.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +39,11 @@
 		FDA289AE29395E5800EC88D5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FDAB73FA2970A6670093B7FE /* PlayableAppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayableAppDelegate.swift; sourceTree = "<group>"; };
 		FDD3C5FE2970ADC70039FF24 /* NotificationCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationCoordinator.swift; sourceTree = "<group>"; };
+		FDF6B2862979B4DD00CC5C8E /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		FDF6B2882979B4F600CC5C8E /* NavigationItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationItemView.swift; sourceTree = "<group>"; };
+		FDF6B28A2979B4FC00CC5C8E /* ChannelGridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelGridView.swift; sourceTree = "<group>"; };
+		FDF6B28C2979B4FF00CC5C8E /* ChannelGridItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelGridItem.swift; sourceTree = "<group>"; };
+		FDF6B28F2979E39E00CC5C8E /* Conditional.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Conditional.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,11 +51,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FD50120129388D4200DFD5A6 /* swiftlint in Frameworks */,
 				FDB4ABEA2974665D00BDDF7C /* SFSafeSymbols in Frameworks */,
 				FD5F4A8629773C1F0027B5CF /* PlayableUI in Frameworks */,
 				FD50120729388D9C00DFD5A6 /* SystemColors in Frameworks */,
 				FD5F4A8229773C1F0027B5CF /* PlayableFoundation in Frameworks */,
+				FDF6B2852979B2FF00CC5C8E /* IONavigation in Frameworks */,
 				FD5F4A8029773BDF0027B5CF /* ParseSwift in Frameworks */,
 				FD5011FE29388CF300DFD5A6 /* SwiftyBeaver in Frameworks */,
 				FD5F4A8429773C1F0027B5CF /* PlayableParse in Frameworks */,
@@ -58,6 +68,7 @@
 		FD270923293932E70022571F /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				FDF6B28F2979E39E00CC5C8E /* Conditional.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -104,8 +115,12 @@
 		FD50120829388DCA00DFD5A6 /* Application */ = {
 			isa = PBXGroup;
 			children = (
+				FDF6B28C2979B4FF00CC5C8E /* ChannelGridItem.swift */,
+				FDF6B28A2979B4FC00CC5C8E /* ChannelGridView.swift */,
+				FDF6B2862979B4DD00CC5C8E /* MainView.swift */,
 				FD3D8FB729388A6A006BD359 /* PlayableApp.swift */,
 				FDAB73FA2970A6670093B7FE /* PlayableAppDelegate.swift */,
+				FDF6B2882979B4F600CC5C8E /* NavigationItemView.swift */,
 			);
 			path = Application;
 			sourceTree = "<group>";
@@ -155,13 +170,13 @@
 			name = Playable;
 			packageProductDependencies = (
 				FD5011FD29388CF300DFD5A6 /* SwiftyBeaver */,
-				FD50120029388D4200DFD5A6 /* swiftlint */,
 				FD50120629388D9C00DFD5A6 /* SystemColors */,
 				FDB4ABE92974665D00BDDF7C /* SFSafeSymbols */,
 				FD5F4A7F29773BDF0027B5CF /* ParseSwift */,
 				FD5F4A8129773C1F0027B5CF /* PlayableFoundation */,
 				FD5F4A8329773C1F0027B5CF /* PlayableParse */,
 				FD5F4A8529773C1F0027B5CF /* PlayableUI */,
+				FDF6B2842979B2FF00CC5C8E /* IONavigation */,
 			);
 			productName = Podlive;
 			productReference = FD3D8FB429388A6A006BD359 /* Playable.app */;
@@ -194,10 +209,10 @@
 			mainGroup = FD3D8FAB29388A6A006BD359;
 			packageReferences = (
 				FD5011FC29388CF300DFD5A6 /* XCRemoteSwiftPackageReference "SwiftyBeaver" */,
-				FD5011FF29388D4200DFD5A6 /* XCRemoteSwiftPackageReference "SwiftLint" */,
 				FD50120529388D9C00DFD5A6 /* XCRemoteSwiftPackageReference "swiftui-system-colors" */,
 				FDB4ABE82974665D00BDDF7C /* XCRemoteSwiftPackageReference "SFSafeSymbols" */,
 				FD5F4A7E29773BDF0027B5CF /* XCRemoteSwiftPackageReference "Parse-Swift" */,
+				FDF6B2832979B2FF00CC5C8E /* XCRemoteSwiftPackageReference "IONavigation" */,
 			);
 			productRefGroup = FD3D8FB529388A6A006BD359 /* Products */;
 			projectDirPath = "";
@@ -224,9 +239,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FDF6B2902979E39E00CC5C8E /* Conditional.swift in Sources */,
+				FDF6B28B2979B4FC00CC5C8E /* ChannelGridView.swift in Sources */,
+				FDF6B28D2979B4FF00CC5C8E /* ChannelGridItem.swift in Sources */,
 				FDAB73FB2970A6670093B7FE /* PlayableAppDelegate.swift in Sources */,
+				FDF6B2872979B4DD00CC5C8E /* MainView.swift in Sources */,
 				FD3D8FB829388A6A006BD359 /* PlayableApp.swift in Sources */,
 				FDD3C5FF2970ADC70039FF24 /* NotificationCoordinator.swift in Sources */,
+				FDF6B2892979B4F600CC5C8E /* NavigationItemView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -387,11 +407,12 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = macosx;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
 				SUPPORTS_MACCATALYST = NO;
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Development;
 		};
@@ -432,11 +453,12 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = macosx;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
 				SUPPORTS_MACCATALYST = NO;
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Production;
 		};
@@ -472,14 +494,6 @@
 				minimumVersion = 1.0.0;
 			};
 		};
-		FD5011FF29388D4200DFD5A6 /* XCRemoteSwiftPackageReference "SwiftLint" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/realm/SwiftLint.git";
-			requirement = {
-				branch = main;
-				kind = branch;
-			};
-		};
 		FD50120529388D9C00DFD5A6 /* XCRemoteSwiftPackageReference "swiftui-system-colors" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/diniska/swiftui-system-colors.git";
@@ -504,6 +518,14 @@
 				minimumVersion = 4.0.0;
 			};
 		};
+		FDF6B2832979B2FF00CC5C8E /* XCRemoteSwiftPackageReference "IONavigation" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/kaevinio/IONavigation.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -511,11 +533,6 @@
 			isa = XCSwiftPackageProductDependency;
 			package = FD5011FC29388CF300DFD5A6 /* XCRemoteSwiftPackageReference "SwiftyBeaver" */;
 			productName = SwiftyBeaver;
-		};
-		FD50120029388D4200DFD5A6 /* swiftlint */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = FD5011FF29388D4200DFD5A6 /* XCRemoteSwiftPackageReference "SwiftLint" */;
-			productName = swiftlint;
 		};
 		FD50120629388D9C00DFD5A6 /* SystemColors */ = {
 			isa = XCSwiftPackageProductDependency;
@@ -543,6 +560,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = FDB4ABE82974665D00BDDF7C /* XCRemoteSwiftPackageReference "SFSafeSymbols" */;
 			productName = SFSafeSymbols;
+		};
+		FDF6B2842979B2FF00CC5C8E /* IONavigation */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FDF6B2832979B2FF00CC5C8E /* XCRemoteSwiftPackageReference "IONavigation" */;
+			productName = IONavigation;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

@@ -1,12 +1,30 @@
 {
   "pins" : [
     {
+      "identity" : "cachedasyncimage",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/StefKors/CachedAsyncImage.git",
+      "state" : {
+        "branch" : "main",
+        "revision" : "e3c1f7c6c935ebfc46d865548e6d28cbdaf836d5"
+      }
+    },
+    {
       "identity" : "collectionconcurrencykit",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/JohnSundell/CollectionConcurrencyKit.git",
       "state" : {
         "revision" : "b4f23e24b5a1bff301efc5e70871083ca029ff95",
         "version" : "0.2.0"
+      }
+    },
+    {
+      "identity" : "ionavigation",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/kaevinio/IONavigation.git",
+      "state" : {
+        "revision" : "323f20bc2e7def09b1b9d7e62030d308709fcd28",
+        "version" : "1.3.7"
       }
     },
     {

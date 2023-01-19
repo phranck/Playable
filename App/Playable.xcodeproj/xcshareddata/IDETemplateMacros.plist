@@ -3,9 +3,8 @@
 <plist version="1.0">
 <dict>
     <key>FILEHEADER</key>
-    <string>
-// Podlive - 🎧
-// This file is part of the Podlive project.
+    <string>// Playable - 🎧
+// This file is part of the Playable project.
 // Copyright (c) 2015-___YEAR___ Woodbytes, &lt;phranck@mac.com&gt;
 //
 // Created by: ___FULLUSERNAME___

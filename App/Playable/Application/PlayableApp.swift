@@ -13,7 +13,11 @@ import SwiftUI
 
 @main
 struct PlayableApp: App {
+#if os(macOS)
     @NSApplicationDelegateAdaptor(PlayableAppDelegate.self) var appDelegate
+#else
+    @UIApplicationDelegateAdaptor(PlayableAppDelegate.self) var appDelegate
+#endif
 
     init() {
         setupLogging()
@@ -25,6 +29,7 @@ struct PlayableApp: App {
         WindowGroup {
             MainView()
         }
+#if os(macOS)
         .windowToolbarStyle(UnifiedWindowToolbarStyle())
         .defaultSize(width: 960, height: 520)
         .defaultPosition(.center)
@@ -33,13 +38,13 @@ struct PlayableApp: App {
                 Button("About MyGreatApp") {
                     NSApp.orderFrontStandardAboutPanel(
                         options: [
-                            NSApplication.AboutPanelOptionKey.credits: NSAttributedString(
+                            Application.AboutPanelOptionKey.credits: NSAttributedString(
                                 string: "Never miss a live streaming podcast",
                                 attributes: [
                                     .font: NSFont.boldSystemFont(ofSize: NSFont.smallSystemFontSize)
                                 ]
                             ),
-                            NSApplication.AboutPanelOptionKey(
+                            Application.AboutPanelOptionKey(
                                 rawValue: "Copyright"
                             ): "© 2022 Woodbytes"
                         ]
@@ -47,5 +52,6 @@ struct PlayableApp: App {
                 }
             }
         }
+#endif
     }
 }

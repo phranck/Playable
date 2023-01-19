@@ -5,7 +5,9 @@ import PackageDescription
 
 let package = Package(
     name: "PlayableUI",
+    defaultLocalization: "en",
     platforms: [
+        .iOS("16.1"),
         .macOS(.v13)
     ],
     products: [

@@ -1,4 +1,3 @@
-//
 // Playable - 🎧
 // This file is part of the Playable project.
 // Copyright (c) 2015-2022 Woodbytes, <phranck@mac.com>
@@ -7,7 +6,6 @@
 // Created at: 15.12.22
 //
 
-import Carbon.HIToolbox
 import SwiftUI
 
 /// Keyboard layout independent keycodes
@@ -62,10 +60,18 @@ public enum ViewKeyCode: UInt16 {
 }
 
 public extension View {
+    @available(iOS, deprecated, message: "The closure of this modifier is being ignored. It just returns the view it is attached to.")
     func onKeyPress(_ keyCode: ViewKeyCode, action: @escaping () -> Void) -> some View {
+#if os(macOS)
         modifier(KeyPressViewModifier(keyCode, action: action))
+#else
+        self
+#endif
     }
 }
+
+#if os(macOS)
+import Carbon.HIToolbox
 
 // MARK: - Private API
 
@@ -117,3 +123,4 @@ private extension KeyCodeView {
         }
     }
 }
+#endif

@@ -10,7 +10,7 @@
 import PlayableFoundation
 import SwiftUI
 
-struct SidebarItemView: View {
+struct NavigationItemView: View {
     let item: SidebarItem
     let count: Int
 
@@ -24,12 +24,6 @@ struct SidebarItemView: View {
                 .font(.title3)
 
             Spacer()
-
-//            Text("\(count)")
-//                .font(.caption)
-//                .background(Color.textBackground)
-//                .padding(6)
-//                .cornerRadius(2)
         }
         .fontDesign(.rounded)
         .padding(.vertical, 4)
@@ -40,7 +34,7 @@ struct SidebarItemView: View {
 
 struct SidebarItemView_Previews: PreviewProvider {
     static var previews: some View {
-        SidebarItemView(item: .all, count: 3)
+        NavigationItemView(item: .all, count: 3)
             .frame(width: 230)
     }
 }

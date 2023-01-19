@@ -28,7 +28,7 @@ public struct ChannelGridItem: View {
         VStack {
             HStack(alignment: .top) {
                 // Cover
-                CachedAsyncImage(url: channel.coverartThumbnail200?.url, urlCache: .imageCache) { image in
+                AsyncImage(url: channel.coverartThumbnail200?.url) { image in
                     image
                         .renderingMode(.original)
                         .resizable()
@@ -53,6 +53,7 @@ public struct ChannelGridItem: View {
                     }
                 }
                 .padding(10)
+
                 Spacer(minLength: 1)
 
                 VStack {

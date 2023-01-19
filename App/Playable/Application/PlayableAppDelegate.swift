@@ -10,9 +10,10 @@ import ParseSwift
 import PlayableFoundation
 import PlayableParse
 import SwiftUI
+import UserNotifications
 
-class PlayableAppDelegate: NSObject, NSApplicationDelegate {
-    func application(_ application: NSApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
+class PlayableAppDelegate: NSObject, ApplicationDelegate {
+    func application(_ application: Application, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
         log.debug("Device Token: \(String(describing: PlayableParseInstallation.current?.deviceToken))")
 
         guard
@@ -35,12 +36,20 @@ class PlayableAppDelegate: NSObject, NSApplicationDelegate {
         }
     }
 
-    func application(_ application: NSApplication, didFailToRegisterForRemoteNotificationsWithError error: Error) {
+    func application(_ application: Application, didFailToRegisterForRemoteNotificationsWithError error: Error) {
         log.error("Error while registering for Remote Notifications: \(error.localizedDescription)")
     }
 
-    func application(_ application: NSApplication, didReceiveRemoteNotification userInfo: [String : Any]) {
+#if os(macOS)
+    func application(_ application: Application, didReceiveRemoteNotification userInfo: [String : Any]) {
         log.debug("Did receive remote notification: \(userInfo)")
+        Application.handleRemoteNotification(userInfo: userInfo)
     }
+#else
+    func application(_ application: Application, didReceiveRemoteNotification userInfo: [AnyHashable : Any], fetchCompletionHandler completionHandler: @escaping (UIBackgroundFetchResult) -> Void) {
+        log.debug("Did receive remote notification: \(userInfo)")
+        Application.handleRemoteNotification(userInfo: userInfo)
+        completionHandler(.newData)
+    }
+#endif
 }
-

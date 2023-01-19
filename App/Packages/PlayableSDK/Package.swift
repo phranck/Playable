@@ -27,7 +27,7 @@ let package = Package(
                 "SwiftyBeaver",
                 "SFSafeSymbols"
             ],
-            path: "Modules/PlayableFoundation",
+            path: "Modules/Foundation",
             plugins: [
                 .plugin(name: "SwiftLintPlugin", package: "SwiftLint")
             ]
@@ -39,7 +39,7 @@ let package = Package(
                 "SwiftyBeaver",
                 .product(name: "ParseSwift", package: "Parse-Swift")
             ],
-            path: "Modules/PlayableParse",
+            path: "Modules/Parse",
             plugins: [
                 .plugin(name: "SwiftLintPlugin", package: "SwiftLint")
             ]

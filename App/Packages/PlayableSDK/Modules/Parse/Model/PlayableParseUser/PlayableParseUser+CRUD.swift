@@ -39,7 +39,7 @@ private extension PlayableParseUser {
             return
         }
 
-        NSApplication.registerForRemoteNotifications { result in
+        Application.registerForRemoteNotifications { result in
             switch result {
             case .success:
                 log.debug("Successfully registered for Remote Notifications")
