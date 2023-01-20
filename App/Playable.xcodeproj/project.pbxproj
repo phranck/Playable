@@ -44,6 +44,7 @@
 		FDF6B28A2979B4FC00CC5C8E /* ChannelGridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelGridView.swift; sourceTree = "<group>"; };
 		FDF6B28C2979B4FF00CC5C8E /* ChannelGridItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelGridItem.swift; sourceTree = "<group>"; };
 		FDF6B28F2979E39E00CC5C8E /* Conditional.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Conditional.swift; sourceTree = "<group>"; };
+		FDF6B291297A11AC00CC5C8E /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; name = .gitignore; path = ../.gitignore; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +87,7 @@
 			isa = PBXGroup;
 			children = (
 				FD27092D293939180022571F /* .swiftlint.yml */,
+				FDF6B291297A11AC00CC5C8E /* .gitignore */,
 				FD3D8FB629388A6A006BD359 /* Playable */,
 				FD270924293933550022571F /* Packages */,
 				FD3D8FB529388A6A006BD359 /* Products */,
