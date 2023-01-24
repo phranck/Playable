@@ -35,19 +35,11 @@ struct PlayableApp: App {
         .defaultPosition(.center)
         .commands {
             CommandGroup(replacing: .appInfo) {
-                Button("About MyGreatApp") {
+                Button("About \(Application.appName)") {
                     NSApp.orderFrontStandardAboutPanel(
                         options: [
-                            Application.AboutPanelOptionKey.credits: NSAttributedString(
-                                string: "Never miss a live streaming podcast",
-                                attributes: [
-                                    .font: NSFont.boldSystemFont(ofSize: NSFont.smallSystemFontSize)
-                                ]
-                            ),
-                            Application.AboutPanelOptionKey(
-                                rawValue: "Copyright"
-                            ): "© 2022 Woodbytes"
-                        ]
+                            Application.AboutPanelOptionKey.credits: credits,
+                            Application.AboutPanelOptionKey(rawValue: "Copyright"): "© 2022 Woodbytes"]
                     )
                 }
             }
@@ -55,3 +47,21 @@ struct PlayableApp: App {
 #endif
     }
 }
+
+// MARK: - Private Helper
+
+private extension PlayableApp {
+    var credits: NSAttributedString {
+        let result = NSMutableAttributedString()
+
+        let note = NSAttributedString(
+            string: "Never miss a live streaming podcast\n",
+            attributes: [.font: NSFont.boldSystemFont(ofSize: NSFont.smallSystemFontSize)]
+        )
+
+        result.append(note)
+
+        return result
+    }
+}
+

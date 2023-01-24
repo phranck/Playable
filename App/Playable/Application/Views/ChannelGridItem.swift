@@ -6,7 +6,6 @@
 // Created at: 14.01.23
 //
 
-import CachedAsyncImage
 import PlayableFoundation
 import PlayableParse
 import SFSafeSymbols
@@ -27,17 +26,7 @@ public struct ChannelGridItem: View {
     public var body: some View {
         VStack {
             HStack(alignment: .top) {
-                // Cover
-                AsyncImage(url: channel.coverartThumbnail200?.url) { image in
-                    image
-                        .renderingMode(.original)
-                        .resizable()
-                } placeholder: {
-                    Image(systemSymbol: .photoCircleFill)
-                        .resizable()
-                        .frame(maxWidth: .infinity, maxHeight: .infinity)
-                }
-                .frame(width: imageSize, height: imageSize)
+                CoverImage(channel: channel, imageSize: $imageSize)
 
                 // Title & Description
                 VStack(alignment: .leading, spacing: 8) {
@@ -55,7 +44,7 @@ public struct ChannelGridItem: View {
                 .padding(10)
 
                 Spacer(minLength: 1)
-
+#if os(iOS)
                 VStack {
                     Spacer()
                     Image(systemSymbol: .playCircleFill)
@@ -64,6 +53,7 @@ public struct ChannelGridItem: View {
                     Spacer()
                 }
                 .padding()
+#endif
             }
             .frame(maxWidth: .infinity)
         }
@@ -76,13 +66,51 @@ public struct ChannelGridItem: View {
     }
 }
 
-// MARK: - Private Helper
+struct CoverImage: View {
+    @State private var isHovered: Bool = false
+    let channel: Channel
+    @Binding var imageSize: CGFloat
 
-private extension URLCache {
-    static let imageCache = URLCache(
-        memoryCapacity: 50_000_000,
-        diskCapacity: 1_000_000_000
-    )
+    var body: some View {
+        AsyncImage(
+            url: channel.coverartThumbnail200?.url,
+            content: coverImage,
+            placeholder: coverPlaceholderImage
+        )
+        .frame(width: imageSize, height: imageSize)
+#if os(macOS)
+        .overlay {
+            Color.black
+                .opacity(isHovered ? 0.75 : 0)
+                .overlay {
+                    Image(systemSymbol: .playCircleFill)
+                        .symbolRenderingMode(.hierarchical)
+                        .font(.system(size: 36))
+                        .bold()
+                        .foregroundColor(.white)
+                        .opacity(isHovered ? 1 : 0)
+                }
+                .animation(.easeInOut(duration: 0.05), value: isHovered)
+        }
+        .onHover { hover in
+            isHovered = hover
+        }
+#endif
+    }
+}
+
+private extension CoverImage {
+    func coverImage(_ image: Image) -> some View {
+        image
+            .renderingMode(.original)
+            .resizable()
+    }
+
+    func coverPlaceholderImage() -> some View {
+        Image(systemSymbol: .photoCircleFill)
+            .resizable()
+            .frame(maxWidth: .infinity, maxHeight: .infinity)
+    }
 }
 
 // MARK: - Preview

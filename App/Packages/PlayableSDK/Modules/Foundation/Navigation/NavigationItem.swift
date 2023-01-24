@@ -9,29 +9,37 @@
 import SFSafeSymbols
 import SwiftUI
 
-public enum SidebarItem: Int, Identifiable, CaseIterable {
+public enum NavigationGroups: Int, Identifiable, CaseIterable {
+    public var id: Int { rawValue }
+
+    case podcasts = 0
+    case radio
+    case general
+}
+
+public enum NavigationItem: Int, Identifiable, CaseIterable {
     public var id: Int { rawValue }
 
     case live = 0
-    case all
-    case favorites
+    case discover
+    case subscribed
     case popular
     case featured
 }
 
-public extension SidebarItem {
-    var title: LocalizedStringKey {
+public extension NavigationItem {
+    var title: String {
         switch self {
         case .live:
-            return LocalizedStringKey("Live")
-        case .all:
-            return LocalizedStringKey("All")
-        case .favorites:
-            return LocalizedStringKey("Favorites")
+            return "Live"
+        case .discover:
+            return "Discover"
+        case .subscribed:
+            return "Subscribed"
         case .popular:
-            return LocalizedStringKey("Popular")
+            return "Popular"
         case .featured:
-            return LocalizedStringKey("Featured")
+            return "Featured"
         }
     }
 
@@ -39,14 +47,14 @@ public extension SidebarItem {
         switch self {
         case .live:
             return .antennaRadiowavesLeftAndRight
-        case .all:
-            return .waveform
-        case .favorites:
-            return .starCircleFill
+        case .discover:
+            return .waveformAndMagnifyingglass
+        case .subscribed:
+            return .checklistChecked
         case .popular:
-            return .chartLineUptrendXyaxisCircleFill
+            return .chartLineUptrendXyaxis
         case .featured:
-            return .handThumbsupFill
+            return .medal
         }
     }
 
@@ -54,9 +62,9 @@ public extension SidebarItem {
         switch self {
         case .live:
             return KeyboardShortcut("1", modifiers: .command)
-        case .all:
+        case .discover:
             return KeyboardShortcut("2", modifiers: .command)
-        case .favorites:
+        case .subscribed:
             return KeyboardShortcut("3", modifiers: .command)
         case .popular:
             return KeyboardShortcut("4", modifiers: .command)
@@ -64,4 +72,8 @@ public extension SidebarItem {
             return KeyboardShortcut("5", modifiers: .command)
         }
     }
+}
+
+public extension NavigationItem {
+    
 }

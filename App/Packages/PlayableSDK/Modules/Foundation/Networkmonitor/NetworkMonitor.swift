@@ -11,18 +11,17 @@ import Network
 import SwiftUI
 
 /// An enum to handle the network status
-public enum CFNetworkStatus: Equatable {
+public enum NetworkStatus: Equatable {
     case connected
     case disconnected(NWPath.UnsatisfiedReason)
 }
 
-/// Based on this answer: https://stackoverflow.com/a/65819059/
-public final class CFNetworkMonitor: ObservableObject {
+public final class NetworkMonitor: ObservableObject {
     private let monitor = NWPathMonitor()
-    private let queue = DispatchQueue(label: "NetworkMonitor")
+    private let queue = DispatchQueue(label: "\(NetworkMonitor.self)")
 
-    public static let shared = CFNetworkMonitor()
-    @Published public var status: CFNetworkStatus = .connected
+    public static let shared = NetworkMonitor()
+    @Published public var status: NetworkStatus = .connected
 
     private init() {
         monitor.pathUpdateHandler = { [weak self] path in

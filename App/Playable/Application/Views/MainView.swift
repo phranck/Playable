@@ -10,16 +10,26 @@ import PlayableFoundation
 import PlayableParse
 import SwiftUI
 
-
-public struct NavigationItemGroup: Identifiable, Hashable {
+public struct NavigationItemGroupModel: Identifiable, Hashable {
     public let id = UUID().uuidString
 
-    public let header: String?
+    public let title: String?
+    public let image: Image
     public let items: [NavigationItem]
     public let isCollapsable: Bool
 }
 
-public struct NavigationItem: Identifiable, Hashable {
+extension NavigationItemGroupModel: Equatable {
+    public static func == (lhs: Self, rhs: Self) -> Bool {
+        lhs.id == rhs.id
+    }
+
+    public func hash(into hasher: inout Hasher) {
+        hasher.combine(id)
+    }
+}
+
+public struct NavigationItemModel: Identifiable, Hashable {
     public let id = UUID().uuidString
 
     public let title: String
@@ -27,8 +37,8 @@ public struct NavigationItem: Identifiable, Hashable {
     public let view: AnyView
 }
 
-extension NavigationItem: Equatable {
-    public static func == (lhs: NavigationItem, rhs: NavigationItem) -> Bool {
+extension NavigationItemModel: Equatable {
+    public static func == (lhs: Self, rhs: Self) -> Bool {
         lhs.id == rhs.id
     }
 
@@ -45,7 +55,7 @@ public struct MainView: View {
     @Environment(\.horizontalSizeClass) var horizontalSizeClass
 #endif
     @State private var searchText = ""
-    @State private var selectedSidebarItem: SidebarItem = .all
+    @State private var selectedSidebarItem: NavigationItem = .discover
     @State private var sidebarVisibility: NavigationSplitViewVisibility = .automatic
     @StateObject var channelService = ChannelService()
 
@@ -71,36 +81,36 @@ public struct MainView: View {
             searchText: $searchText
         )
 #endif
-
     }
 }
 
 #if os(macOS)
 public struct MacOSNavigationView: View {
-    @Binding var selectedSidebarItem: SidebarItem
+    @Binding var selectedSidebarItem: NavigationItem
     @Binding var sidebarVisibility: NavigationSplitViewVisibility
     @ObservedObject var channelService: ChannelService
     @Binding var searchText: String
 
     public var body: some View {
         NavigationSplitView(columnVisibility: $sidebarVisibility) {
-            List(SidebarItem.allCases, selection: $selectedSidebarItem) { item in
+            List(NavigationItem.allCases, selection: $selectedSidebarItem) { item in
                 NavigationLink(value: item) {
-                    NavigationItemView(item: item, count: 0)
+                    NavigationItemView(item: item, count: channelService.channels.count)
                 }
             }
             .listStyle(SidebarListStyle())
             .navigationSplitViewColumnWidth(min: 200, ideal: 230, max: 280)
+            .searchable(text: $searchText)
         } detail: {
             switch selectedSidebarItem {
             case .live:
                 Text(selectedSidebarItem.title)
 
-            case .all:
+            case .discover:
                 ChannelGridView()
                     .navigationSplitViewColumnWidth(min: 790, ideal: 790)
 
-            case .favorites:
+            case .subscribed:
                 Text(selectedSidebarItem.title)
 
             case .popular:
@@ -112,11 +122,9 @@ public struct MacOSNavigationView: View {
         }
         .environmentObject(channelService)
         .navigationSplitViewStyle(.balanced)
-        .searchable(text: $searchText)
         .toolbar {
             ToolbarItem(placement: .secondaryAction) {
-                Text("PlayerView Placeholder")
-                    .frame(height: 164)
+                EmptyView()
             }
         }
     }
@@ -125,7 +133,7 @@ public struct MacOSNavigationView: View {
 
 #if os(iOS)
 public struct IOSCompactNavigationView: View {
-    @Binding var selectedSidebarItem: SidebarItem
+    @Binding var selectedSidebarItem: NavigationItem
 
     public var body: some View {
         TabView(selection: $selectedSidebarItem) {
@@ -151,7 +159,7 @@ public struct IOSCompactNavigationView: View {
 }
 
 struct IOSNavigationView: View {
-    @Binding var selectedSidebarItem: SidebarItem
+    @Binding var selectedSidebarItem: NavigationItem
     @Binding var sidebarVisibility: NavigationSplitViewVisibility
     @ObservedObject var channelService: ChannelService
     @Binding var searchText: String
@@ -159,7 +167,7 @@ struct IOSNavigationView: View {
     public var body: some View {
         NavigationSplitView(columnVisibility: $sidebarVisibility) {
             List {
-                ForEach(SidebarItem.allCases) { item in
+                ForEach(NavigationItem.allCases) { item in
                     NavigationLink(value: item) {
                         NavigationItemView(item: item, count: 0)
                     }
@@ -172,7 +180,7 @@ struct IOSNavigationView: View {
             case .live:
                 Text(selectedSidebarItem.title)
 
-            case .all:
+            case .discover:
                 ChannelGridView()
                     .navigationSplitViewColumnWidth(min: 790, ideal: 790)
 
@@ -191,8 +199,7 @@ struct IOSNavigationView: View {
         .searchable(text: $searchText)
         .toolbar {
             ToolbarItem(placement: .secondaryAction) {
-                Text("PlayerView Placeholder")
-                    .frame(height: 164)
+                EmptyView()
             }
         }
     }

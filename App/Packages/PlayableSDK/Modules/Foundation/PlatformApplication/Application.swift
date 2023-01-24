@@ -38,3 +38,22 @@ public extension Application {
     static func handleRemoteNotification(userInfo: [AnyHashable: Any]) {
     }
 }
+
+public extension Application {
+    // swiftlint: disable force_unwrapping
+    internal var infoPlistDictionary: [String: Any] {
+        Bundle.main.infoDictionary!
+    }
+
+    static var appName: String {
+        Application.shared.infoPlistDictionary["CFBundleName"] as? String ?? "n/a"
+    }
+
+    static var version: String {
+        Application.shared.infoPlistDictionary["CFBundleShortVersionString"] as? String ?? "n/a"
+    }
+
+    static var buildNumber: String {
+        Application.shared.infoPlistDictionary["CFBundleVersion"] as? String ?? "n/a"
+    }
+}

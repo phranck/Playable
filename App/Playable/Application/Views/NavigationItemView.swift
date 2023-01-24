@@ -11,30 +11,31 @@ import PlayableFoundation
 import SwiftUI
 
 struct NavigationItemView: View {
-    let item: SidebarItem
+    let item: NavigationItem
     let count: Int
 
     var body: some View {
-        HStack(spacing: 8) {
-            Image(systemSymbol: item.icon)
-                .symbolRenderingMode(.hierarchical)
-                .font(.title)
-
-            Text(item.title)
-                .font(.title3)
+        HStack {
+            Label(item.title, systemSymbol: item.icon)
+                .fontDesign(.rounded)
+                .padding(.vertical, 4)
+                .padding(.horizontal, 8)
+                .cornerRadius(5)
 
             Spacer()
+
+            Text("\(count)")
+                .font(.body)
+                .padding(.horizontal, 6)
+                .padding(.vertical, 2)
+
         }
-        .fontDesign(.rounded)
-        .padding(.vertical, 4)
-        .padding(.horizontal, 8)
-        .cornerRadius(5)
     }
 }
 
 struct SidebarItemView_Previews: PreviewProvider {
     static var previews: some View {
-        NavigationItemView(item: .all, count: 3)
+        NavigationItemView(item: .discover, count: 3)
             .frame(width: 230)
     }
 }

@@ -7,23 +7,24 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FD2C7DFC29805CEC00DC7A29 /* SwiftUINavigation in Frameworks */ = {isa = PBXBuildFile; productRef = FD2C7DFB29805CEC00DC7A29 /* SwiftUINavigation */; };
+		FD2C7DFF29805D8200DC7A29 /* Dependencies in Frameworks */ = {isa = PBXBuildFile; productRef = FD2C7DFE29805D8200DC7A29 /* Dependencies */; };
+		FD2C7E0229805DC700DC7A29 /* IdentifiedCollections in Frameworks */ = {isa = PBXBuildFile; productRef = FD2C7E0129805DC700DC7A29 /* IdentifiedCollections */; };
 		FD3D8FB829388A6A006BD359 /* PlayableApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD3D8FB729388A6A006BD359 /* PlayableApp.swift */; };
 		FD3D8FBC29388A6B006BD359 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FD3D8FBB29388A6B006BD359 /* Assets.xcassets */; };
+		FD4F6571297CCB3F000036EB /* PlayableFoundation in Frameworks */ = {isa = PBXBuildFile; productRef = FD4F6570297CCB3F000036EB /* PlayableFoundation */; };
+		FD4F6573297CCB3F000036EB /* PlayableParse in Frameworks */ = {isa = PBXBuildFile; productRef = FD4F6572297CCB3F000036EB /* PlayableParse */; };
+		FD4F6575297CCB3F000036EB /* PlayableUI in Frameworks */ = {isa = PBXBuildFile; productRef = FD4F6574297CCB3F000036EB /* PlayableUI */; };
 		FD5011FE29388CF300DFD5A6 /* SwiftyBeaver in Frameworks */ = {isa = PBXBuildFile; productRef = FD5011FD29388CF300DFD5A6 /* SwiftyBeaver */; };
 		FD50120729388D9C00DFD5A6 /* SystemColors in Frameworks */ = {isa = PBXBuildFile; productRef = FD50120629388D9C00DFD5A6 /* SystemColors */; };
 		FD5F4A8029773BDF0027B5CF /* ParseSwift in Frameworks */ = {isa = PBXBuildFile; productRef = FD5F4A7F29773BDF0027B5CF /* ParseSwift */; };
-		FD5F4A8229773C1F0027B5CF /* PlayableFoundation in Frameworks */ = {isa = PBXBuildFile; productRef = FD5F4A8129773C1F0027B5CF /* PlayableFoundation */; };
-		FD5F4A8429773C1F0027B5CF /* PlayableParse in Frameworks */ = {isa = PBXBuildFile; productRef = FD5F4A8329773C1F0027B5CF /* PlayableParse */; };
-		FD5F4A8629773C1F0027B5CF /* PlayableUI in Frameworks */ = {isa = PBXBuildFile; productRef = FD5F4A8529773C1F0027B5CF /* PlayableUI */; };
 		FDAB73FB2970A6670093B7FE /* PlayableAppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDAB73FA2970A6670093B7FE /* PlayableAppDelegate.swift */; };
 		FDB4ABEA2974665D00BDDF7C /* SFSafeSymbols in Frameworks */ = {isa = PBXBuildFile; productRef = FDB4ABE92974665D00BDDF7C /* SFSafeSymbols */; };
 		FDD3C5FF2970ADC70039FF24 /* NotificationCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDD3C5FE2970ADC70039FF24 /* NotificationCoordinator.swift */; };
-		FDF6B2852979B2FF00CC5C8E /* IONavigation in Frameworks */ = {isa = PBXBuildFile; productRef = FDF6B2842979B2FF00CC5C8E /* IONavigation */; };
 		FDF6B2872979B4DD00CC5C8E /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDF6B2862979B4DD00CC5C8E /* MainView.swift */; };
 		FDF6B2892979B4F600CC5C8E /* NavigationItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDF6B2882979B4F600CC5C8E /* NavigationItemView.swift */; };
 		FDF6B28B2979B4FC00CC5C8E /* ChannelGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDF6B28A2979B4FC00CC5C8E /* ChannelGridView.swift */; };
 		FDF6B28D2979B4FF00CC5C8E /* ChannelGridItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDF6B28C2979B4FF00CC5C8E /* ChannelGridItem.swift */; };
-		FDF6B2902979E39E00CC5C8E /* Conditional.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDF6B28F2979E39E00CC5C8E /* Conditional.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,7 +44,6 @@
 		FDF6B2882979B4F600CC5C8E /* NavigationItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationItemView.swift; sourceTree = "<group>"; };
 		FDF6B28A2979B4FC00CC5C8E /* ChannelGridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelGridView.swift; sourceTree = "<group>"; };
 		FDF6B28C2979B4FF00CC5C8E /* ChannelGridItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelGridItem.swift; sourceTree = "<group>"; };
-		FDF6B28F2979E39E00CC5C8E /* Conditional.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Conditional.swift; sourceTree = "<group>"; };
 		FDF6B291297A11AC00CC5C8E /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; name = .gitignore; path = ../.gitignore; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -52,28 +52,22 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FD4F6573297CCB3F000036EB /* PlayableParse in Frameworks */,
 				FDB4ABEA2974665D00BDDF7C /* SFSafeSymbols in Frameworks */,
-				FD5F4A8629773C1F0027B5CF /* PlayableUI in Frameworks */,
 				FD50120729388D9C00DFD5A6 /* SystemColors in Frameworks */,
-				FD5F4A8229773C1F0027B5CF /* PlayableFoundation in Frameworks */,
-				FDF6B2852979B2FF00CC5C8E /* IONavigation in Frameworks */,
+				FD2C7DFF29805D8200DC7A29 /* Dependencies in Frameworks */,
 				FD5F4A8029773BDF0027B5CF /* ParseSwift in Frameworks */,
+				FD2C7E0229805DC700DC7A29 /* IdentifiedCollections in Frameworks */,
+				FD2C7DFC29805CEC00DC7A29 /* SwiftUINavigation in Frameworks */,
+				FD4F6575297CCB3F000036EB /* PlayableUI in Frameworks */,
 				FD5011FE29388CF300DFD5A6 /* SwiftyBeaver in Frameworks */,
-				FD5F4A8429773C1F0027B5CF /* PlayableParse in Frameworks */,
+				FD4F6571297CCB3F000036EB /* PlayableFoundation in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		FD270923293932E70022571F /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				FDF6B28F2979E39E00CC5C8E /* Conditional.swift */,
-			);
-			path = Views;
-			sourceTree = "<group>";
-		};
 		FD270924293933550022571F /* Packages */ = {
 			isa = PBXGroup;
 			children = (
@@ -109,20 +103,27 @@
 				FD50120829388DCA00DFD5A6 /* Application */,
 				FDD3C5FD2970ADAB0039FF24 /* Notifications */,
 				FD50120929388DDA00DFD5A6 /* Supporting Files */,
-				FD270923293932E70022571F /* Views */,
 			);
 			path = Playable;
 			sourceTree = "<group>";
 		};
-		FD50120829388DCA00DFD5A6 /* Application */ = {
+		FD4F656F297C5F46000036EB /* Views */ = {
 			isa = PBXGroup;
 			children = (
 				FDF6B28C2979B4FF00CC5C8E /* ChannelGridItem.swift */,
 				FDF6B28A2979B4FC00CC5C8E /* ChannelGridView.swift */,
 				FDF6B2862979B4DD00CC5C8E /* MainView.swift */,
+				FDF6B2882979B4F600CC5C8E /* NavigationItemView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		FD50120829388DCA00DFD5A6 /* Application */ = {
+			isa = PBXGroup;
+			children = (
 				FD3D8FB729388A6A006BD359 /* PlayableApp.swift */,
 				FDAB73FA2970A6670093B7FE /* PlayableAppDelegate.swift */,
-				FDF6B2882979B4F600CC5C8E /* NavigationItemView.swift */,
+				FD4F656F297C5F46000036EB /* Views */,
 			);
 			path = Application;
 			sourceTree = "<group>";
@@ -175,10 +176,12 @@
 				FD50120629388D9C00DFD5A6 /* SystemColors */,
 				FDB4ABE92974665D00BDDF7C /* SFSafeSymbols */,
 				FD5F4A7F29773BDF0027B5CF /* ParseSwift */,
-				FD5F4A8129773C1F0027B5CF /* PlayableFoundation */,
-				FD5F4A8329773C1F0027B5CF /* PlayableParse */,
-				FD5F4A8529773C1F0027B5CF /* PlayableUI */,
-				FDF6B2842979B2FF00CC5C8E /* IONavigation */,
+				FD4F6570297CCB3F000036EB /* PlayableFoundation */,
+				FD4F6572297CCB3F000036EB /* PlayableParse */,
+				FD4F6574297CCB3F000036EB /* PlayableUI */,
+				FD2C7DFB29805CEC00DC7A29 /* SwiftUINavigation */,
+				FD2C7DFE29805D8200DC7A29 /* Dependencies */,
+				FD2C7E0129805DC700DC7A29 /* IdentifiedCollections */,
 			);
 			productName = Podlive;
 			productReference = FD3D8FB429388A6A006BD359 /* Playable.app */;
@@ -214,7 +217,9 @@
 				FD50120529388D9C00DFD5A6 /* XCRemoteSwiftPackageReference "swiftui-system-colors" */,
 				FDB4ABE82974665D00BDDF7C /* XCRemoteSwiftPackageReference "SFSafeSymbols" */,
 				FD5F4A7E29773BDF0027B5CF /* XCRemoteSwiftPackageReference "Parse-Swift" */,
-				FDF6B2832979B2FF00CC5C8E /* XCRemoteSwiftPackageReference "IONavigation" */,
+				FD2C7DFA29805CEC00DC7A29 /* XCRemoteSwiftPackageReference "swiftui-navigation" */,
+				FD2C7DFD29805D8200DC7A29 /* XCRemoteSwiftPackageReference "swift-dependencies" */,
+				FD2C7E0029805DC700DC7A29 /* XCRemoteSwiftPackageReference "swift-identified-collections" */,
 			);
 			productRefGroup = FD3D8FB529388A6A006BD359 /* Products */;
 			projectDirPath = "";
@@ -241,7 +246,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FDF6B2902979E39E00CC5C8E /* Conditional.swift in Sources */,
 				FDF6B28B2979B4FC00CC5C8E /* ChannelGridView.swift in Sources */,
 				FDF6B28D2979B4FF00CC5C8E /* ChannelGridItem.swift in Sources */,
 				FDAB73FB2970A6670093B7FE /* PlayableAppDelegate.swift in Sources */,
@@ -488,6 +492,30 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		FD2C7DFA29805CEC00DC7A29 /* XCRemoteSwiftPackageReference "swiftui-navigation" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/pointfreeco/swiftui-navigation.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.5.0;
+			};
+		};
+		FD2C7DFD29805D8200DC7A29 /* XCRemoteSwiftPackageReference "swift-dependencies" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/pointfreeco/swift-dependencies.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.1.4;
+			};
+		};
+		FD2C7E0029805DC700DC7A29 /* XCRemoteSwiftPackageReference "swift-identified-collections" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/pointfreeco/swift-identified-collections.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.6.0;
+			};
+		};
 		FD5011FC29388CF300DFD5A6 /* XCRemoteSwiftPackageReference "SwiftyBeaver" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/SwiftyBeaver/SwiftyBeaver.git";
@@ -520,17 +548,36 @@
 				minimumVersion = 4.0.0;
 			};
 		};
-		FDF6B2832979B2FF00CC5C8E /* XCRemoteSwiftPackageReference "IONavigation" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/kaevinio/IONavigation.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 1.0.0;
-			};
-		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		FD2C7DFB29805CEC00DC7A29 /* SwiftUINavigation */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FD2C7DFA29805CEC00DC7A29 /* XCRemoteSwiftPackageReference "swiftui-navigation" */;
+			productName = SwiftUINavigation;
+		};
+		FD2C7DFE29805D8200DC7A29 /* Dependencies */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FD2C7DFD29805D8200DC7A29 /* XCRemoteSwiftPackageReference "swift-dependencies" */;
+			productName = Dependencies;
+		};
+		FD2C7E0129805DC700DC7A29 /* IdentifiedCollections */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FD2C7E0029805DC700DC7A29 /* XCRemoteSwiftPackageReference "swift-identified-collections" */;
+			productName = IdentifiedCollections;
+		};
+		FD4F6570297CCB3F000036EB /* PlayableFoundation */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = PlayableFoundation;
+		};
+		FD4F6572297CCB3F000036EB /* PlayableParse */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = PlayableParse;
+		};
+		FD4F6574297CCB3F000036EB /* PlayableUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = PlayableUI;
+		};
 		FD5011FD29388CF300DFD5A6 /* SwiftyBeaver */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = FD5011FC29388CF300DFD5A6 /* XCRemoteSwiftPackageReference "SwiftyBeaver" */;
@@ -546,27 +593,10 @@
 			package = FD5F4A7E29773BDF0027B5CF /* XCRemoteSwiftPackageReference "Parse-Swift" */;
 			productName = ParseSwift;
 		};
-		FD5F4A8129773C1F0027B5CF /* PlayableFoundation */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = PlayableFoundation;
-		};
-		FD5F4A8329773C1F0027B5CF /* PlayableParse */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = PlayableParse;
-		};
-		FD5F4A8529773C1F0027B5CF /* PlayableUI */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = PlayableUI;
-		};
 		FDB4ABE92974665D00BDDF7C /* SFSafeSymbols */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = FDB4ABE82974665D00BDDF7C /* XCRemoteSwiftPackageReference "SFSafeSymbols" */;
 			productName = SFSafeSymbols;
-		};
-		FDF6B2842979B2FF00CC5C8E /* IONavigation */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = FDF6B2832979B2FF00CC5C8E /* XCRemoteSwiftPackageReference "IONavigation" */;
-			productName = IONavigation;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
