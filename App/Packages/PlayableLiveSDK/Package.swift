@@ -4,7 +4,7 @@
 import PackageDescription
 
 let package = Package(
-    name: "PlayableSDK",
+    name: "PlayableLiveSDK",
     defaultLocalization: "en",
     platforms: [
         .iOS("16.1"),
@@ -12,7 +12,7 @@ let package = Package(
     ],
     products: [
         .library(name: "PlayableFoundation", targets: ["PlayableFoundation"]),
-        .library(name: "PlayableParse", targets: ["PlayableParse"]),
+        .library(name: "PlayableParse", targets: ["PlayableParse"])
     ],
     dependencies: [
         .package(url: "https://github.com/parse-community/Parse-Swift", from: "4.0.0"),

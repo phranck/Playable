@@ -8,14 +8,15 @@
 
 import PlayableFoundation
 import PlayableParse
-import PlayableUI
 import SwiftUI
+
+// swiftlint:disable indentation_width
 
 @main
 struct PlayableApp: App {
-#if os(macOS)
+#if canImport(AppKit)
     @NSApplicationDelegateAdaptor(PlayableAppDelegate.self) var appDelegate
-#else
+#elseif canImport(UIKit)
     @UIApplicationDelegateAdaptor(PlayableAppDelegate.self) var appDelegate
 #endif
 
@@ -29,17 +30,18 @@ struct PlayableApp: App {
         WindowGroup {
             MainView()
         }
-#if os(macOS)
-        .windowToolbarStyle(UnifiedWindowToolbarStyle())
+#if canImport(AppKit)
+        .windowToolbarStyle(UnifiedCompactWindowToolbarStyle())
+        .windowStyle(HiddenTitleBarWindowStyle())
         .defaultSize(width: 960, height: 520)
         .defaultPosition(.center)
         .commands {
             CommandGroup(replacing: .appInfo) {
-                Button("About \(Application.appName)") {
+                Button("About \(PlatformApplication.appName)") {
                     NSApp.orderFrontStandardAboutPanel(
                         options: [
-                            Application.AboutPanelOptionKey.credits: credits,
-                            Application.AboutPanelOptionKey(rawValue: "Copyright"): "© 2022 Woodbytes"]
+                            PlatformApplication.AboutPanelOptionKey.credits: credits,
+                            PlatformApplication.AboutPanelOptionKey(rawValue: "Copyright"): "© 2022 Woodbytes"]
                     )
                 }
             }
@@ -50,18 +52,13 @@ struct PlayableApp: App {
 
 // MARK: - Private Helper
 
+#if canImport(AppKit)
 private extension PlayableApp {
     var credits: NSAttributedString {
-        let result = NSMutableAttributedString()
-
-        let note = NSAttributedString(
+        return NSAttributedString(
             string: "Never miss a live streaming podcast\n",
             attributes: [.font: NSFont.boldSystemFont(ofSize: NSFont.smallSystemFontSize)]
         )
-
-        result.append(note)
-
-        return result
     }
 }
-
+#endif

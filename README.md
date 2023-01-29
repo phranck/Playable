@@ -2,7 +2,6 @@
 [![Mastodon: @Podlive](https://img.shields.io/badge/Mastodon-@Podlive-ca94d4.svg?style=flat)](https://chaos.social/@Podlive)
 [![](https://img.shields.io/endpoint?url=https%3A%2F%2Fswiftpackageindex.com%2Fapi%2Fpackages%2Fpointfreeco%2Fswift-composable-architecture%2Fbadge%3Ftype%3Dswift-versions)](https://swiftpackageindex.com/phranck/RadioBrowserKit)
 
-
 # Playable
 
 Playable is a client for macOS to listen to live streaming podcasts. It currently supports all livestreams being broadcasted via [Ultraschall](http://ultraschall.fm) with [Studio Link On Air](https://studio-link.de).
@@ -13,7 +12,9 @@ So, here is an ongoing-by-progress changing screenshot. 😃
 ![](screenshot1.png)
 
 ## Resources and Documentations
-* [iTuneSearchAPI](https://developer.apple.com/library/archive/documentation/AudioVideo/Conceptual/iTuneSearchAPI/Searching.html)
+* [iTunes Search API 1](https://developer.apple.com/library/archive/documentation/AudioVideo/Conceptual/iTuneSearchAPI/index.html)
+* [iTunes Search API 2](https://performance-partners.apple.com/search-api)
+* [Taddy’s Podcast API](https://taddy.org/developers/podcast-api)
 * [AUDD: MUSIC RECOGNITION API](https://www.audd.io)
 
 ## Contact

@@ -39,7 +39,7 @@ private extension PlayableParseUser {
             return
         }
 
-        Application.registerForRemoteNotifications { result in
+        PlatformApplication.registerForRemoteNotifications { result in
             switch result {
             case .success:
                 log.debug("Successfully registered for Remote Notifications")

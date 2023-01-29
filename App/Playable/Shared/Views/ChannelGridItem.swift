@@ -12,6 +12,7 @@ import SFSafeSymbols
 import SwiftUI
 import SystemColors
 
+// swiftlint:disable indentation_width
 public struct ChannelGridItem: View {
     let channel: Channel
     @Binding var imageSize: CGFloat
@@ -44,7 +45,7 @@ public struct ChannelGridItem: View {
                 .padding(10)
 
                 Spacer(minLength: 1)
-#if os(iOS)
+#if canImport(UIKit)
                 VStack {
                     Spacer()
                     Image(systemSymbol: .playCircleFill)
@@ -67,7 +68,7 @@ public struct ChannelGridItem: View {
 }
 
 struct CoverImage: View {
-    @State private var isHovered: Bool = false
+    @State private var isHovered = false
     let channel: Channel
     @Binding var imageSize: CGFloat
 
@@ -78,7 +79,7 @@ struct CoverImage: View {
             placeholder: coverPlaceholderImage
         )
         .frame(width: imageSize, height: imageSize)
-#if os(macOS)
+#if canImport(AppKit)
         .overlay {
             Color.black
                 .opacity(isHovered ? 0.75 : 0)

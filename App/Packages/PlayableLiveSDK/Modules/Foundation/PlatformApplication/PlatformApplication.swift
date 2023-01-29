@@ -9,15 +9,15 @@
 import SwiftUI
 import UserNotifications
 
-#if os(macOS)
-public typealias Application = NSApplication
-public typealias ApplicationDelegate = NSApplicationDelegate
-#else
-public typealias Application = UIApplication
-public typealias ApplicationDelegate = UIApplicationDelegate
+#if canImport(AppKit)
+public typealias PlatformApplication = NSApplication
+public typealias PlatformApplicationDelegate = NSApplicationDelegate
+#elseif canImport(UIKit)
+public typealias PlatformApplication = UIApplication
+public typealias PlatformApplicationDelegate = UIApplicationDelegate
 #endif
 
-public extension Application {
+public extension PlatformApplication {
     static func registerForRemoteNotifications(completion: @escaping (Result<Bool, Error>) -> Void ) {
         let notificationCenter = UNUserNotificationCenter.current()
 
@@ -39,21 +39,21 @@ public extension Application {
     }
 }
 
-public extension Application {
+public extension PlatformApplication {
     // swiftlint: disable force_unwrapping
     internal var infoPlistDictionary: [String: Any] {
         Bundle.main.infoDictionary!
     }
 
     static var appName: String {
-        Application.shared.infoPlistDictionary["CFBundleName"] as? String ?? "n/a"
+        PlatformApplication.shared.infoPlistDictionary["CFBundleName"] as? String ?? "n/a"
     }
 
     static var version: String {
-        Application.shared.infoPlistDictionary["CFBundleShortVersionString"] as? String ?? "n/a"
+        PlatformApplication.shared.infoPlistDictionary["CFBundleShortVersionString"] as? String ?? "n/a"
     }
 
     static var buildNumber: String {
-        Application.shared.infoPlistDictionary["CFBundleVersion"] as? String ?? "n/a"
+        PlatformApplication.shared.infoPlistDictionary["CFBundleVersion"] as? String ?? "n/a"
     }
 }

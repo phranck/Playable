@@ -3,11 +3,7 @@
 // Copyright (c) 2015-2023 Woodbytes, <phranck@mac.com>
 //
 // Created by: Frank Gregor
-// Created at: 12.01.23
+// Created at: 27.01.23
 //
 
-import Foundation
-
-struct NotificationCoordinator {
-	
-}
+import SwiftUI

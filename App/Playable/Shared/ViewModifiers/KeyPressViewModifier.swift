@@ -9,6 +9,7 @@
 import SwiftUI
 
 /// Keyboard layout independent keycodes
+@available(macOS 12, *)
 public enum ViewKeyCode: UInt16 {
     case Return        = 0x24
     case Tab           = 0x30
@@ -59,10 +60,12 @@ public enum ViewKeyCode: UInt16 {
     case UpArrow       = 0x7E
 }
 
+// swiftlint:disable indentation_width
 public extension View {
+    @available(macOS 12, *)
     @available(iOS, deprecated, message: "The closure of this modifier is being ignored. It just returns the view it is attached to.")
     func onKeyPress(_ keyCode: ViewKeyCode, action: @escaping () -> Void) -> some View {
-#if os(macOS)
+#if canImport(AppKit)
         modifier(KeyPressViewModifier(keyCode, action: action))
 #else
         self
@@ -70,7 +73,7 @@ public extension View {
     }
 }
 
-#if os(macOS)
+#if canImport(AppKit)
 import Carbon.HIToolbox
 
 // MARK: - Private API
@@ -109,7 +112,6 @@ private struct KeyCodeView: NSViewRepresentable {
 }
 
 private extension KeyCodeView {
-    // swiftlint:disable type_name
     final class _KeyCodeView: NSView {
         var keyCode: UInt16 = 0
         var action: (() -> Void) = {}
