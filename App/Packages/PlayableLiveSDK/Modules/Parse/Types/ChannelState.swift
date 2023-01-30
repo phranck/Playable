@@ -26,21 +26,21 @@ public extension ChannelState {
 
         switch self {
         case .live:
-            return NSLocalizedString("channel state live", bundle: bundle, value: "Live", comment: "channel state live")
+            return String(localized: "Live", bundle: bundle, comment: "channel state live")
         case .online:
-            return NSLocalizedString("channel state online", bundle: bundle, value: "Online", comment: "channel state online")
+            return String(localized: "Online", bundle: bundle, comment: "channel state online")
         case .preshow:
-            return NSLocalizedString("channel state preshow", bundle: bundle, value: "Preshow", comment: "channel state preshow")
+            return String(localized: "Preshow", bundle: bundle, comment: "channel state preshow")
         case .postshow:
-            return NSLocalizedString("channel state postshow", bundle: bundle, value: "Postshow", comment: "channel state postshow")
+            return String(localized: "Postshow", bundle: bundle, comment: "channel state postshow")
         case .`break`:
-            return NSLocalizedString("channel state break", bundle: bundle, value: "Break", comment: "channel state break")
+            return String(localized: "Break", bundle: bundle, comment: "channel state break")
         case .test:
-            return NSLocalizedString("channel state test", bundle: bundle, value: "Test", comment: "channel state test")
+            return String(localized: "Test", bundle: bundle, comment: "channel state test")
         case .invalid:
-            return NSLocalizedString("channel state invalid", bundle: bundle, value: "Invalid", comment: "channel state invalid")
+            return String(localized: "Invalid", bundle: bundle, comment: "channel state invalid")
         case .offline:
-            return NSLocalizedString("channel state offline", bundle: bundle, value: "Offline", comment: "channel state offline")
+            return String(localized: "Offline", bundle: bundle, comment: "channel state offline")
         }
     }
 }

@@ -12,7 +12,6 @@ import SFSafeSymbols
 import SwiftUI
 import SystemColors
 
-// swiftlint:disable indentation_width
 public struct ChannelGridItem: View {
     let channel: Channel
     @Binding var imageSize: CGFloat

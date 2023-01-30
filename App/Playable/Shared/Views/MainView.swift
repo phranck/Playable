@@ -21,15 +21,15 @@ public struct MainView: View {
     public init() {}
 
     public var body: some View {
-        #if canImport(AppKit)
-        NavigationView_macOS()
+#if canImport(AppKit)
+        SidebarNavigationView()
 
-        #elseif canImport(UIKit)
+#elseif canImport(UIKit)
         if horizontalSizeClass == .compact {
-            NavigationView_iPhone()
+            TabbedNavigationView()
         } else {
-            NavigationView_iPad()
+            SidebarNavigationView()
         }
-        #endif
+#endif
     }
 }

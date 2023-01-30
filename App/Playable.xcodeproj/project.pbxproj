@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FD05653029885470005B4C4A /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = FD05652E29885470005B4C4A /* Localizable.strings */; };
 		FD0D58BF2984618500FEBA50 /* KeyPressViewModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD0D58BE2984618500FEBA50 /* KeyPressViewModifier.swift */; };
 		FD0D58C12984619600FEBA50 /* Conditional.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD0D58C02984619600FEBA50 /* Conditional.swift */; };
 		FD0D58C929846F5900FEBA50 /* NavigationMacOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD0D58C829846F5900FEBA50 /* NavigationMacOS.swift */; };
@@ -14,6 +15,8 @@
 		FD0D58CF2984820F00FEBA50 /* Tagged in Frameworks */ = {isa = PBXBuildFile; productRef = FD0D58CE2984820F00FEBA50 /* Tagged */; };
 		FD0D58D229858E3F00FEBA50 /* CasePaths in Frameworks */ = {isa = PBXBuildFile; productRef = FD0D58D129858E3F00FEBA50 /* CasePaths */; };
 		FD0D58D72985EA4E00FEBA50 /* SuperEllipse.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD0D58D62985EA4E00FEBA50 /* SuperEllipse.swift */; };
+		FD2782B92986F6BE003A14B1 /* NavigationItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD2782B82986F6BE003A14B1 /* NavigationItem.swift */; };
+		FD2782BB2986FA40003A14B1 /* NavigationItemGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD2782BA2986FA40003A14B1 /* NavigationItemGroup.swift */; };
 		FD2C7DFC29805CEC00DC7A29 /* SwiftUINavigation in Frameworks */ = {isa = PBXBuildFile; productRef = FD2C7DFB29805CEC00DC7A29 /* SwiftUINavigation */; };
 		FD2C7DFF29805D8200DC7A29 /* Dependencies in Frameworks */ = {isa = PBXBuildFile; productRef = FD2C7DFE29805D8200DC7A29 /* Dependencies */; };
 		FD2C7E0229805DC700DC7A29 /* IdentifiedCollections in Frameworks */ = {isa = PBXBuildFile; productRef = FD2C7E0129805DC700DC7A29 /* IdentifiedCollections */; };
@@ -23,9 +26,8 @@
 		FD4F6573297CCB3F000036EB /* PlayableParse in Frameworks */ = {isa = PBXBuildFile; productRef = FD4F6572297CCB3F000036EB /* PlayableParse */; };
 		FD5011FE29388CF300DFD5A6 /* SwiftyBeaver in Frameworks */ = {isa = PBXBuildFile; productRef = FD5011FD29388CF300DFD5A6 /* SwiftyBeaver */; };
 		FD50120729388D9C00DFD5A6 /* SystemColors in Frameworks */ = {isa = PBXBuildFile; productRef = FD50120629388D9C00DFD5A6 /* SystemColors */; };
-		FD505BCA29860BAB0035E80B /* NavigationView_macOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD505BC929860BAB0035E80B /* NavigationView_macOS.swift */; };
-		FD505BCC29860BD80035E80B /* NavigationView_iPad.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD505BCB29860BD80035E80B /* NavigationView_iPad.swift */; };
-		FD505BCE29860BF40035E80B /* NavigationView_iPhone.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD505BCD29860BF40035E80B /* NavigationView_iPhone.swift */; };
+		FD505BCA29860BAB0035E80B /* SidebarNavigationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD505BC929860BAB0035E80B /* SidebarNavigationView.swift */; };
+		FD505BCE29860BF40035E80B /* TabbedNavigationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD505BCD29860BF40035E80B /* TabbedNavigationView.swift */; };
 		FD5F4A8029773BDF0027B5CF /* ParseSwift in Frameworks */ = {isa = PBXBuildFile; productRef = FD5F4A7F29773BDF0027B5CF /* ParseSwift */; };
 		FDAB73FB2970A6670093B7FE /* PlayableAppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDAB73FA2970A6670093B7FE /* PlayableAppDelegate.swift */; };
 		FDB4ABEA2974665D00BDDF7C /* SFSafeSymbols in Frameworks */ = {isa = PBXBuildFile; productRef = FDB4ABE92974665D00BDDF7C /* SFSafeSymbols */; };
@@ -36,6 +38,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		FD05652F29885470005B4C4A /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Localizable.strings; sourceTree = "<group>"; };
 		FD0D58BE2984618500FEBA50 /* KeyPressViewModifier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyPressViewModifier.swift; sourceTree = "<group>"; };
 		FD0D58C02984619600FEBA50 /* Conditional.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Conditional.swift; sourceTree = "<group>"; };
 		FD0D58C22984622800FEBA50 /* PlayableLiveSDK */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = PlayableLiveSDK; sourceTree = "<group>"; };
@@ -43,13 +46,14 @@
 		FD0D58CA298470EC00FEBA50 /* Navigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Navigation.swift; sourceTree = "<group>"; };
 		FD0D58D62985EA4E00FEBA50 /* SuperEllipse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuperEllipse.swift; sourceTree = "<group>"; };
 		FD27092D293939180022571F /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
+		FD2782B82986F6BE003A14B1 /* NavigationItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationItem.swift; sourceTree = "<group>"; };
+		FD2782BA2986FA40003A14B1 /* NavigationItemGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationItemGroup.swift; sourceTree = "<group>"; };
 		FD3D8FB429388A6A006BD359 /* Playable.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Playable.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FD3D8FB729388A6A006BD359 /* PlayableApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayableApp.swift; sourceTree = "<group>"; };
 		FD3D8FBB29388A6B006BD359 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FD3D8FBD29388A6B006BD359 /* Playable.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Playable.entitlements; sourceTree = "<group>"; };
-		FD505BC929860BAB0035E80B /* NavigationView_macOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationView_macOS.swift; sourceTree = "<group>"; };
-		FD505BCB29860BD80035E80B /* NavigationView_iPad.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationView_iPad.swift; sourceTree = "<group>"; };
-		FD505BCD29860BF40035E80B /* NavigationView_iPhone.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationView_iPhone.swift; sourceTree = "<group>"; };
+		FD505BC929860BAB0035E80B /* SidebarNavigationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SidebarNavigationView.swift; sourceTree = "<group>"; };
+		FD505BCD29860BF40035E80B /* TabbedNavigationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabbedNavigationView.swift; sourceTree = "<group>"; };
 		FDA289AA29395BE300EC88D5 /* Production.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Production.xcconfig; sourceTree = "<group>"; };
 		FDA289AD29395DFB00EC88D5 /* Development.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Development.xcconfig; sourceTree = "<group>"; };
 		FDA289AE29395E5800EC88D5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -193,11 +197,11 @@
 		FD4F656F297C5F46000036EB /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				FD505BC829860B900035E80B /* Navigation */,
 				FDF6B28C2979B4FF00CC5C8E /* ChannelGridItem.swift */,
 				FDF6B28A2979B4FC00CC5C8E /* ChannelGridView.swift */,
 				FD0D58C02984619600FEBA50 /* Conditional.swift */,
 				FDF6B2862979B4DD00CC5C8E /* MainView.swift */,
+				FD505BC829860B900035E80B /* Navigation */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -216,6 +220,7 @@
 			children = (
 				FD3D8FBB29388A6B006BD359 /* Assets.xcassets */,
 				FDA289AE29395E5800EC88D5 /* Info.plist */,
+				FD05652E29885470005B4C4A /* Localizable.strings */,
 				FD3D8FBD29388A6B006BD359 /* Playable.entitlements */,
 				FDA289AD29395DFB00EC88D5 /* Development.xcconfig */,
 				FDA289AA29395BE300EC88D5 /* Production.xcconfig */,
@@ -226,9 +231,10 @@
 		FD505BC829860B900035E80B /* Navigation */ = {
 			isa = PBXGroup;
 			children = (
-				FD505BCB29860BD80035E80B /* NavigationView_iPad.swift */,
-				FD505BCD29860BF40035E80B /* NavigationView_iPhone.swift */,
-				FD505BC929860BAB0035E80B /* NavigationView_macOS.swift */,
+				FD2782B82986F6BE003A14B1 /* NavigationItem.swift */,
+				FD2782BA2986FA40003A14B1 /* NavigationItemGroup.swift */,
+				FD505BC929860BAB0035E80B /* SidebarNavigationView.swift */,
+				FD505BCD29860BF40035E80B /* TabbedNavigationView.swift */,
 			);
 			path = Navigation;
 			sourceTree = "<group>";
@@ -304,7 +310,7 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
-				Base,
+				de,
 			);
 			mainGroup = FD3D8FAB29388A6A006BD359;
 			packageReferences = (
@@ -333,6 +339,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FD3D8FBC29388A6B006BD359 /* Assets.xcassets in Resources */,
+				FD05653029885470005B4C4A /* Localizable.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -342,7 +349,7 @@
 		FD0D58D82985EB2B00FEBA50 /* SwiftLint */ = {
 			isa = PBXShellScriptBuildPhase;
 			alwaysOutOfDate = 1;
-			buildActionMask = 2147483647;
+			buildActionMask = 12;
 			files = (
 			);
 			inputFileListPaths = (
@@ -356,7 +363,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "export PATH=\"$PATH:/opt/homebrew/bin\"\nif which swiftlint > /dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+			shellScript = "export PATH=\"$PATH:/opt/homebrew/bin\"\nif which swiftlint > /dev/null; then\n  swiftlint --no-cache --config /Users/phranck/Developer/Projects/Private/Playable/App/.swiftlint.yml\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -366,24 +373,36 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FD2782BB2986FA40003A14B1 /* NavigationItemGroup.swift in Sources */,
 				FD0D58C12984619600FEBA50 /* Conditional.swift in Sources */,
-				FD505BCA29860BAB0035E80B /* NavigationView_macOS.swift in Sources */,
+				FD505BCA29860BAB0035E80B /* SidebarNavigationView.swift in Sources */,
 				FDF6B28B2979B4FC00CC5C8E /* ChannelGridView.swift in Sources */,
 				FDF6B28D2979B4FF00CC5C8E /* ChannelGridItem.swift in Sources */,
-				FD505BCE29860BF40035E80B /* NavigationView_iPhone.swift in Sources */,
+				FD505BCE29860BF40035E80B /* TabbedNavigationView.swift in Sources */,
 				FD0D58CB298470EC00FEBA50 /* Navigation.swift in Sources */,
 				FDAB73FB2970A6670093B7FE /* PlayableAppDelegate.swift in Sources */,
-				FD505BCC29860BD80035E80B /* NavigationView_iPad.swift in Sources */,
 				FDF6B2872979B4DD00CC5C8E /* MainView.swift in Sources */,
 				FD3D8FB829388A6A006BD359 /* PlayableApp.swift in Sources */,
 				FD0D58BF2984618500FEBA50 /* KeyPressViewModifier.swift in Sources */,
 				FD0D58D72985EA4E00FEBA50 /* SuperEllipse.swift in Sources */,
 				FDD3C5FF2970ADC70039FF24 /* NotificationCoordinator.swift in Sources */,
+				FD2782B92986F6BE003A14B1 /* NavigationItem.swift in Sources */,
 				FD0D58C929846F5900FEBA50 /* NavigationMacOS.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		FD05652E29885470005B4C4A /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FD05652F29885470005B4C4A /* de */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		FD3D8FD729388A6B006BD359 /* Development */ = {

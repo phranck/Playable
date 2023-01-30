@@ -1,7 +1,6 @@
 excluded:
 
 disabled_rules:
-  - comment_spacing
   - convenience_type
   - identifier_name
   - notification_center_detachment
@@ -9,6 +8,7 @@ disabled_rules:
   - required_deinit
   - statement_position
   - todo
+  - type_name
   - unused_capture_list
 
 opt_in_rules:
@@ -92,6 +92,7 @@ identifier_name:
 
 indentation_width:
   include_compiler_directives: false
+  include_comments: false
 
 line_length:
   warning: 150

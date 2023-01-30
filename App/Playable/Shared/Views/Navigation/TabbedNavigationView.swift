@@ -9,8 +9,7 @@
 import SwiftUI
 
 #if canImport(UIKit)
-// swiftlint:disable type_name
-struct NavigationView_iPhone: View {
+struct TabbedNavigationView: View {
     var body: some View {
         Text("NavigationView_iPhone")
     }

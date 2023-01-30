@@ -1,0 +1,24 @@
+/* channel state break */
+"Break" = "Pause";
+
+/* channel state invalid */
+"Invalid" = "Invalid";
+
+/* channel state live */
+"Live" = "Live";
+
+/* channel state offline */
+"Offline" = "Offline";
+
+/* channel state online */
+"Online" = "Online";
+
+/* channel state postshow */
+"Postshow" = "Postshow";
+
+/* channel state preshow */
+"Preshow" = "Preshow";
+
+/* channel state test */
+"Test" = "Test";
+

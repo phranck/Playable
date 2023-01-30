@@ -10,8 +10,6 @@ import PlayableFoundation
 import PlayableParse
 import SwiftUI
 
-// swiftlint:disable indentation_width
-
 @main
 struct PlayableApp: App {
 #if canImport(AppKit)
@@ -31,13 +29,13 @@ struct PlayableApp: App {
             MainView()
         }
 #if canImport(AppKit)
-        .windowToolbarStyle(UnifiedCompactWindowToolbarStyle())
+        .windowToolbarStyle(UnifiedWindowToolbarStyle())
         .windowStyle(HiddenTitleBarWindowStyle())
         .defaultSize(width: 960, height: 520)
         .defaultPosition(.center)
         .commands {
             CommandGroup(replacing: .appInfo) {
-                Button("About \(PlatformApplication.appName)") {
+                Button(String(localized: "About \(PlatformApplication.appName)")) {
                     NSApp.orderFrontStandardAboutPanel(
                         options: [
                             PlatformApplication.AboutPanelOptionKey.credits: credits,
@@ -56,7 +54,7 @@ struct PlayableApp: App {
 private extension PlayableApp {
     var credits: NSAttributedString {
         return NSAttributedString(
-            string: "Never miss a live streaming podcast\n",
+            string: String(localized: "Never miss a live streaming podcast\n"),
             attributes: [.font: NSFont.boldSystemFont(ofSize: NSFont.smallSystemFontSize)]
         )
     }

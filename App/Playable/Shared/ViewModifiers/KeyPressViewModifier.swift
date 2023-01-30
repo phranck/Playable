@@ -60,7 +60,6 @@ public enum ViewKeyCode: UInt16 {
     case UpArrow       = 0x7E
 }
 
-// swiftlint:disable indentation_width
 public extension View {
     @available(macOS 12, *)
     @available(iOS, deprecated, message: "The closure of this modifier is being ignored. It just returns the view it is attached to.")

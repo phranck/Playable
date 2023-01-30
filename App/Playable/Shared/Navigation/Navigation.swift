@@ -13,17 +13,17 @@ import Tagged
 
 // MARK: - NavigationGroup
 
-struct NavigationGroup: Equatable, Identifiable {
+struct NavigationGroupModel: Equatable, Identifiable {
     let id: Tagged<Self, UUID> = Self.ID(UUID())
     var title: LocalizedStringKey = ""
     var symbol: SFSymbol?
     var isCollapsed = false
-    var items: IdentifiedArrayOf<NavigationItem> = []
+    var items: IdentifiedArrayOf<NavigationItemModel> = []
 }
 
 // MARK: - NavigationItem
 
-struct NavigationItem: Equatable, Identifiable {
+struct NavigationItemModel: Equatable, Identifiable {
     let id: Tagged<Self, UUID> = Self.ID(UUID())
     var title: LocalizedStringKey = ""
     var symbol: SFSymbol?
