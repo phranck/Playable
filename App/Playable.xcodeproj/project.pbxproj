@@ -22,8 +22,6 @@
 		FD2C7E0229805DC700DC7A29 /* IdentifiedCollections in Frameworks */ = {isa = PBXBuildFile; productRef = FD2C7E0129805DC700DC7A29 /* IdentifiedCollections */; };
 		FD3D8FB829388A6A006BD359 /* PlayableApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD3D8FB729388A6A006BD359 /* PlayableApp.swift */; };
 		FD3D8FBC29388A6B006BD359 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FD3D8FBB29388A6B006BD359 /* Assets.xcassets */; };
-		FD4F6571297CCB3F000036EB /* PlayableFoundation in Frameworks */ = {isa = PBXBuildFile; productRef = FD4F6570297CCB3F000036EB /* PlayableFoundation */; };
-		FD4F6573297CCB3F000036EB /* PlayableParse in Frameworks */ = {isa = PBXBuildFile; productRef = FD4F6572297CCB3F000036EB /* PlayableParse */; };
 		FD5011FE29388CF300DFD5A6 /* SwiftyBeaver in Frameworks */ = {isa = PBXBuildFile; productRef = FD5011FD29388CF300DFD5A6 /* SwiftyBeaver */; };
 		FD50120729388D9C00DFD5A6 /* SystemColors in Frameworks */ = {isa = PBXBuildFile; productRef = FD50120629388D9C00DFD5A6 /* SystemColors */; };
 		FD505BCA29860BAB0035E80B /* SidebarNavigationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD505BC929860BAB0035E80B /* SidebarNavigationView.swift */; };
@@ -32,6 +30,8 @@
 		FDAB73FB2970A6670093B7FE /* PlayableAppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDAB73FA2970A6670093B7FE /* PlayableAppDelegate.swift */; };
 		FDB4ABEA2974665D00BDDF7C /* SFSafeSymbols in Frameworks */ = {isa = PBXBuildFile; productRef = FDB4ABE92974665D00BDDF7C /* SFSafeSymbols */; };
 		FDD3C5FF2970ADC70039FF24 /* NotificationCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDD3C5FE2970ADC70039FF24 /* NotificationCoordinator.swift */; };
+		FDDC5A6E298B31870021AE7E /* PlayableFoundation in Frameworks */ = {isa = PBXBuildFile; productRef = FDDC5A6D298B31870021AE7E /* PlayableFoundation */; };
+		FDDC5A70298B32890021AE7E /* PlayableParse in Frameworks */ = {isa = PBXBuildFile; productRef = FDDC5A6F298B32890021AE7E /* PlayableParse */; };
 		FDF6B2872979B4DD00CC5C8E /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDF6B2862979B4DD00CC5C8E /* MainView.swift */; };
 		FDF6B28B2979B4FC00CC5C8E /* ChannelGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDF6B28A2979B4FC00CC5C8E /* ChannelGridView.swift */; };
 		FDF6B28D2979B4FF00CC5C8E /* ChannelGridItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDF6B28C2979B4FF00CC5C8E /* ChannelGridItem.swift */; };
@@ -41,7 +41,6 @@
 		FD05652F29885470005B4C4A /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Localizable.strings; sourceTree = "<group>"; };
 		FD0D58BE2984618500FEBA50 /* KeyPressViewModifier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyPressViewModifier.swift; sourceTree = "<group>"; };
 		FD0D58C02984619600FEBA50 /* Conditional.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Conditional.swift; sourceTree = "<group>"; };
-		FD0D58C22984622800FEBA50 /* PlayableLiveSDK */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = PlayableLiveSDK; sourceTree = "<group>"; };
 		FD0D58C829846F5900FEBA50 /* NavigationMacOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationMacOS.swift; sourceTree = "<group>"; };
 		FD0D58CA298470EC00FEBA50 /* Navigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Navigation.swift; sourceTree = "<group>"; };
 		FD0D58D62985EA4E00FEBA50 /* SuperEllipse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuperEllipse.swift; sourceTree = "<group>"; };
@@ -59,6 +58,8 @@
 		FDA289AE29395E5800EC88D5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FDAB73FA2970A6670093B7FE /* PlayableAppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayableAppDelegate.swift; sourceTree = "<group>"; };
 		FDD3C5FE2970ADC70039FF24 /* NotificationCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationCoordinator.swift; sourceTree = "<group>"; };
+		FDDC5A68298B2F840021AE7E /* PlayableFoundation */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = PlayableFoundation; sourceTree = "<group>"; };
+		FDDC5A6C298B309D0021AE7E /* PlayableParse */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = PlayableParse; sourceTree = "<group>"; };
 		FDF6B2862979B4DD00CC5C8E /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		FDF6B28A2979B4FC00CC5C8E /* ChannelGridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelGridView.swift; sourceTree = "<group>"; };
 		FDF6B28C2979B4FF00CC5C8E /* ChannelGridItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelGridItem.swift; sourceTree = "<group>"; };
@@ -72,15 +73,15 @@
 			files = (
 				FD0D58CF2984820F00FEBA50 /* Tagged in Frameworks */,
 				FD0D58D229858E3F00FEBA50 /* CasePaths in Frameworks */,
-				FD4F6573297CCB3F000036EB /* PlayableParse in Frameworks */,
 				FDB4ABEA2974665D00BDDF7C /* SFSafeSymbols in Frameworks */,
 				FD50120729388D9C00DFD5A6 /* SystemColors in Frameworks */,
 				FD2C7DFF29805D8200DC7A29 /* Dependencies in Frameworks */,
 				FD5F4A8029773BDF0027B5CF /* ParseSwift in Frameworks */,
 				FD2C7E0229805DC700DC7A29 /* IdentifiedCollections in Frameworks */,
+				FDDC5A70298B32890021AE7E /* PlayableParse in Frameworks */,
 				FD2C7DFC29805CEC00DC7A29 /* SwiftUINavigation in Frameworks */,
 				FD5011FE29388CF300DFD5A6 /* SwiftyBeaver in Frameworks */,
-				FD4F6571297CCB3F000036EB /* PlayableFoundation in Frameworks */,
+				FDDC5A6E298B31870021AE7E /* PlayableFoundation in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -157,7 +158,8 @@
 		FD270924293933550022571F /* Packages */ = {
 			isa = PBXGroup;
 			children = (
-				FD0D58C22984622800FEBA50 /* PlayableLiveSDK */,
+				FDDC5A68298B2F840021AE7E /* PlayableFoundation */,
+				FDDC5A6C298B309D0021AE7E /* PlayableParse */,
 			);
 			path = Packages;
 			sourceTree = "<group>";
@@ -170,7 +172,7 @@
 				FD3D8FB629388A6A006BD359 /* Playable */,
 				FD270924293933550022571F /* Packages */,
 				FD3D8FB529388A6A006BD359 /* Products */,
-				FD695D9D297734AD00B50C6A /* Frameworks */,
+				FDDC5A69298B302D0021AE7E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -239,19 +241,19 @@
 			path = Navigation;
 			sourceTree = "<group>";
 		};
-		FD695D9D297734AD00B50C6A /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 		FDD3C5FD2970ADAB0039FF24 /* Notifications */ = {
 			isa = PBXGroup;
 			children = (
 				FDD3C5FE2970ADC70039FF24 /* NotificationCoordinator.swift */,
 			);
 			path = Notifications;
+			sourceTree = "<group>";
+		};
+		FDDC5A69298B302D0021AE7E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -276,13 +278,13 @@
 				FD50120629388D9C00DFD5A6 /* SystemColors */,
 				FDB4ABE92974665D00BDDF7C /* SFSafeSymbols */,
 				FD5F4A7F29773BDF0027B5CF /* ParseSwift */,
-				FD4F6570297CCB3F000036EB /* PlayableFoundation */,
-				FD4F6572297CCB3F000036EB /* PlayableParse */,
 				FD2C7DFB29805CEC00DC7A29 /* SwiftUINavigation */,
 				FD2C7DFE29805D8200DC7A29 /* Dependencies */,
 				FD2C7E0129805DC700DC7A29 /* IdentifiedCollections */,
 				FD0D58CE2984820F00FEBA50 /* Tagged */,
 				FD0D58D129858E3F00FEBA50 /* CasePaths */,
+				FDDC5A6D298B31870021AE7E /* PlayableFoundation */,
+				FDDC5A6F298B32890021AE7E /* PlayableParse */,
 			);
 			productName = Podlive;
 			productReference = FD3D8FB429388A6A006BD359 /* Playable.app */;
@@ -363,7 +365,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "export PATH=\"$PATH:/opt/homebrew/bin\"\nif which swiftlint > /dev/null; then\n  swiftlint --no-cache --config /Users/phranck/Developer/Projects/Private/Playable/App/.swiftlint.yml\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+			shellScript = "export PATH=\"$PATH:/opt/homebrew/bin\"\nif which swiftlint > /dev/null; then\n  swiftlint --no-cache --config ${PROJECT_DIR}/.swiftlint.yml\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -740,14 +742,6 @@
 			package = FD2C7E0029805DC700DC7A29 /* XCRemoteSwiftPackageReference "swift-identified-collections" */;
 			productName = IdentifiedCollections;
 		};
-		FD4F6570297CCB3F000036EB /* PlayableFoundation */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = PlayableFoundation;
-		};
-		FD4F6572297CCB3F000036EB /* PlayableParse */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = PlayableParse;
-		};
 		FD5011FD29388CF300DFD5A6 /* SwiftyBeaver */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = FD5011FC29388CF300DFD5A6 /* XCRemoteSwiftPackageReference "SwiftyBeaver" */;
@@ -767,6 +761,14 @@
 			isa = XCSwiftPackageProductDependency;
 			package = FDB4ABE82974665D00BDDF7C /* XCRemoteSwiftPackageReference "SFSafeSymbols" */;
 			productName = SFSafeSymbols;
+		};
+		FDDC5A6D298B31870021AE7E /* PlayableFoundation */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = PlayableFoundation;
+		};
+		FDDC5A6F298B32890021AE7E /* PlayableParse */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = PlayableParse;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

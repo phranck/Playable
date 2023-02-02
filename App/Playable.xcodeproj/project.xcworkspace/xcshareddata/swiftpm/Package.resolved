@@ -32,8 +32,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/SFSafeSymbols/SFSafeSymbols.git",
       "state" : {
-        "revision" : "50bc33264e6c0972f905b61af656201cf6091de8",
-        "version" : "4.0.0"
+        "revision" : "7cca2d60925876b5953a2cf7341cd80fbeac983c",
+        "version" : "4.1.1"
       }
     },
     {
@@ -139,8 +139,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/pointfreeco/swiftui-navigation.git",
       "state" : {
-        "revision" : "ddc01cdcddfd30ef7a966049b2e1d251e224ad93",
-        "version" : "0.5.0"
+        "revision" : "270a754308f5440be52fc295242eb7031638bd15",
+        "version" : "0.6.1"
       }
     },
     {

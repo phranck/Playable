@@ -16,6 +16,7 @@ So, here is an ongoing-by-progress changing screenshot. 😃
 * [iTunes Search API 2](https://performance-partners.apple.com/search-api)
 * [Taddy’s Podcast API](https://taddy.org/developers/podcast-api)
 * [AUDD: MUSIC RECOGNITION API](https://www.audd.io)
+* [Relax - REST Package](https://swiftpackageindex.com/tdeleon/relax/2.0.0/documentation/relax)
 
 ## Contact
 

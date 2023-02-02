@@ -61,7 +61,6 @@ opt_in_rules:
   - vertical_whitespace_opening_braces
   - yoda_condition
 
-
 analyzer_rules:
   - unused_declaration
   - unused_import

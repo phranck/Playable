@@ -22,12 +22,14 @@ struct SidebarNavigationView: View {
                             NavigationLink(value: item) {
                                 Label(item.title, systemSymbol: item.icon)
                             }
+                            .keyboardShortcut(item.shortcut)
                         }
                     }
                 }
             }
             .listStyle(SidebarListStyle())
         } detail: {
+            EmptyView()
         }
         .navigationSplitViewStyle(.balanced)
     }

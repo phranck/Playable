@@ -28,28 +28,6 @@
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
-         <TestableReference
-            skipped = "NO"
-            parallelizable = "YES">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "FD3D8FC429388A6B006BD359"
-               BuildableName = "PlayableTests.xctest"
-               BlueprintName = "PlayableTests"
-               ReferencedContainer = "container:Playable.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
-         <TestableReference
-            skipped = "NO"
-            parallelizable = "YES">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "FD3D8FCE29388A6B006BD359"
-               BuildableName = "Podlive-macOSUITests.xctest"
-               BlueprintName = "Podlive-macOSUITests"
-               ReferencedContainer = "container:Playable.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
       </Testables>
    </TestAction>
    <LaunchAction
@@ -101,7 +79,7 @@
       buildConfiguration = "Development">
    </AnalyzeAction>
    <ArchiveAction
-      buildConfiguration = "Release"
+      buildConfiguration = "Production"
       revealArchiveInOrganizer = "YES">
    </ArchiveAction>
 </Scheme>

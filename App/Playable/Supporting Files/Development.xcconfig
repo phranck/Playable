@@ -11,14 +11,14 @@
 // https://help.apple.com/xcode/#/dev745c5c974
 
 // Development
-//PARSE_APPLICATION_ID=iePaewo3chah2cis0ophei9moosh5ief7ooviereithiemaech
-//PARSE_CLIENT_KEY=uVeV2Uv9tooxifioYa3to4thiegonuboaziePohthahr5Eecee
-//PARSE_SERVER_URL=parse-server-staging.podlive.io/parse
+PARSE_APPLICATION_ID=iePaewo3chah2cis0ophei9moosh5ief7ooviereithiemaech
+PARSE_CLIENT_KEY=uVeV2Uv9tooxifioYa3to4thiegonuboaziePohthahr5Eecee
+PARSE_SERVER_URL=parse-server-staging.podlive.io/parse
 
 
 // Production
-PARSE_APPLICATION_ID=ni2aeFaed4goo3feis2doo7vegeoy5iJaip0Aexech5Iegahp1
-PARSE_CLIENT_KEY=boopup4quoludoh0ohSh8du8iophohhouYixaighi0ohp0Pah2
-PARSE_SERVER_URL=parse-server.podlive.io/parse
+//PARSE_APPLICATION_ID=ni2aeFaed4goo3feis2doo7vegeoy5iJaip0Aexech5Iegahp1
+//PARSE_CLIENT_KEY=boopup4quoludoh0ohSh8du8iophohhouYixaighi0ohp0Pah2
+//PARSE_SERVER_URL=parse-server.podlive.io/parse
 
 APP_GROUP_ID=me.woodbytes.Playable
