@@ -17,13 +17,13 @@ struct SidebarNavigationView: View {
             List(NavigationItemGroup.allCases, selection: $selection) { group in
                 Section(group.title.uppercased()) {
                     switch group {
-                    case .podcast(let items), .radio(let items), .general(let items):
-                        ForEach(items, id: \.self) { item in
-                            NavigationLink(value: item) {
-                                Label(item.title, systemSymbol: item.icon)
+                        case .podcast(let items), .radio(let items), .general(let items):
+                            ForEach(items, id: \.self) { item in
+                                NavigationLink(value: item) {
+                                    Label(item.title, systemSymbol: item.icon)
+                                }
+                                .keyboardShortcut(item.shortcut)
                             }
-                            .keyboardShortcut(item.shortcut)
-                        }
                     }
                 }
             }

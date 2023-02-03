@@ -22,23 +22,23 @@ enum NavigationItemGroup: Identifiable {
 extension NavigationItemGroup {
     var title: String {
         switch self {
-        case .podcast:
-            return String(localized: "Podcasts")
-        case .radio:
-            return String(localized: "Radio")
-        case .general:
-            return String(localized: "General")
+            case .podcast:
+                return String(localized: "Podcasts")
+            case .radio:
+                return String(localized: "Radio")
+            case .general:
+                return String(localized: "General")
         }
     }
 
     var icon: SFSymbol {
         switch self {
-        case .podcast:
-            return .antennaRadiowavesLeftAndRight
-        case .radio:
-            return .waveformAndMagnifyingglass
-        case .general:
-            return .checklistChecked
+            case .podcast:
+                return .antennaRadiowavesLeftAndRight
+            case .radio:
+                return .waveformAndMagnifyingglass
+            case .general:
+                return .checklistChecked
         }
     }
 }

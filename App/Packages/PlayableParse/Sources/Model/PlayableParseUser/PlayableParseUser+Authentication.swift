@@ -17,12 +17,12 @@ public extension PlayableParseUser {
 
         anonymous.login { result in
             switch result {
-            case .success(let user):
-                log.debug("Logged in as anonymous user: \(user)")
-                NotificationCenter.default.post(name: Notification.Name.updateUser, object: nil)
+                case .success(let user):
+                    log.debug("Logged in as anonymous user: \(user)")
+                    NotificationCenter.default.post(name: Notification.Name.updateUser, object: nil)
 
-            case .failure(let error):
-                log.error("Could not login as anonymous user: \(error)")
+                case .failure(let error):
+                    log.error("Could not login as anonymous user: \(error)")
             }
         }
     }

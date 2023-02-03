@@ -27,11 +27,11 @@ class PlayableAppDelegate: NSObject, PlatformApplicationDelegate {
         installation.setDeviceToken(deviceToken)
         installation.save { result in
             switch result {
-            case .success:
-                log.debug("Successfully registered for Push Notifications")
+                case .success:
+                    log.debug("Successfully registered for Push Notifications")
 
-            case .failure(let error):
-                log.error("Error while registering for Push Notifications: \(error.localizedDescription)")
+                case .failure(let error):
+                    log.error("Error while registering for Push Notifications: \(error.localizedDescription)")
             }
         }
     }

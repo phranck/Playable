@@ -53,6 +53,7 @@
 		FD3D8FBD29388A6B006BD359 /* Playable.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Playable.entitlements; sourceTree = "<group>"; };
 		FD505BC929860BAB0035E80B /* SidebarNavigationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SidebarNavigationView.swift; sourceTree = "<group>"; };
 		FD505BCD29860BF40035E80B /* TabbedNavigationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabbedNavigationView.swift; sourceTree = "<group>"; };
+		FD856E04298C2BFE00B2DB95 /* PlayableRealm */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = PlayableRealm; sourceTree = "<group>"; };
 		FDA289AA29395BE300EC88D5 /* Production.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Production.xcconfig; sourceTree = "<group>"; };
 		FDA289AD29395DFB00EC88D5 /* Development.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Development.xcconfig; sourceTree = "<group>"; };
 		FDA289AE29395E5800EC88D5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -160,6 +161,7 @@
 			children = (
 				FDDC5A68298B2F840021AE7E /* PlayableFoundation */,
 				FDDC5A6C298B309D0021AE7E /* PlayableParse */,
+				FD856E04298C2BFE00B2DB95 /* PlayableRealm */,
 			);
 			path = Packages;
 			sourceTree = "<group>";

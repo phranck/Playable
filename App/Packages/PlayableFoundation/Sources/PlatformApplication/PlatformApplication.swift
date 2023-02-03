@@ -23,7 +23,7 @@ public extension PlatformApplication {
 
         notificationCenter.requestAuthorization(options: [.alert, .badge, .sound]) { _, error in
             DispatchQueue.main.async {
-                if let error = error {
+                if let error {
                     log.error("Error while requesting notification authorization: \(error.localizedDescription)")
                     completion(.failure(error))
                 }

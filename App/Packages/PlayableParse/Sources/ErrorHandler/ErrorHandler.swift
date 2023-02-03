@@ -12,18 +12,18 @@ import PlayableFoundation
 import SwiftUI
 
 public struct ErrorHandler {
-	public static let shared = ErrorHandler()
-	private init() {}
+    public static let shared = ErrorHandler()
+    private init() {}
 
     // MARK: - Public API
     public static func handle(error: ParseError) {
         log.error(error)
 
         switch error.code {
-        case .invalidSessionToken:
-            shared.handleInvalidSessionToken()
-        default:
-            break
+            case .invalidSessionToken:
+                shared.handleInvalidSessionToken()
+            default:
+                break
         }
     }
 }
@@ -34,11 +34,11 @@ private extension ErrorHandler {
     func handleInvalidSessionToken() {
         PlayableParseUser.logout { result in
             switch result {
-            case .success:
-                log.debug("User successfully logged out")
+                case .success:
+                    log.debug("User successfully logged out")
 
-            case .failure(let error):
-                log.error("User logout with failure: \(error)")
+                case .failure(let error):
+                    log.error("User logout with failure: \(error)")
             }
         }
 

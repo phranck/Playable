@@ -26,11 +26,11 @@ public extension PlayableParseInstallation {
 
         installation.save { result in
             switch result {
-            case .success(let installation):
-                log.debug("Installation with id: '\(installation.id)' for user with id: '\(user.id)' successfully saved.")
+                case .success(let installation):
+                    log.debug("Installation with id: '\(installation.id)' for user with id: '\(user.id)' successfully saved.")
 
-            case .failure(let error):
-                log.error("Error while saving installation: \(error.localizedDescription)")
+                case .failure(let error):
+                    log.error("Error while saving installation: \(error.localizedDescription)")
             }
 
             completion()
@@ -45,12 +45,12 @@ public extension PlayableParseInstallation {
 
         installation.fetch { result in
             switch result {
-            case .success:
-                log.debug("Sucessfully synced installation from backend.")
-                completion()
+                case .success:
+                    log.debug("Sucessfully synced installation from backend.")
+                    completion()
 
-            case .failure(let error):
-                fatalError(error.localizedDescription)
+                case .failure(let error):
+                    fatalError(error.localizedDescription)
             }
         }
     }

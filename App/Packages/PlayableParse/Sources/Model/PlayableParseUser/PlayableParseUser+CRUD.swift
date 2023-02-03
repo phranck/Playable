@@ -18,11 +18,11 @@ public extension PlayableParseUser {
 
         fetch { result in
             switch result {
-            case .success(let user):
-                handleSyncSuccess(for: user)
+                case .success(let user):
+                    handleSyncSuccess(for: user)
 
-            case .failure(let error):
-                ErrorHandler.handle(error: error)
+                case .failure(let error):
+                    ErrorHandler.handle(error: error)
             }
         }
     }
@@ -41,11 +41,11 @@ private extension PlayableParseUser {
 
         PlatformApplication.registerForRemoteNotifications { result in
             switch result {
-            case .success:
-                log.debug("Successfully registered for Remote Notifications")
+                case .success:
+                    log.debug("Successfully registered for Remote Notifications")
 
-            case .failure(let error):
-                log.error("Error while registering for Remote Notifications: \(error.localizedDescription)")
+                case .failure(let error):
+                    log.error("Error while registering for Remote Notifications: \(error.localizedDescription)")
             }
         }
     }

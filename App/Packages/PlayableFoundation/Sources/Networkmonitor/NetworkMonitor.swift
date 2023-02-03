@@ -31,11 +31,11 @@ public final class NetworkMonitor: ObservableObject {
             // on the main thread
             DispatchQueue.main.async {
                 switch path.status {
-                case .satisfied:
-                    self.status = .connected
+                    case .satisfied:
+                        self.status = .connected
 
-                default:
-                    self.status = .disconnected(path.unsatisfiedReason)
+                    default:
+                        self.status = .disconnected(path.unsatisfiedReason)
                 }
             }
         }
