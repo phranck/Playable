@@ -8,62 +8,38 @@
 
 /* Begin PBXBuildFile section */
 		FD05653029885470005B4C4A /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = FD05652E29885470005B4C4A /* Localizable.strings */; };
-		FD0D58BF2984618500FEBA50 /* KeyPressViewModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD0D58BE2984618500FEBA50 /* KeyPressViewModifier.swift */; };
-		FD0D58C12984619600FEBA50 /* Conditional.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD0D58C02984619600FEBA50 /* Conditional.swift */; };
-		FD0D58C929846F5900FEBA50 /* NavigationMacOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD0D58C829846F5900FEBA50 /* NavigationMacOS.swift */; };
-		FD0D58CB298470EC00FEBA50 /* Navigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD0D58CA298470EC00FEBA50 /* Navigation.swift */; };
 		FD0D58CF2984820F00FEBA50 /* Tagged in Frameworks */ = {isa = PBXBuildFile; productRef = FD0D58CE2984820F00FEBA50 /* Tagged */; };
 		FD0D58D229858E3F00FEBA50 /* CasePaths in Frameworks */ = {isa = PBXBuildFile; productRef = FD0D58D129858E3F00FEBA50 /* CasePaths */; };
-		FD0D58D72985EA4E00FEBA50 /* SuperEllipse.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD0D58D62985EA4E00FEBA50 /* SuperEllipse.swift */; };
-		FD2782B92986F6BE003A14B1 /* NavigationItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD2782B82986F6BE003A14B1 /* NavigationItem.swift */; };
-		FD2782BB2986FA40003A14B1 /* NavigationItemGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD2782BA2986FA40003A14B1 /* NavigationItemGroup.swift */; };
 		FD2C7DFC29805CEC00DC7A29 /* SwiftUINavigation in Frameworks */ = {isa = PBXBuildFile; productRef = FD2C7DFB29805CEC00DC7A29 /* SwiftUINavigation */; };
 		FD2C7DFF29805D8200DC7A29 /* Dependencies in Frameworks */ = {isa = PBXBuildFile; productRef = FD2C7DFE29805D8200DC7A29 /* Dependencies */; };
 		FD2C7E0229805DC700DC7A29 /* IdentifiedCollections in Frameworks */ = {isa = PBXBuildFile; productRef = FD2C7E0129805DC700DC7A29 /* IdentifiedCollections */; };
 		FD3D8FB829388A6A006BD359 /* PlayableApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD3D8FB729388A6A006BD359 /* PlayableApp.swift */; };
 		FD3D8FBC29388A6B006BD359 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FD3D8FBB29388A6B006BD359 /* Assets.xcassets */; };
+		FD41F0E62998577F004D5047 /* SFSafeSymbols in Frameworks */ = {isa = PBXBuildFile; productRef = FD41F0E52998577F004D5047 /* SFSafeSymbols */; };
+		FD41F0E9299857A2004D5047 /* SystemColors in Frameworks */ = {isa = PBXBuildFile; productRef = FD41F0E8299857A2004D5047 /* SystemColors */; };
 		FD5011FE29388CF300DFD5A6 /* SwiftyBeaver in Frameworks */ = {isa = PBXBuildFile; productRef = FD5011FD29388CF300DFD5A6 /* SwiftyBeaver */; };
-		FD50120729388D9C00DFD5A6 /* SystemColors in Frameworks */ = {isa = PBXBuildFile; productRef = FD50120629388D9C00DFD5A6 /* SystemColors */; };
-		FD505BCA29860BAB0035E80B /* SidebarNavigationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD505BC929860BAB0035E80B /* SidebarNavigationView.swift */; };
-		FD505BCE29860BF40035E80B /* TabbedNavigationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD505BCD29860BF40035E80B /* TabbedNavigationView.swift */; };
 		FD5F4A8029773BDF0027B5CF /* ParseSwift in Frameworks */ = {isa = PBXBuildFile; productRef = FD5F4A7F29773BDF0027B5CF /* ParseSwift */; };
 		FDAB73FB2970A6670093B7FE /* PlayableAppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDAB73FA2970A6670093B7FE /* PlayableAppDelegate.swift */; };
-		FDB4ABEA2974665D00BDDF7C /* SFSafeSymbols in Frameworks */ = {isa = PBXBuildFile; productRef = FDB4ABE92974665D00BDDF7C /* SFSafeSymbols */; };
-		FDD3C5FF2970ADC70039FF24 /* NotificationCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDD3C5FE2970ADC70039FF24 /* NotificationCoordinator.swift */; };
 		FDDC5A6E298B31870021AE7E /* PlayableFoundation in Frameworks */ = {isa = PBXBuildFile; productRef = FDDC5A6D298B31870021AE7E /* PlayableFoundation */; };
 		FDDC5A70298B32890021AE7E /* PlayableParse in Frameworks */ = {isa = PBXBuildFile; productRef = FDDC5A6F298B32890021AE7E /* PlayableParse */; };
-		FDF6B2872979B4DD00CC5C8E /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDF6B2862979B4DD00CC5C8E /* MainView.swift */; };
-		FDF6B28B2979B4FC00CC5C8E /* ChannelGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDF6B28A2979B4FC00CC5C8E /* ChannelGridView.swift */; };
-		FDF6B28D2979B4FF00CC5C8E /* ChannelGridItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDF6B28C2979B4FF00CC5C8E /* ChannelGridItem.swift */; };
+		FDEEEC6B29985ADC00E864E1 /* PlayableApplication in Frameworks */ = {isa = PBXBuildFile; productRef = FDEEEC6A29985ADC00E864E1 /* PlayableApplication */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		FD05652F29885470005B4C4A /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Localizable.strings; sourceTree = "<group>"; };
-		FD0D58BE2984618500FEBA50 /* KeyPressViewModifier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyPressViewModifier.swift; sourceTree = "<group>"; };
-		FD0D58C02984619600FEBA50 /* Conditional.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Conditional.swift; sourceTree = "<group>"; };
-		FD0D58C829846F5900FEBA50 /* NavigationMacOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationMacOS.swift; sourceTree = "<group>"; };
-		FD0D58CA298470EC00FEBA50 /* Navigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Navigation.swift; sourceTree = "<group>"; };
-		FD0D58D62985EA4E00FEBA50 /* SuperEllipse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuperEllipse.swift; sourceTree = "<group>"; };
 		FD27092D293939180022571F /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
-		FD2782B82986F6BE003A14B1 /* NavigationItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationItem.swift; sourceTree = "<group>"; };
-		FD2782BA2986FA40003A14B1 /* NavigationItemGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationItemGroup.swift; sourceTree = "<group>"; };
 		FD3D8FB429388A6A006BD359 /* Playable.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Playable.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FD3D8FB729388A6A006BD359 /* PlayableApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayableApp.swift; sourceTree = "<group>"; };
 		FD3D8FBB29388A6B006BD359 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FD3D8FBD29388A6B006BD359 /* Playable.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Playable.entitlements; sourceTree = "<group>"; };
-		FD505BC929860BAB0035E80B /* SidebarNavigationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SidebarNavigationView.swift; sourceTree = "<group>"; };
-		FD505BCD29860BF40035E80B /* TabbedNavigationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabbedNavigationView.swift; sourceTree = "<group>"; };
+		FD41F0E3299854A5004D5047 /* PlayableApplication */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = PlayableApplication; sourceTree = "<group>"; };
 		FD856E04298C2BFE00B2DB95 /* PlayableRealm */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = PlayableRealm; sourceTree = "<group>"; };
 		FDA289AA29395BE300EC88D5 /* Production.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Production.xcconfig; sourceTree = "<group>"; };
 		FDA289AD29395DFB00EC88D5 /* Development.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Development.xcconfig; sourceTree = "<group>"; };
 		FDA289AE29395E5800EC88D5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FDAB73FA2970A6670093B7FE /* PlayableAppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayableAppDelegate.swift; sourceTree = "<group>"; };
-		FDD3C5FE2970ADC70039FF24 /* NotificationCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationCoordinator.swift; sourceTree = "<group>"; };
 		FDDC5A68298B2F840021AE7E /* PlayableFoundation */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = PlayableFoundation; sourceTree = "<group>"; };
 		FDDC5A6C298B309D0021AE7E /* PlayableParse */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = PlayableParse; sourceTree = "<group>"; };
-		FDF6B2862979B4DD00CC5C8E /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
-		FDF6B28A2979B4FC00CC5C8E /* ChannelGridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelGridView.swift; sourceTree = "<group>"; };
-		FDF6B28C2979B4FF00CC5C8E /* ChannelGridItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelGridItem.swift; sourceTree = "<group>"; };
 		FDF6B291297A11AC00CC5C8E /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; name = .gitignore; path = ../.gitignore; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -72,13 +48,14 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FD41F0E62998577F004D5047 /* SFSafeSymbols in Frameworks */,
+				FDEEEC6B29985ADC00E864E1 /* PlayableApplication in Frameworks */,
 				FD0D58CF2984820F00FEBA50 /* Tagged in Frameworks */,
 				FD0D58D229858E3F00FEBA50 /* CasePaths in Frameworks */,
-				FDB4ABEA2974665D00BDDF7C /* SFSafeSymbols in Frameworks */,
-				FD50120729388D9C00DFD5A6 /* SystemColors in Frameworks */,
 				FD2C7DFF29805D8200DC7A29 /* Dependencies in Frameworks */,
 				FD5F4A8029773BDF0027B5CF /* ParseSwift in Frameworks */,
 				FD2C7E0229805DC700DC7A29 /* IdentifiedCollections in Frameworks */,
+				FD41F0E9299857A2004D5047 /* SystemColors in Frameworks */,
 				FDDC5A70298B32890021AE7E /* PlayableParse in Frameworks */,
 				FD2C7DFC29805CEC00DC7A29 /* SwiftUINavigation in Frameworks */,
 				FD5011FE29388CF300DFD5A6 /* SwiftyBeaver in Frameworks */,
@@ -89,76 +66,10 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		FD0D58BD2984618500FEBA50 /* ViewModifiers */ = {
-			isa = PBXGroup;
-			children = (
-				FD0D58BE2984618500FEBA50 /* KeyPressViewModifier.swift */,
-			);
-			path = ViewModifiers;
-			sourceTree = "<group>";
-		};
-		FD0D58C329846DCF00FEBA50 /* Shared */ = {
-			isa = PBXGroup;
-			children = (
-				FD0D58CC2984720300FEBA50 /* Navigation */,
-				FDD3C5FD2970ADAB0039FF24 /* Notifications */,
-				FD0D58D52985EA3700FEBA50 /* Shapes */,
-				FD0D58BD2984618500FEBA50 /* ViewModifiers */,
-				FD4F656F297C5F46000036EB /* Views */,
-			);
-			path = Shared;
-			sourceTree = "<group>";
-		};
-		FD0D58C429846E2400FEBA50 /* iOS */ = {
-			isa = PBXGroup;
-			children = (
-				FD0D58C729846F3600FEBA50 /* Navigation */,
-			);
-			path = iOS;
-			sourceTree = "<group>";
-		};
-		FD0D58C529846E2B00FEBA50 /* macOS */ = {
-			isa = PBXGroup;
-			children = (
-				FD0D58C629846F2B00FEBA50 /* Navigation */,
-			);
-			path = macOS;
-			sourceTree = "<group>";
-		};
-		FD0D58C629846F2B00FEBA50 /* Navigation */ = {
-			isa = PBXGroup;
-			children = (
-				FD0D58C829846F5900FEBA50 /* NavigationMacOS.swift */,
-			);
-			path = Navigation;
-			sourceTree = "<group>";
-		};
-		FD0D58C729846F3600FEBA50 /* Navigation */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Navigation;
-			sourceTree = "<group>";
-		};
-		FD0D58CC2984720300FEBA50 /* Navigation */ = {
-			isa = PBXGroup;
-			children = (
-				FD0D58CA298470EC00FEBA50 /* Navigation.swift */,
-			);
-			path = Navigation;
-			sourceTree = "<group>";
-		};
-		FD0D58D52985EA3700FEBA50 /* Shapes */ = {
-			isa = PBXGroup;
-			children = (
-				FD0D58D62985EA4E00FEBA50 /* SuperEllipse.swift */,
-			);
-			path = Shapes;
-			sourceTree = "<group>";
-		};
 		FD270924293933550022571F /* Packages */ = {
 			isa = PBXGroup;
 			children = (
+				FD41F0E3299854A5004D5047 /* PlayableApplication */,
 				FDDC5A68298B2F840021AE7E /* PlayableFoundation */,
 				FDDC5A6C298B309D0021AE7E /* PlayableParse */,
 				FD856E04298C2BFE00B2DB95 /* PlayableRealm */,
@@ -190,24 +101,9 @@
 			isa = PBXGroup;
 			children = (
 				FD50120829388DCA00DFD5A6 /* Application */,
-				FD0D58C429846E2400FEBA50 /* iOS */,
-				FD0D58C529846E2B00FEBA50 /* macOS */,
-				FD0D58C329846DCF00FEBA50 /* Shared */,
 				FD50120929388DDA00DFD5A6 /* Supporting Files */,
 			);
 			path = Playable;
-			sourceTree = "<group>";
-		};
-		FD4F656F297C5F46000036EB /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				FDF6B28C2979B4FF00CC5C8E /* ChannelGridItem.swift */,
-				FDF6B28A2979B4FC00CC5C8E /* ChannelGridView.swift */,
-				FD0D58C02984619600FEBA50 /* Conditional.swift */,
-				FDF6B2862979B4DD00CC5C8E /* MainView.swift */,
-				FD505BC829860B900035E80B /* Navigation */,
-			);
-			path = Views;
 			sourceTree = "<group>";
 		};
 		FD50120829388DCA00DFD5A6 /* Application */ = {
@@ -230,25 +126,6 @@
 				FDA289AA29395BE300EC88D5 /* Production.xcconfig */,
 			);
 			path = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		FD505BC829860B900035E80B /* Navigation */ = {
-			isa = PBXGroup;
-			children = (
-				FD2782B82986F6BE003A14B1 /* NavigationItem.swift */,
-				FD2782BA2986FA40003A14B1 /* NavigationItemGroup.swift */,
-				FD505BC929860BAB0035E80B /* SidebarNavigationView.swift */,
-				FD505BCD29860BF40035E80B /* TabbedNavigationView.swift */,
-			);
-			path = Navigation;
-			sourceTree = "<group>";
-		};
-		FDD3C5FD2970ADAB0039FF24 /* Notifications */ = {
-			isa = PBXGroup;
-			children = (
-				FDD3C5FE2970ADC70039FF24 /* NotificationCoordinator.swift */,
-			);
-			path = Notifications;
 			sourceTree = "<group>";
 		};
 		FDDC5A69298B302D0021AE7E /* Frameworks */ = {
@@ -277,8 +154,6 @@
 			name = Playable;
 			packageProductDependencies = (
 				FD5011FD29388CF300DFD5A6 /* SwiftyBeaver */,
-				FD50120629388D9C00DFD5A6 /* SystemColors */,
-				FDB4ABE92974665D00BDDF7C /* SFSafeSymbols */,
 				FD5F4A7F29773BDF0027B5CF /* ParseSwift */,
 				FD2C7DFB29805CEC00DC7A29 /* SwiftUINavigation */,
 				FD2C7DFE29805D8200DC7A29 /* Dependencies */,
@@ -287,6 +162,9 @@
 				FD0D58D129858E3F00FEBA50 /* CasePaths */,
 				FDDC5A6D298B31870021AE7E /* PlayableFoundation */,
 				FDDC5A6F298B32890021AE7E /* PlayableParse */,
+				FD41F0E52998577F004D5047 /* SFSafeSymbols */,
+				FD41F0E8299857A2004D5047 /* SystemColors */,
+				FDEEEC6A29985ADC00E864E1 /* PlayableApplication */,
 			);
 			productName = Podlive;
 			productReference = FD3D8FB429388A6A006BD359 /* Playable.app */;
@@ -319,14 +197,14 @@
 			mainGroup = FD3D8FAB29388A6A006BD359;
 			packageReferences = (
 				FD5011FC29388CF300DFD5A6 /* XCRemoteSwiftPackageReference "SwiftyBeaver" */,
-				FD50120529388D9C00DFD5A6 /* XCRemoteSwiftPackageReference "swiftui-system-colors" */,
-				FDB4ABE82974665D00BDDF7C /* XCRemoteSwiftPackageReference "SFSafeSymbols" */,
 				FD5F4A7E29773BDF0027B5CF /* XCRemoteSwiftPackageReference "Parse-Swift" */,
 				FD2C7DFA29805CEC00DC7A29 /* XCRemoteSwiftPackageReference "swiftui-navigation" */,
 				FD2C7DFD29805D8200DC7A29 /* XCRemoteSwiftPackageReference "swift-dependencies" */,
 				FD2C7E0029805DC700DC7A29 /* XCRemoteSwiftPackageReference "swift-identified-collections" */,
 				FD0D58CD2984820F00FEBA50 /* XCRemoteSwiftPackageReference "swift-tagged" */,
 				FD0D58D029858E3F00FEBA50 /* XCRemoteSwiftPackageReference "swift-case-paths" */,
+				FD41F0E42998577F004D5047 /* XCRemoteSwiftPackageReference "SFSafeSymbols" */,
+				FD41F0E7299857A2004D5047 /* XCRemoteSwiftPackageReference "swiftui-system-colors" */,
 			);
 			productRefGroup = FD3D8FB529388A6A006BD359 /* Products */;
 			projectDirPath = "";
@@ -377,21 +255,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FD2782BB2986FA40003A14B1 /* NavigationItemGroup.swift in Sources */,
-				FD0D58C12984619600FEBA50 /* Conditional.swift in Sources */,
-				FD505BCA29860BAB0035E80B /* SidebarNavigationView.swift in Sources */,
-				FDF6B28B2979B4FC00CC5C8E /* ChannelGridView.swift in Sources */,
-				FDF6B28D2979B4FF00CC5C8E /* ChannelGridItem.swift in Sources */,
-				FD505BCE29860BF40035E80B /* TabbedNavigationView.swift in Sources */,
-				FD0D58CB298470EC00FEBA50 /* Navigation.swift in Sources */,
 				FDAB73FB2970A6670093B7FE /* PlayableAppDelegate.swift in Sources */,
-				FDF6B2872979B4DD00CC5C8E /* MainView.swift in Sources */,
 				FD3D8FB829388A6A006BD359 /* PlayableApp.swift in Sources */,
-				FD0D58BF2984618500FEBA50 /* KeyPressViewModifier.swift in Sources */,
-				FD0D58D72985EA4E00FEBA50 /* SuperEllipse.swift in Sources */,
-				FDD3C5FF2970ADC70039FF24 /* NotificationCoordinator.swift in Sources */,
-				FD2782B92986F6BE003A14B1 /* NavigationItem.swift in Sources */,
-				FD0D58C929846F5900FEBA50 /* NavigationMacOS.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -684,6 +549,22 @@
 				minimumVersion = 0.6.0;
 			};
 		};
+		FD41F0E42998577F004D5047 /* XCRemoteSwiftPackageReference "SFSafeSymbols" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SFSafeSymbols/SFSafeSymbols.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.0.0;
+			};
+		};
+		FD41F0E7299857A2004D5047 /* XCRemoteSwiftPackageReference "swiftui-system-colors" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/diniska/swiftui-system-colors.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
 		FD5011FC29388CF300DFD5A6 /* XCRemoteSwiftPackageReference "SwiftyBeaver" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/SwiftyBeaver/SwiftyBeaver.git";
@@ -692,25 +573,9 @@
 				minimumVersion = 1.0.0;
 			};
 		};
-		FD50120529388D9C00DFD5A6 /* XCRemoteSwiftPackageReference "swiftui-system-colors" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/diniska/swiftui-system-colors.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 1.0.0;
-			};
-		};
 		FD5F4A7E29773BDF0027B5CF /* XCRemoteSwiftPackageReference "Parse-Swift" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/parse-community/Parse-Swift";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 4.0.0;
-			};
-		};
-		FDB4ABE82974665D00BDDF7C /* XCRemoteSwiftPackageReference "SFSafeSymbols" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/SFSafeSymbols/SFSafeSymbols.git";
 			requirement = {
 				kind = upToNextMajorVersion;
 				minimumVersion = 4.0.0;
@@ -744,25 +609,25 @@
 			package = FD2C7E0029805DC700DC7A29 /* XCRemoteSwiftPackageReference "swift-identified-collections" */;
 			productName = IdentifiedCollections;
 		};
+		FD41F0E52998577F004D5047 /* SFSafeSymbols */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FD41F0E42998577F004D5047 /* XCRemoteSwiftPackageReference "SFSafeSymbols" */;
+			productName = SFSafeSymbols;
+		};
+		FD41F0E8299857A2004D5047 /* SystemColors */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FD41F0E7299857A2004D5047 /* XCRemoteSwiftPackageReference "swiftui-system-colors" */;
+			productName = SystemColors;
+		};
 		FD5011FD29388CF300DFD5A6 /* SwiftyBeaver */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = FD5011FC29388CF300DFD5A6 /* XCRemoteSwiftPackageReference "SwiftyBeaver" */;
 			productName = SwiftyBeaver;
 		};
-		FD50120629388D9C00DFD5A6 /* SystemColors */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = FD50120529388D9C00DFD5A6 /* XCRemoteSwiftPackageReference "swiftui-system-colors" */;
-			productName = SystemColors;
-		};
 		FD5F4A7F29773BDF0027B5CF /* ParseSwift */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = FD5F4A7E29773BDF0027B5CF /* XCRemoteSwiftPackageReference "Parse-Swift" */;
 			productName = ParseSwift;
-		};
-		FDB4ABE92974665D00BDDF7C /* SFSafeSymbols */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = FDB4ABE82974665D00BDDF7C /* XCRemoteSwiftPackageReference "SFSafeSymbols" */;
-			productName = SFSafeSymbols;
 		};
 		FDDC5A6D298B31870021AE7E /* PlayableFoundation */ = {
 			isa = XCSwiftPackageProductDependency;
@@ -771,6 +636,10 @@
 		FDDC5A6F298B32890021AE7E /* PlayableParse */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = PlayableParse;
+		};
+		FDEEEC6A29985ADC00E864E1 /* PlayableApplication */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = PlayableApplication;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

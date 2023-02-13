@@ -13,17 +13,23 @@ import ParseSwift
 public extension Channel {
     static var allChannels: Query<Channel> {
         Channel
-            .query("isEnabled" == true)
+            .query(CodingKeys.isEnabled.rawValue == true)
             .order([
-                .descending("followerCount"),
-                .ascending("name")
+                .descending(CodingKeys.followerCount.rawValue),
+                .ascending(CodingKeys.name.rawValue)
             ])
             .limit(.max)
     }
 
     static var liveChannels: Query<Channel> {
         Channel.query(
-            CodingKeys.isEnabled.rawValue == true
+            CodingKeys.isEnabled.rawValue == true,
+            CodingKeys.state.rawValue == ChannelState.live.rawValue
         )
+        .order([
+            .descending(CodingKeys.followerCount.rawValue),
+            .ascending(CodingKeys.name.rawValue)
+        ])
+        .limit(.max)
     }
 }

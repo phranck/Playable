@@ -6,6 +6,7 @@
 // Created at: 01.12.22
 //
 
+import PlayableApplication
 import PlayableFoundation
 import PlayableParse
 import SwiftUI
@@ -30,7 +31,7 @@ struct PlayableApp: App {
         }
 #if canImport(AppKit)
         .windowToolbarStyle(UnifiedWindowToolbarStyle())
-        .windowStyle(HiddenTitleBarWindowStyle())
+        .windowStyle(TitleBarWindowStyle())
         .defaultSize(width: 960, height: 520)
         .defaultPosition(.center)
         .commands {

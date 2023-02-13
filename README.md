@@ -17,6 +17,7 @@ So, here is an ongoing-by-progress changing screenshot. 😃
 * [Taddy’s Podcast API](https://taddy.org/developers/podcast-api)
 * [AUDD: MUSIC RECOGNITION API](https://www.audd.io)
 * [Relax - REST Package](https://swiftpackageindex.com/tdeleon/relax/2.0.0/documentation/relax)
+* [Pulse Network Logger](https://kean.blog/pulse/home)
 
 ## Contact
 

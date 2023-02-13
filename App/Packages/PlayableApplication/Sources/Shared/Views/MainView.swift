@@ -23,12 +23,15 @@ public struct MainView: View {
     public var body: some View {
 #if canImport(AppKit)
         SidebarNavigationView()
+            .environmentObject(channelService)
 
 #elseif canImport(UIKit)
         if horizontalSizeClass == .compact {
             TabbedNavigationView()
+                .environmentObject(channelService)
         } else {
             SidebarNavigationView()
+                .environmentObject(channelService)
         }
 #endif
     }

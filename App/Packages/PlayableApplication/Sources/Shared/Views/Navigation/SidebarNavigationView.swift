@@ -29,7 +29,26 @@ struct SidebarNavigationView: View {
             }
             .listStyle(SidebarListStyle())
         } detail: {
-            EmptyView()
+            switch selection {
+                case .live:
+                    EmptyView()
+                case .discover:
+                    ChannelGridView()
+                case .subscribed:
+                    EmptyView()
+                case .popular:
+                    EmptyView()
+                case .featured:
+                    EmptyView()
+                case .local:
+                    EmptyView()
+                case .favorites:
+                    EmptyView()
+                case .settings:
+                    EmptyView()
+                case .account:
+                    EmptyView()
+            }
         }
         .navigationSplitViewStyle(.balanced)
     }
