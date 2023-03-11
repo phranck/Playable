@@ -9,10 +9,10 @@
 import SwiftUI
 import UserNotifications
 
-#if canImport(AppKit)
+#if os(macOS)
 public typealias PlatformApplication = NSApplication
 public typealias PlatformApplicationDelegate = NSApplicationDelegate
-#elseif canImport(UIKit)
+#elseif os(iOS)
 public typealias PlatformApplication = UIApplication
 public typealias PlatformApplicationDelegate = UIApplicationDelegate
 #endif

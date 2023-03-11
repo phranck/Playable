@@ -13,9 +13,9 @@ import SwiftUI
 
 @main
 struct PlayableApp: App {
-#if canImport(AppKit)
+#if os(macOS)
     @NSApplicationDelegateAdaptor(PlayableAppDelegate.self) var appDelegate
-#elseif canImport(UIKit)
+#elseif os(iOS)
     @UIApplicationDelegateAdaptor(PlayableAppDelegate.self) var appDelegate
 #endif
 
@@ -29,7 +29,7 @@ struct PlayableApp: App {
         WindowGroup {
             MainView()
         }
-#if canImport(AppKit)
+#if os(macOS)
         .windowToolbarStyle(UnifiedWindowToolbarStyle())
         .windowStyle(TitleBarWindowStyle())
         .defaultSize(width: 960, height: 520)
@@ -51,7 +51,7 @@ struct PlayableApp: App {
 
 // MARK: - Private Helper
 
-#if canImport(AppKit)
+#if os(macOS)
 private extension PlayableApp {
     var credits: NSAttributedString {
         return NSAttributedString(

@@ -11,7 +11,7 @@ import PlayableParse
 import SwiftUI
 
 public struct MainView: View {
-#if canImport(UIKit)
+#if os(iOS)
     @Environment(\.horizontalSizeClass) var horizontalSizeClass
 #endif
     @State private var searchText = ""
@@ -21,11 +21,11 @@ public struct MainView: View {
     public init() {}
 
     public var body: some View {
-#if canImport(AppKit)
+#if os(macOS)
         SidebarNavigationView()
             .environmentObject(channelService)
 
-#elseif canImport(UIKit)
+#elseif os(iOS)
         if horizontalSizeClass == .compact {
             TabbedNavigationView()
                 .environmentObject(channelService)

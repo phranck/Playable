@@ -64,7 +64,7 @@ public extension View {
     @available(macOS 12, *)
     @available(iOS, deprecated, message: "The closure of this modifier is being ignored. It just returns the view it is attached to.")
     func onKeyPress(_ keyCode: ViewKeyCode, action: @escaping () -> Void) -> some View {
-#if canImport(AppKit)
+#if os(macOS)
         modifier(KeyPressViewModifier(keyCode, action: action))
 #else
         self
@@ -72,7 +72,7 @@ public extension View {
     }
 }
 
-#if canImport(AppKit)
+#if os(macOS)
 import Carbon.HIToolbox
 
 // MARK: - Private API

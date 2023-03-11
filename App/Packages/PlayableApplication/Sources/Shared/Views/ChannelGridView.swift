@@ -11,7 +11,7 @@ import SwiftUI
 
 public struct ChannelGridView: View {
     @EnvironmentObject private var channelService: ChannelService
-    @State private var itemSize: Double = 360
+    @State private var itemSize: Double = 320
     @State private var itemSpacing: Double = 20
     @State private var itemImageSize: CGFloat = 96
 

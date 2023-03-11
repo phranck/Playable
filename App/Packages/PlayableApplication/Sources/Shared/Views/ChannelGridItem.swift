@@ -8,6 +8,7 @@
 
 import PlayableFoundation
 import PlayableParse
+import SDWebImageSwiftUI
 import SFSafeSymbols
 import SwiftUI
 import SystemColors
@@ -44,7 +45,7 @@ public struct ChannelGridItem: View {
                 .padding(10)
 
                 Spacer(minLength: 1)
-#if canImport(UIKit)
+#if os(iOS)
                 VStack {
                     Spacer()
                     Image(systemSymbol: .playCircleFill)
@@ -72,29 +73,26 @@ struct CoverImage: View {
     @Binding var imageSize: CGFloat
 
     var body: some View {
-        AsyncImage(
-            url: channel.coverartThumbnail200?.url,
-            content: coverImage,
-            placeholder: coverPlaceholderImage
-        )
-        .frame(width: imageSize, height: imageSize)
-#if canImport(AppKit)
-        .overlay {
-            Color.black
-                .opacity(isHovered ? 0.75 : 0)
-                .overlay {
-                    Image(systemSymbol: .playCircleFill)
-                        .symbolRenderingMode(.hierarchical)
-                        .font(.system(size: 36))
-                        .bold()
-                        .foregroundColor(.white)
-                        .opacity(isHovered ? 1 : 0)
-                }
-                .animation(.easeInOut(duration: 0.05), value: isHovered)
-        }
-        .onHover { hover in
-            isHovered = hover
-        }
+        WebImage(url: channel.coverartThumbnail200?.url)
+            .resizable()
+            .frame(width: imageSize, height: imageSize)
+#if os(macOS)
+            .overlay {
+                Color.black
+                    .opacity(isHovered ? 0.75 : 0)
+                    .overlay {
+                        Image(systemSymbol: .playCircleFill)
+                            .symbolRenderingMode(.hierarchical)
+                            .font(.system(size: 36))
+                            .bold()
+                            .foregroundColor(.white)
+                            .opacity(isHovered ? 1 : 0)
+                    }
+                    .animation(.easeInOut(duration: 0.1), value: isHovered)
+            }
+            .onHover { hover in
+                isHovered = hover
+            }
 #endif
     }
 }
@@ -110,54 +108,5 @@ private extension CoverImage {
         Image(systemSymbol: .photoCircleFill)
             .resizable()
             .frame(maxWidth: .infinity, maxHeight: .infinity)
-    }
-}
-
-// MARK: - Preview
-
-struct ChannelGridItem_Previews: PreviewProvider {
-    @State private static var itemImageSize: CGFloat = 96
-    @State private static var itemSize: Double = 340
-
-    static var channel = Channel(
-        name: "Test Podcast",
-        description: "Testet Dinge und programmiert Software. Testet Dinge und programmiert Software.",
-        followerCount: 42,
-        coverUrlString: "https://picsum.photos/800"
-    )
-
-    static var previews: some View {
-        VStack {
-            ChannelGridItem(channel: channel, imageSize: $itemImageSize, itemSize: $itemSize)
-        }
-        .padding(36)
-        .background(Color.systemTeal)
-    }
-}
-
-private extension Channel {
-    init(
-        name: String,
-        description: String,
-        followerCount: Int,
-        coverUrlString: String,
-        websiteUrl: String? = nil,
-        twitterName: String? = nil,
-        state: ChannelState = .offline
-    ) {
-        self.init()
-
-        // swiftlint:disable force_try
-        let cover = try! JSONDecoder().decode(
-            Coverart.self,
-            from: Data("{\"name\": \"LoremPicture\", \"url\": \"\(coverUrlString)\"}".utf8)
-        )
-
-        self.name = name
-        self.description = description
-        self.followerCount = followerCount
-        self.coverartThumbnail200 = cover
-        self.coverartThumbnail800 = cover
-        self.coverartThumbnail1400 = cover
     }
 }

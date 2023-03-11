@@ -8,7 +8,7 @@
 
 import SwiftUI
 
-#if canImport(UIKit)
+#if os(iOS)
 struct TabbedNavigationView: View {
     var body: some View {
         Text("NavigationView_iPhone")

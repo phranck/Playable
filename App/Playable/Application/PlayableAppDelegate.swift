@@ -40,12 +40,12 @@ class PlayableAppDelegate: NSObject, PlatformApplicationDelegate {
         log.error("Error while registering for Remote Notifications: \(error.localizedDescription)")
     }
 
-#if canImport(AppKit)
+#if os(macOS)
     func application(_ application: PlatformApplication, didReceiveRemoteNotification userInfo: [String: Any]) {
         log.debug("Did receive remote notification: \(userInfo)")
         PlatformApplication.handleRemoteNotification(userInfo: userInfo)
     }
-#elseif canImport(UIKit)
+#elseif os(iOS)
     func application(_ application: PlatformApplication, didReceiveRemoteNotification userInfo: [AnyHashable: Any], fetchCompletionHandler completionHandler: @escaping (UIBackgroundFetchResult) -> Void) {
         log.debug("Did receive remote notification: \(userInfo)")
         PlatformApplication.handleRemoteNotification(userInfo: userInfo)

@@ -19,6 +19,7 @@ let package = Package(
         .package(url: "https://github.com/SFSafeSymbols/SFSafeSymbols.git", from: "4.0.0"),
         .package(url: "https://github.com/pointfreeco/swiftui-navigation.git", from: "0.5.0"),
         .package(url: "https://github.com/pointfreeco/swift-dependencies.git", from: "0.1.4"),
+        .package(url: "https://github.com/SDWebImage/SDWebImageSwiftUI.git", from: "2.0.0"),
         .package(path: "../PlayableFoundation"),
         .package(path: "../PlayableParse"),
         .package(path: "../PlayableRealm")
@@ -30,6 +31,7 @@ let package = Package(
                 "PlayableFoundation",
                 "PlayableParse",
                 "PlayableRealm",
+                "SDWebImageSwiftUI",
                 "SwiftyBeaver"
             ],
             path: "Sources",

@@ -32,8 +32,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/realm/realm-core.git",
       "state" : {
-        "revision" : "b77443ca7fa25407869ca537bf3ae912b1427bff",
-        "version" : "12.13.0"
+        "revision" : "dd91f5f967c4ae89c37e24ab2a0315c31106648f",
+        "version" : "13.6.0"
       }
     },
     {
@@ -41,8 +41,26 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/realm/realm-swift.git",
       "state" : {
-        "revision" : "b1072f3ef733108dfcc62c2001781e5d65605fbf",
-        "version" : "10.34.1"
+        "revision" : "8ac6fe1aa5d0fb0100062d80863416a4d70de8ca",
+        "version" : "10.37.0"
+      }
+    },
+    {
+      "identity" : "sdwebimage",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/SDWebImage/SDWebImage.git",
+      "state" : {
+        "revision" : "fb50c1d20f24db5322b2f8f379de3618f75fe08e",
+        "version" : "5.15.5"
+      }
+    },
+    {
+      "identity" : "sdwebimageswiftui",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/SDWebImage/SDWebImageSwiftUI.git",
+      "state" : {
+        "revision" : "61fefe9c284fd41ddef77d02749e88f00c305196",
+        "version" : "2.2.2"
       }
     },
     {
@@ -59,8 +77,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/jpsim/SourceKitten.git",
       "state" : {
-        "revision" : "fc12c0f182c5cf80781dd933b17a82eb98bd7c61",
-        "version" : "0.33.1"
+        "revision" : "b6dc09ee51dfb0c66e042d2328c017483a1a5d56",
+        "version" : "0.34.1"
       }
     },
     {
@@ -68,17 +86,17 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/apple/swift-argument-parser.git",
       "state" : {
-        "revision" : "fddd1c00396eed152c45a46bea9f47b98e59301d",
-        "version" : "1.2.0"
+        "revision" : "fee6933f37fde9a5e12a1e4aeaa93fe60116ff2a",
+        "version" : "1.2.2"
       }
     },
     {
       "identity" : "swift-case-paths",
       "kind" : "remoteSourceControl",
-      "location" : "https://github.com/pointfreeco/swift-case-paths",
+      "location" : "https://github.com/pointfreeco/swift-case-paths.git",
       "state" : {
-        "revision" : "c3a42e8d1a76ff557cf565ed6d8b0aee0e6e75af",
-        "version" : "0.11.0"
+        "revision" : "870133b7b2387df136ad301ec67b2e864b51dda1",
+        "version" : "0.14.0"
       }
     },
     {
@@ -104,8 +122,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/pointfreeco/swift-custom-dump",
       "state" : {
-        "revision" : "ead7d30cc224c3642c150b546f4f1080d1c411a8",
-        "version" : "0.6.1"
+        "revision" : "de8ba65649e7ee317b9daf27dd5eebf34bd4be57",
+        "version" : "0.9.1"
       }
     },
     {
@@ -113,8 +131,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/pointfreeco/swift-dependencies.git",
       "state" : {
-        "revision" : "8282b0c59662eb38946afe30eb403663fc2ecf76",
-        "version" : "0.1.4"
+        "revision" : "6bb1034e8a1bfbf46dfb766b6c09b7b17e1cba10",
+        "version" : "0.2.0"
       }
     },
     {
@@ -122,8 +140,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/pointfreeco/swift-identified-collections.git",
       "state" : {
-        "revision" : "fd34c544ad27f3ba6b19142b348005bfa85b6005",
-        "version" : "0.6.0"
+        "revision" : "ad3932d28c2e0a009a0167089619526709ef6497",
+        "version" : "0.7.0"
       }
     },
     {
@@ -131,7 +149,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/apple/swift-syntax.git",
       "state" : {
-        "revision" : "e8da93046936e02ef3d700527ecdcd808c3c6bcd"
+        "revision" : "013a48e2312e57b7b355db25bd3ea75282ebf274",
+        "version" : "0.50900.0-swift-DEVELOPMENT-SNAPSHOT-2023-02-06-a"
       }
     },
     {
@@ -139,8 +158,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/pointfreeco/swift-tagged.git",
       "state" : {
-        "revision" : "af06825aaa6adffd636c10a2570b2010c7c07e6a",
-        "version" : "0.9.0"
+        "revision" : "3907a9438f5b57d317001dc99f3f11b46882272b",
+        "version" : "0.10.0"
       }
     },
     {
@@ -149,7 +168,7 @@
       "location" : "https://github.com/realm/SwiftLint.git",
       "state" : {
         "branch" : "main",
-        "revision" : "92304cdd9879d058c1278c195ae9ee4aea5438d6"
+        "revision" : "bd77cbcf6e9e5aabcc04d97b4505a52f0294130f"
       }
     },
     {
@@ -157,8 +176,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/pointfreeco/swiftui-navigation.git",
       "state" : {
-        "revision" : "270a754308f5440be52fc295242eb7031638bd15",
-        "version" : "0.6.1"
+        "revision" : "0a0e1b321d70ee6a464ecfe6b0136d9eff77ebfc",
+        "version" : "0.7.0"
       }
     },
     {
@@ -202,8 +221,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/pointfreeco/xctest-dynamic-overlay",
       "state" : {
-        "revision" : "16b23a295fa322eb957af98037f86791449de60f",
-        "version" : "0.8.1"
+        "revision" : "ab8c9f45843694dd16be4297e6d44c0634fd9913",
+        "version" : "0.8.4"
       }
     },
     {
@@ -211,8 +230,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/jpsim/Yams.git",
       "state" : {
-        "revision" : "01835dc202670b5bb90d07f3eae41867e9ed29f6",
-        "version" : "5.0.1"
+        "revision" : "f47ba4838c30dbd59998a4e4c87ab620ff959e8a",
+        "version" : "5.0.5"
       }
     }
   ],

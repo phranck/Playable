@@ -26,6 +26,7 @@ public class Station: Object, ObjectKeyIdentifiable {
 extension Station {
     override public var debugDescription: String {
         var desc = "ID: \(_id), "
+        desc.append("station: \(station)")
 
         return desc
     }
