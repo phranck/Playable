@@ -10,7 +10,6 @@ import PlayableFoundation
 import PlayableParse
 import SDWebImageSwiftUI
 import SwiftUI
-import SystemColors
 
 public struct ChannelGridItem: View {
     let channel: Channel

@@ -11,15 +11,26 @@ import SwiftUI
 /// Takes a boolean as condition to show the `content` closure or not.
 public struct Conditional<Content: View>: View {
     public typealias ContentBuilder = () -> Content
-    private var condition: Bool
-    private var content: ContentBuilder
 
-    public init(if condition: Bool = false, @ViewBuilder _ content: @escaping ContentBuilder) {
-        self.condition = condition
+    private var condition: Bool
+    @ViewBuilder private let content: ContentBuilder
+    @ViewBuilder private let alternateContent: ContentBuilder?
+
+    public init(if: Bool = true, @ViewBuilder _ content: @escaping ContentBuilder, else alternateContent: ContentBuilder? = nil) {
+        self.condition = `if`
         self.content = content
+        self.alternateContent = alternateContent
     }
 
     public var body: some View {
-        condition ? content() : nil
+        if condition {
+            content()
+        } else {
+            if let alternateContent {
+                alternateContent()
+            } else {
+                EmptyView()
+            }
+        }
     }
 }

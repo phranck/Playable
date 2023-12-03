@@ -8,7 +8,7 @@
 
 import SwiftUI
 
-enum NavigationItem: Identifiable {
+enum NavigationItem: Identifiable, CaseIterable {
     var id: UUID {
         UUID()
     }
@@ -32,70 +32,70 @@ enum NavigationItem: Identifiable {
 extension NavigationItem {
     var title: String {
         switch self {
-            case .live:
-                return String(localized: "Live")
-            case .discover:
-                return String(localized: "Discover")
-            case .subscribed:
-                return String(localized: "Subscribed")
-            case .popular:
-                return String(localized: "Popular")
-            case .featured:
-                return String(localized: "Featured")
-            case .local:
-                return String(localized: "Local Stations")
-            case .favorites:
-                return String(localized: "Favorites")
-            case .settings:
-                return String(localized: "Settings")
-            case .account:
-                return String(localized: "Account")
+        case .live:
+            return String(localized: "Live")
+        case .discover:
+            return String(localized: "Discover")
+        case .subscribed:
+            return String(localized: "Subscribed")
+        case .popular:
+            return String(localized: "Popular")
+        case .featured:
+            return String(localized: "Featured")
+        case .local:
+            return String(localized: "Local Stations")
+        case .favorites:
+            return String(localized: "Favorites")
+        case .settings:
+            return String(localized: "Settings")
+        case .account:
+            return String(localized: "Account")
         }
     }
 
-    var icon: String {
+    var imageName: String {
         switch self {
-            case .live:
-                return "antenna.radiowaves.left.and.right"
-            case .discover:
-                return "waveform.badge.magnifyingglass"
-            case .subscribed:
-                return "checklist.checked"
-            case .popular:
-                return "chart.line.uptrend.xyaxis"
-            case .featured:
-                return "medal"
-            case .local:
-                return "antenna.radiowaves.left.and.right"
-            case .favorites:
-                return "checklist.checked"
-            case .settings:
-                return "gearshape"
-            case .account:
-                return "person.fill"
+        case .live:
+            return "antenna.radiowaves.left.and.right"
+        case .discover:
+            return "waveform.badge.magnifyingglass"
+        case .subscribed:
+            return "checklist.checked"
+        case .popular:
+            return "chart.line.uptrend.xyaxis"
+        case .featured:
+            return "medal"
+        case .local:
+            return "antenna.radiowaves.left.and.right"
+        case .favorites:
+            return "checklist.checked"
+        case .settings:
+            return "gearshape"
+        case .account:
+            return "person.fill"
         }
     }
 
     var shortcut: KeyboardShortcut {
         switch self {
-            case .live:
-                return KeyboardShortcut("1", modifiers: .command)
-            case .discover:
-                return KeyboardShortcut("2", modifiers: .command)
-            case .subscribed:
-                return KeyboardShortcut("3", modifiers: .command)
-            case .popular:
-                return KeyboardShortcut("4", modifiers: .command)
-            case .featured:
-                return KeyboardShortcut("5", modifiers: .command)
-            case .local:
-                return KeyboardShortcut("6", modifiers: .command)
-            case .favorites:
-                return KeyboardShortcut("7", modifiers: .command)
-            case .settings:
-                return KeyboardShortcut("8", modifiers: .command)
-            case .account:
-                return KeyboardShortcut("9", modifiers: .command)
+        case .live:
+            return KeyboardShortcut("1", modifiers: .command)
+        case .discover:
+            return KeyboardShortcut("2", modifiers: .command)
+        case .subscribed:
+            return KeyboardShortcut("3", modifiers: .command)
+        case .popular:
+            return KeyboardShortcut("4", modifiers: .command)
+        case .featured:
+            return KeyboardShortcut("5", modifiers: .command)
+        case .local:
+            return KeyboardShortcut("6", modifiers: .command)
+        case .favorites:
+            return KeyboardShortcut("7", modifiers: .command)
+        case .settings:
+            return KeyboardShortcut("8", modifiers: .command)
+        case .account:
+            return KeyboardShortcut("9", modifiers: .command)
         }
     }
 }

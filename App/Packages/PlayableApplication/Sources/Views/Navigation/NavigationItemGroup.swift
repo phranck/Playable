@@ -30,7 +30,7 @@ extension NavigationItemGroup {
         }
     }
 
-    var icon: String {
+    var imageName: String {
         switch self {
             case .podcast:
                 return "antenna.radiowaves.left.and.right"
