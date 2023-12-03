@@ -4,7 +4,6 @@ disabled_rules:
   - comment_spacing
   - convenience_type
   - identifier_name
-  - indentation_width
   - notification_center_detachment
   - orphaned_doc_comment
   - required_deinit
@@ -33,7 +32,6 @@ opt_in_rules:
   - force_unwrapping
   - identical_operands
   - implicitly_unwrapped_optional
-  - indentation_width
   - last_where
   - leading_whitespace
   - legacy_random
@@ -90,10 +88,6 @@ identifier_name:
     - x
     - y
     - z
-
-indentation_width:
-  include_compiler_directives: false
-  include_comments: false
 
 line_length:
   warning: 150

@@ -19,6 +19,7 @@ public extension Coverart {
     var url: URL {
         // swiftlint:disable force_unwrapping
         return URL(string: urlString)!
+        // swiftlint:enable force_unwrapping
     }
 }
 

@@ -6,25 +6,22 @@
 // Created at: 27.01.23
 //
 
-import IdentifiedCollections
-import SFSafeSymbols
 import SwiftUI
-import Tagged
 
 // MARK: - NavigationGroup
 
 struct NavigationGroupModel: Equatable, Identifiable {
-    let id: Tagged<Self, UUID> = Self.ID(UUID())
+    let id = UUID()
     var title: LocalizedStringKey = ""
-    var symbol: SFSymbol?
+    var systemIconName: String?
     var isCollapsed = false
-    var items: IdentifiedArrayOf<NavigationItemModel> = []
+    var items: [NavigationItemModel] = []
 }
 
 // MARK: - NavigationItem
 
 struct NavigationItemModel: Equatable, Identifiable {
-    let id: Tagged<Self, UUID> = Self.ID(UUID())
+    let id = UUID()
     var title: LocalizedStringKey = ""
-    var symbol: SFSymbol?
+    var systemIconName: String?
 }

@@ -25,22 +25,22 @@ public extension ChannelState {
         let bundle = Bundle.module
 
         switch self {
-            case .live:
-                return String(localized: "Live", bundle: bundle, comment: "channel state live")
-            case .online:
-                return String(localized: "Online", bundle: bundle, comment: "channel state online")
-            case .preshow:
-                return String(localized: "Preshow", bundle: bundle, comment: "channel state preshow")
-            case .postshow:
-                return String(localized: "Postshow", bundle: bundle, comment: "channel state postshow")
-            case .`break`:
-                return String(localized: "Break", bundle: bundle, comment: "channel state break")
-            case .test:
-                return String(localized: "Test", bundle: bundle, comment: "channel state test")
-            case .invalid:
-                return String(localized: "Invalid", bundle: bundle, comment: "channel state invalid")
-            case .offline:
-                return String(localized: "Offline", bundle: bundle, comment: "channel state offline")
+        case .`break`:
+            return String(localized: "Break", bundle: bundle, comment: "channel state break")
+        case .invalid:
+            return String(localized: "Invalid", bundle: bundle, comment: "channel state invalid")
+        case .live:
+            return String(localized: "Live", bundle: bundle, comment: "channel state live")
+        case .offline:
+            return String(localized: "Offline", bundle: bundle, comment: "channel state offline")
+        case .online:
+            return String(localized: "Online", bundle: bundle, comment: "channel state online")
+        case .postshow:
+            return String(localized: "Postshow", bundle: bundle, comment: "channel state postshow")
+        case .preshow:
+            return String(localized: "Preshow", bundle: bundle, comment: "channel state preshow")
+        case .test:
+            return String(localized: "Test", bundle: bundle, comment: "channel state test")
         }
     }
 }

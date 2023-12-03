@@ -1,4 +1,4 @@
-// swift-tools-version: 5.7
+// swift-tools-version: 5.8
 
 import PackageDescription
 
@@ -6,15 +6,15 @@ let package = Package(
     name: "PlayableFoundation",
     defaultLocalization: "en",
     platforms: [
-        .iOS("16.1"),
-        .macOS(.v13)
+        .iOS("16.4"),
+        .macOS("13.3")
     ],
     products: [
         .library(name: "PlayableFoundation", targets: ["PlayableFoundation"])
     ],
     dependencies: [
         .package(url: "https://github.com/SwiftyBeaver/SwiftyBeaver.git", from: "1.9.0"),
-        .package(url: "https://github.com/realm/SwiftLint.git", branch: "main")
+        .package(url: "https://github.com/realm/SwiftLint.git", from: "0.51.0")
     ],
     targets: [
         .target(

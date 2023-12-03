@@ -6,7 +6,6 @@
 // Created at: 29.01.23
 //
 
-import SFSafeSymbols
 import SwiftUI
 
 enum NavigationItem: Identifiable {
@@ -54,26 +53,26 @@ extension NavigationItem {
         }
     }
 
-    var icon: SFSymbol {
+    var icon: String {
         switch self {
             case .live:
-                return .antennaRadiowavesLeftAndRight
+                return "antenna.radiowaves.left.and.right"
             case .discover:
-                return .waveformAndMagnifyingglass
+                return "waveform.badge.magnifyingglass"
             case .subscribed:
-                return .checklistChecked
+                return "checklist.checked"
             case .popular:
-                return .chartLineUptrendXyaxis
+                return "chart.line.uptrend.xyaxis"
             case .featured:
-                return .medal
+                return "medal"
             case .local:
-                return .antennaRadiowavesLeftAndRight
+                return "antenna.radiowaves.left.and.right"
             case .favorites:
-                return .checklistChecked
+                return "checklist.checked"
             case .settings:
-                return .gearshape
+                return "gearshape"
             case .account:
-                return .personFill
+                return "person.fill"
         }
     }
 

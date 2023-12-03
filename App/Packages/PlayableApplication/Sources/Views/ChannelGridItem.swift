@@ -9,7 +9,6 @@
 import PlayableFoundation
 import PlayableParse
 import SDWebImageSwiftUI
-import SFSafeSymbols
 import SwiftUI
 import SystemColors
 
@@ -45,16 +44,6 @@ public struct ChannelGridItem: View {
                 .padding(10)
 
                 Spacer(minLength: 1)
-#if os(iOS)
-                VStack {
-                    Spacer()
-                    Image(systemSymbol: .playCircleFill)
-                        .font(.system(size: 36))
-                        .bold()
-                    Spacer()
-                }
-                .padding()
-#endif
             }
             .frame(maxWidth: .infinity)
         }
@@ -76,12 +65,11 @@ struct CoverImage: View {
         WebImage(url: channel.coverartThumbnail200?.url)
             .resizable()
             .frame(width: imageSize, height: imageSize)
-#if os(macOS)
             .overlay {
                 Color.black
                     .opacity(isHovered ? 0.75 : 0)
                     .overlay {
-                        Image(systemSymbol: .playCircleFill)
+                        Image(systemName: "play.circle.fill")
                             .symbolRenderingMode(.hierarchical)
                             .font(.system(size: 36))
                             .bold()
@@ -93,7 +81,6 @@ struct CoverImage: View {
             .onHover { hover in
                 isHovered = hover
             }
-#endif
     }
 }
 
@@ -105,7 +92,7 @@ private extension CoverImage {
     }
 
     func coverPlaceholderImage() -> some View {
-        Image(systemSymbol: .photoCircleFill)
+        Image(systemName: "photo.circle.fill")
             .resizable()
             .frame(maxWidth: .infinity, maxHeight: .infinity)
     }

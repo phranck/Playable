@@ -6,7 +6,6 @@
 // Created at: 29.01.23
 //
 
-import SFSafeSymbols
 import SwiftUI
 
 enum NavigationItemGroup: Identifiable {
@@ -31,14 +30,14 @@ extension NavigationItemGroup {
         }
     }
 
-    var icon: SFSymbol {
+    var icon: String {
         switch self {
             case .podcast:
-                return .antennaRadiowavesLeftAndRight
+                return "antenna.radiowaves.left.and.right"
             case .radio:
-                return .waveformAndMagnifyingglass
+                return "waveform.badge.magnifyingglass"
             case .general:
-                return .checklistChecked
+                return "checklist.checked"
         }
     }
 }

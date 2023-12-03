@@ -6,7 +6,6 @@
 // Created at: 29.01.23
 //
 
-import SFSafeSymbols
 import SwiftUI
 
 struct SidebarNavigationView: View {
@@ -20,7 +19,7 @@ struct SidebarNavigationView: View {
                         case .podcast(let items), .radio(let items), .general(let items):
                             ForEach(items, id: \.self) { item in
                                 NavigationLink(value: item) {
-                                    Label(item.title, systemSymbol: item.icon)
+                                    Label(item.title, systemImage: item.icon)
                                 }
                                 .keyboardShortcut(item.shortcut)
                             }

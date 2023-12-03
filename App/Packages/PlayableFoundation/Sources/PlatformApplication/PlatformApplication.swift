@@ -9,15 +9,7 @@
 import SwiftUI
 import UserNotifications
 
-#if os(macOS)
-public typealias PlatformApplication = NSApplication
-public typealias PlatformApplicationDelegate = NSApplicationDelegate
-#elseif os(iOS)
-public typealias PlatformApplication = UIApplication
-public typealias PlatformApplicationDelegate = UIApplicationDelegate
-#endif
-
-public extension PlatformApplication {
+public extension NSApplication {
     static func registerForRemoteNotifications(completion: @escaping (Result<Bool, Error>) -> Void ) {
         let notificationCenter = UNUserNotificationCenter.current()
 
@@ -39,21 +31,22 @@ public extension PlatformApplication {
     }
 }
 
-public extension PlatformApplication {
-    // swiftlint: disable force_unwrapping
+// swiftlint: disable force_unwrapping
+public extension NSApplication {
     internal var infoPlistDictionary: [String: Any] {
         Bundle.main.infoDictionary!
     }
 
     static var appName: String {
-        PlatformApplication.shared.infoPlistDictionary["CFBundleName"] as? String ?? "n/a"
+        shared.infoPlistDictionary["CFBundleName"] as? String ?? "n/a"
     }
 
     static var version: String {
-        PlatformApplication.shared.infoPlistDictionary["CFBundleShortVersionString"] as? String ?? "n/a"
+        shared.infoPlistDictionary["CFBundleShortVersionString"] as? String ?? "n/a"
     }
 
     static var buildNumber: String {
-        PlatformApplication.shared.infoPlistDictionary["CFBundleVersion"] as? String ?? "n/a"
+        shared.infoPlistDictionary["CFBundleVersion"] as? String ?? "n/a"
     }
 }
+// swiftlint: enable force_unwrapping

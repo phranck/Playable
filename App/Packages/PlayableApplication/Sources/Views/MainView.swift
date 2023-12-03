@@ -11,9 +11,6 @@ import PlayableParse
 import SwiftUI
 
 public struct MainView: View {
-#if os(iOS)
-    @Environment(\.horizontalSizeClass) var horizontalSizeClass
-#endif
     @State private var searchText = ""
     @State private var sidebarVisibility: NavigationSplitViewVisibility = .automatic
     @StateObject var channelService = ChannelService()
@@ -21,18 +18,7 @@ public struct MainView: View {
     public init() {}
 
     public var body: some View {
-#if os(macOS)
         SidebarNavigationView()
             .environmentObject(channelService)
-
-#elseif os(iOS)
-        if horizontalSizeClass == .compact {
-            TabbedNavigationView()
-                .environmentObject(channelService)
-        } else {
-            SidebarNavigationView()
-                .environmentObject(channelService)
-        }
-#endif
     }
 }

@@ -38,3 +38,4 @@ private extension Bundle {
         return value
     }
 }
+// swiftlint:enable force_unwrapping
