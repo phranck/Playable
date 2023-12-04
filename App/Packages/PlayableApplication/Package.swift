@@ -6,7 +6,7 @@ let package = Package(
     name: "PlayableApplication",
     defaultLocalization: "en",
     platforms: [
-        .macOS(.v13)
+        .macOS("14.0")
     ],
     products: [
         .library(name: "PlayableApplication", targets: ["PlayableApplication"])

@@ -10,9 +10,6 @@
 		FD05653029885470005B4C4A /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = FD05652E29885470005B4C4A /* Localizable.strings */; };
 		FD3D8FB829388A6A006BD359 /* PlayableApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD3D8FB729388A6A006BD359 /* PlayableApp.swift */; };
 		FD3D8FBC29388A6B006BD359 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FD3D8FBB29388A6B006BD359 /* Assets.xcassets */; };
-		FD41F0E9299857A2004D5047 /* SystemColors in Frameworks */ = {isa = PBXBuildFile; productRef = FD41F0E8299857A2004D5047 /* SystemColors */; };
-		FD5011FE29388CF300DFD5A6 /* SwiftyBeaver in Frameworks */ = {isa = PBXBuildFile; productRef = FD5011FD29388CF300DFD5A6 /* SwiftyBeaver */; };
-		FD5F4A8029773BDF0027B5CF /* ParseSwift in Frameworks */ = {isa = PBXBuildFile; productRef = FD5F4A7F29773BDF0027B5CF /* ParseSwift */; };
 		FDAB73FB2970A6670093B7FE /* PlayableAppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDAB73FA2970A6670093B7FE /* PlayableAppDelegate.swift */; };
 		FDDC5A6E298B31870021AE7E /* PlayableFoundation in Frameworks */ = {isa = PBXBuildFile; productRef = FDDC5A6D298B31870021AE7E /* PlayableFoundation */; };
 		FDDC5A70298B32890021AE7E /* PlayableParse in Frameworks */ = {isa = PBXBuildFile; productRef = FDDC5A6F298B32890021AE7E /* PlayableParse */; };
@@ -42,10 +39,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FDEEEC6B29985ADC00E864E1 /* PlayableApplication in Frameworks */,
-				FD5F4A8029773BDF0027B5CF /* ParseSwift in Frameworks */,
-				FD41F0E9299857A2004D5047 /* SystemColors in Frameworks */,
 				FDDC5A70298B32890021AE7E /* PlayableParse in Frameworks */,
-				FD5011FE29388CF300DFD5A6 /* SwiftyBeaver in Frameworks */,
 				FDDC5A6E298B31870021AE7E /* PlayableFoundation in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -139,11 +133,8 @@
 			);
 			name = Playable;
 			packageProductDependencies = (
-				FD5011FD29388CF300DFD5A6 /* SwiftyBeaver */,
-				FD5F4A7F29773BDF0027B5CF /* ParseSwift */,
 				FDDC5A6D298B31870021AE7E /* PlayableFoundation */,
 				FDDC5A6F298B32890021AE7E /* PlayableParse */,
-				FD41F0E8299857A2004D5047 /* SystemColors */,
 				FDEEEC6A29985ADC00E864E1 /* PlayableApplication */,
 			);
 			productName = Podlive;
@@ -177,9 +168,6 @@
 			);
 			mainGroup = FD3D8FAB29388A6A006BD359;
 			packageReferences = (
-				FD5011FC29388CF300DFD5A6 /* XCRemoteSwiftPackageReference "SwiftyBeaver" */,
-				FD5F4A7E29773BDF0027B5CF /* XCRemoteSwiftPackageReference "Parse-Swift" */,
-				FD41F0E7299857A2004D5047 /* XCRemoteSwiftPackageReference "swiftui-system-colors" */,
 			);
 			productRefGroup = FD3D8FB529388A6A006BD359 /* Products */;
 			projectDirPath = "";
@@ -487,49 +475,7 @@
 		};
 /* End XCConfigurationList section */
 
-/* Begin XCRemoteSwiftPackageReference section */
-		FD41F0E7299857A2004D5047 /* XCRemoteSwiftPackageReference "swiftui-system-colors" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/diniska/swiftui-system-colors.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 1.0.0;
-			};
-		};
-		FD5011FC29388CF300DFD5A6 /* XCRemoteSwiftPackageReference "SwiftyBeaver" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/SwiftyBeaver/SwiftyBeaver.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 1.0.0;
-			};
-		};
-		FD5F4A7E29773BDF0027B5CF /* XCRemoteSwiftPackageReference "Parse-Swift" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/parse-community/Parse-Swift";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 4.0.0;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
-
 /* Begin XCSwiftPackageProductDependency section */
-		FD41F0E8299857A2004D5047 /* SystemColors */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = FD41F0E7299857A2004D5047 /* XCRemoteSwiftPackageReference "swiftui-system-colors" */;
-			productName = SystemColors;
-		};
-		FD5011FD29388CF300DFD5A6 /* SwiftyBeaver */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = FD5011FC29388CF300DFD5A6 /* XCRemoteSwiftPackageReference "SwiftyBeaver" */;
-			productName = SwiftyBeaver;
-		};
-		FD5F4A7F29773BDF0027B5CF /* ParseSwift */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = FD5F4A7E29773BDF0027B5CF /* XCRemoteSwiftPackageReference "Parse-Swift" */;
-			productName = ParseSwift;
-		};
 		FDDC5A6D298B31870021AE7E /* PlayableFoundation */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = PlayableFoundation;
