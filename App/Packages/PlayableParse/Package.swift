@@ -6,8 +6,7 @@ let package = Package(
     name: "PlayableParse",
     defaultLocalization: "en",
     platforms: [
-        .iOS("16.4"),
-        .macOS("13.3")
+        .macOS(.v13)
     ],
     products: [
         .library(name: "PlayableParse", targets: ["PlayableParse"])

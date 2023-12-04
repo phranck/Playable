@@ -23,7 +23,7 @@ class PlayableAppDelegate: NSObject, NSApplicationDelegate {
             return
         }
 
-        // so we have to set the curren token
+        // so we have to set the currentharald lesch token
         installation.setDeviceToken(deviceToken)
         installation.save { result in
             switch result {
