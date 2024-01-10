@@ -13,6 +13,7 @@
 		FD5D4A5E2B1D5638001EA2B5 /* PlayableApplication in Frameworks */ = {isa = PBXBuildFile; productRef = FD5D4A5D2B1D5638001EA2B5 /* PlayableApplication */; };
 		FD5D4A612B1D564B001EA2B5 /* PlayableFoundation in Frameworks */ = {isa = PBXBuildFile; productRef = FD5D4A602B1D564B001EA2B5 /* PlayableFoundation */; };
 		FD5D4A642B1D565B001EA2B5 /* PlayableParse in Frameworks */ = {isa = PBXBuildFile; productRef = FD5D4A632B1D565B001EA2B5 /* PlayableParse */; };
+		FD7F30752B23C380000E55ED /* NeoKit in Frameworks */ = {isa = PBXBuildFile; productRef = FD7F30742B23C380000E55ED /* NeoKit */; };
 		FDAB73FB2970A6670093B7FE /* PlayableAppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDAB73FA2970A6670093B7FE /* PlayableAppDelegate.swift */; };
 		FDDC5A6E298B31870021AE7E /* PlayableFoundation in Frameworks */ = {isa = PBXBuildFile; productRef = FDDC5A6D298B31870021AE7E /* PlayableFoundation */; };
 		FDDC5A70298B32890021AE7E /* PlayableParse in Frameworks */ = {isa = PBXBuildFile; productRef = FDDC5A6F298B32890021AE7E /* PlayableParse */; };
@@ -27,6 +28,7 @@
 		FD3D8FBB29388A6B006BD359 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FD3D8FBD29388A6B006BD359 /* Playable.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Playable.entitlements; sourceTree = "<group>"; };
 		FD41F0E3299854A5004D5047 /* PlayableApplication */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = PlayableApplication; sourceTree = "<group>"; };
+		FD7F30732B2392BC000E55ED /* NeoKit */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = NeoKit; sourceTree = "<group>"; };
 		FDA289AA29395BE300EC88D5 /* Production.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Production.xcconfig; sourceTree = "<group>"; };
 		FDA289AD29395DFB00EC88D5 /* Development.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Development.xcconfig; sourceTree = "<group>"; };
 		FDA289AE29395E5800EC88D5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -41,6 +43,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FD7F30752B23C380000E55ED /* NeoKit in Frameworks */,
 				FD5D4A642B1D565B001EA2B5 /* PlayableParse in Frameworks */,
 				FDEEEC6B29985ADC00E864E1 /* PlayableApplication in Frameworks */,
 				FD5D4A5E2B1D5638001EA2B5 /* PlayableApplication in Frameworks */,
@@ -56,6 +59,7 @@
 		FD270924293933550022571F /* Packages */ = {
 			isa = PBXGroup;
 			children = (
+				FD7F30732B2392BC000E55ED /* NeoKit */,
 				FD41F0E3299854A5004D5047 /* PlayableApplication */,
 				FDDC5A68298B2F840021AE7E /* PlayableFoundation */,
 				FDDC5A6C298B309D0021AE7E /* PlayableParse */,
@@ -128,7 +132,6 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FD3D8FD929388A6B006BD359 /* Build configuration list for PBXNativeTarget "Playable" */;
 			buildPhases = (
-				FD0D58D82985EB2B00FEBA50 /* SwiftLint */,
 				FD3D8FB029388A6A006BD359 /* Sources */,
 				FD3D8FB129388A6A006BD359 /* Frameworks */,
 				FD3D8FB229388A6A006BD359 /* Resources */,
@@ -145,6 +148,7 @@
 				FD5D4A5D2B1D5638001EA2B5 /* PlayableApplication */,
 				FD5D4A602B1D564B001EA2B5 /* PlayableFoundation */,
 				FD5D4A632B1D565B001EA2B5 /* PlayableParse */,
+				FD7F30742B23C380000E55ED /* NeoKit */,
 			);
 			productName = Podlive;
 			productReference = FD3D8FB429388A6A006BD359 /* Playable.app */;
@@ -201,29 +205,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		FD0D58D82985EB2B00FEBA50 /* SwiftLint */ = {
-			isa = PBXShellScriptBuildPhase;
-			alwaysOutOfDate = 1;
-			buildActionMask = 12;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-			);
-			name = SwiftLint;
-			outputFileListPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "export PATH=\"$PATH:/opt/homebrew/bin\"\nif which swiftlint > /dev/null; then\n  swiftlint --no-cache --config ${PROJECT_DIR}/.swiftlint.yml\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		FD3D8FB029388A6A006BD359 /* Sources */ = {
@@ -399,7 +380,7 @@
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 14.0;
@@ -408,12 +389,13 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = macosx;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
 				SUPPORTS_MACCATALYST = NO;
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_STRICT_CONCURRENCY = complete;
 				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 2;
 			};
 			name = Development;
 		};
@@ -446,7 +428,7 @@
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 14.0;
@@ -455,12 +437,13 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = macosx;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
 				SUPPORTS_MACCATALYST = NO;
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_STRICT_CONCURRENCY = complete;
 				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 2;
 			};
 			name = Production;
 		};
@@ -514,6 +497,10 @@
 		FD5D4A632B1D565B001EA2B5 /* PlayableParse */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = PlayableParse;
+		};
+		FD7F30742B23C380000E55ED /* NeoKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = NeoKit;
 		};
 		FDDC5A6D298B31870021AE7E /* PlayableFoundation */ = {
 			isa = XCSwiftPackageProductDependency;

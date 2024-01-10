@@ -9,11 +9,19 @@
 import SwiftUI
 import UserNotifications
 
-public extension NSApplication {
-    static func registerForRemoteNotifications(completion: @escaping (Result<Bool, Error>) -> Void ) {
-        let notificationCenter = UNUserNotificationCenter.current()
+#if os(macOS)
+public typealias PlatformApplication = NSApplication
+public typealias PlatformApplicationDelegate = NSApplicationDelegate
+#elseif os(iOS)
+public typealias PlatformApplication = UIApplication
+public typealias PlatformApplicationDelegate = UIApplicationDelegate
+#endif
 
-        notificationCenter.requestAuthorization(options: [.alert, .badge, .sound]) { _, error in
+public extension PlatformApplication {
+    static func registerForRemoteNotifications(completion: @escaping (Result<Bool, Error>) -> Void ) {
+        let nc = UNUserNotificationCenter.current()
+
+        nc.requestAuthorization(options: [.alert, .badge, .sound]) { _, error in
             DispatchQueue.main.async {
                 if let error {
                     log.error("Error while requesting notification authorization: \(error.localizedDescription)")
@@ -31,8 +39,8 @@ public extension NSApplication {
     }
 }
 
-// swiftlint: disable force_unwrapping
-public extension NSApplication {
+public extension PlatformApplication {
+    // swiftlint: disable force_unwrapping
     internal var infoPlistDictionary: [String: Any] {
         Bundle.main.infoDictionary!
     }
@@ -42,11 +50,10 @@ public extension NSApplication {
     }
 
     static var version: String {
-        shared.infoPlistDictionary["CFBundleShortVersionString"] as? String ?? "n/a"
+        PlatformApplication.shared.infoPlistDictionary["CFBundleShortVersionString"] as? String ?? "n/a"
     }
 
     static var buildNumber: String {
-        shared.infoPlistDictionary["CFBundleVersion"] as? String ?? "n/a"
+        PlatformApplication.shared.infoPlistDictionary["CFBundleVersion"] as? String ?? "n/a"
     }
 }
-// swiftlint: enable force_unwrapping

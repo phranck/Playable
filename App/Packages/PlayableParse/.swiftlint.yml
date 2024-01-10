@@ -9,6 +9,7 @@ disabled_rules:
   - required_deinit
   - switch_case_alignment
   - statement_position
+  - syntactic_sugar
   - todo
   - type_name
   - unused_capture_list

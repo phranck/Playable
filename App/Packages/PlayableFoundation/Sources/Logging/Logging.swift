@@ -8,16 +8,58 @@
 //
 
 import Foundation
-import SwiftyBeaver
+import OSLog
 
-public let log = SwiftyBeaver.self
+public let log = Logger(subsystem: Bundle.main.bundleIdentifier ?? "me.woodbytes.Playable", category: "")
 
 public func setupLogging() {
-    // https://docs.swiftybeaver.com/article/20-custom-format
-    let console = ConsoleDestination()
-    console.format = "$DHH:mm:ss.SSS$d [$L] $N.$F:$l → $M"
-    console.asynchronously = false
-    log.addDestination(console)
-
     log.debug("Logging Setup: done")
+}
+
+// MARK: - Public Logger API
+
+public extension Logger {
+    func `default`(_ message: Any, file: String = #file, function: String = #function, line: Int = #line) {
+        _log(.default, message, file: file, function: function, line: line)
+    }
+
+    func info(_ message: Any, file: String = #file, function: String = #function, line: Int = #line) {
+        _log(.info, message, file: file, function: function, line: line)
+    }
+
+    func debug(_ message: Any, file: String = #file, function: String = #function, line: Int = #line) {
+        _log(.debug, message, file: file, function: function, line: line)
+    }
+
+    func error(_ message: Any, file: String = #file, function: String = #function, line: Int = #line) {
+        _log(.error, message, file: file, function: function, line: line)
+    }
+
+    func fault(_ message: Any, file: String = #file, function: String = #function, line: Int = #line) {
+        _log(.fault, message, file: file, function: function, line: line)
+    }
+}
+
+// MARK: - Private Logger API
+
+private extension Logger {
+    func _log(_ level: OSLogType, _ message: Any, file: String, function: String, line: Int) {
+        let fileUrl = URL(filePath: file)
+        let fileName = fileUrl.lastPathComponent.components(separatedBy: ".")[0]
+
+        if let msg = message as? Error {
+            log(level: level, "[\(fileName) → \(function):\(line)] \(msg.localizedDescription)")
+            return
+        }
+
+        if let msg = message as? Dictionary<String, Any> {
+            log(level: level, "[\(fileName) → \(function):\(line)] \(msg.description)")
+            return
+        }
+
+        if let msg = message as? String {
+            log(level: level, "[\(fileName) → \(function):\(line)] \(msg)")
+            return
+        }
+    }
 }

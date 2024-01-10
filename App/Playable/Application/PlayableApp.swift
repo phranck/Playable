@@ -48,7 +48,7 @@ struct PlayableApp: App {
 
 private extension PlayableApp {
     var credits: NSAttributedString {
-        return NSAttributedString(
+        NSAttributedString(
             string: String(localized: "Never miss a live streaming podcast\n"),
             attributes: [.font: NSFont.boldSystemFont(ofSize: NSFont.smallSystemFontSize)]
         )

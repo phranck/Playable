@@ -8,6 +8,8 @@
 
 import SwiftUI
 
+import NeoKit
+
 struct SidebarNavigationView: View {
     @State private var selection: NavigationItem = .discover
 
@@ -26,7 +28,11 @@ struct SidebarNavigationView: View {
                     }
                 }
             }
+            .background {
+                Color.neoBackground
+            }
             .listStyle(SidebarListStyle())
+            .navigationSplitViewColumnWidth(min: 160, ideal: 240, max: 320)
         } detail: {
             switch selection {
             case .live:
