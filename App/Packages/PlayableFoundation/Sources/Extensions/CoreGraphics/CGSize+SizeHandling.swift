@@ -17,11 +17,3 @@ extension CGSize {
         )
     }
 }
-
-public extension CGSize {
-    /// Makes sure that size is not zero.
-    var safeSize: CGSize {
-        let safeSize = self == .zero ? CGSize(width: 1, height: 1) : self
-        return safeSize
-    }
-}

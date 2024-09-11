@@ -104,42 +104,4 @@ public extension CGColor {
 
         return cgColor3
     }
-
-    func toUInt32() -> UInt32? {
-        guard let components = self.components else { return nil }
-        let count = self.numberOfComponents
-
-        var red: CGFloat = 0, green: CGFloat = 0, blue: CGFloat = 0, alpha: CGFloat = 0
-        switch count {
-        case 1: // grayscale
-            red = components[0]
-            green = components[0]
-            blue = components[0]
-            alpha = 1.0
-        case 2: // grayscale with alpha
-            red = components[0]
-            green = components[0]
-            blue = components[0]
-            alpha = components[1]
-        case 3: // RGB
-            red = components[0]
-            green = components[1]
-            blue = components[2]
-            alpha = 1.0
-        case 4: // RGBA
-            red = components[0]
-            green = components[1]
-            blue = components[2]
-            alpha = components[3]
-        default:
-            return nil
-        }
-
-        let redValue = UInt32(red * 255.0) << 16
-        let greenValue = UInt32(green * 255.0) << 8
-        let blueValue = UInt32(blue * 255.0)
-        let alphaValue = UInt32(alpha * 255.0) << 24
-
-        return alphaValue | redValue | greenValue | blueValue
-    }
 }
