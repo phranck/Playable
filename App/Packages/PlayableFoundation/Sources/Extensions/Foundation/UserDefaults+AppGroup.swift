@@ -28,8 +28,4 @@ public extension UserDefaults.GroupDefaults {
     var email: String {
         defaults?.string(forKey: "email") ?? ""
     }
-
-    var migrationFinished: Bool {
-        defaults?.bool(forKey: "migrationFinished") ?? false
-    }
 }

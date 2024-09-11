@@ -12,7 +12,7 @@ import PlayableParse
 import SwiftUI
 import UserNotifications
 
-class PlayableAppDelegate: NSObject, NSApplicationDelegate {
+class PlayableAppDelegate: NSObject, PlatformApplicationDelegate {
     func application(_ application: NSApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
         log.debug("Device Token: \(String(describing: PlayableParseInstallation.current?.deviceToken))")
 
@@ -36,12 +36,12 @@ class PlayableAppDelegate: NSObject, NSApplicationDelegate {
         }
     }
 
-    func application(_ application: NSApplication, didFailToRegisterForRemoteNotificationsWithError error: Error) {
+    func application(_ application: PlatformApplication, didFailToRegisterForRemoteNotificationsWithError error: Error) {
         log.error("Error while registering for Remote Notifications: \(error.localizedDescription)")
     }
 
-    func application(_ application: NSApplication, didReceiveRemoteNotification userInfo: [String: Any]) {
+    func application(_ application: PlatformApplication, didReceiveRemoteNotification userInfo: [String: Any]) {
         log.debug("Did receive remote notification: \(userInfo)")
-        NSApplication.handleRemoteNotification(userInfo: userInfo)
+        PlatformApplication.handleRemoteNotification(userInfo: userInfo)
     }
 }

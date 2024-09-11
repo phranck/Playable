@@ -31,7 +31,7 @@ struct PlayableApp: App {
         .defaultPosition(.center)
         .commands {
             CommandGroup(replacing: .appInfo) {
-                Button(String(localized: "About \(NSApplication.appName)")) {
+                Button(String(localized: "About \(PlatformApplication.name)")) {
                     NSApp.orderFrontStandardAboutPanel(
                         options: [
                             NSApplication.AboutPanelOptionKey.credits: credits,
