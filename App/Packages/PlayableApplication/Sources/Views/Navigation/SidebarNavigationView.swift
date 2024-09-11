@@ -18,7 +18,7 @@ struct SidebarNavigationView: View {
             List(NavigationItemGroup.allCases, selection: $selection) { group in
                 Section(group.title.uppercased()) {
                     switch group {
-                    case .podcast(let items), .radio(let items), .general(let items):
+                    case .podcast(let items), .general(let items):
                         ForEach(items, id: \.self) { item in
                             NavigationLink(value: item) {
                                 Label(item.title, systemImage: item.imageName)
@@ -44,10 +44,6 @@ struct SidebarNavigationView: View {
             case .popular:
                 EmptyView()
             case .featured:
-                EmptyView()
-            case .local:
-                EmptyView()
-            case .favorites:
                 EmptyView()
             case .settings:
                 EmptyView()

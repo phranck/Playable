@@ -6,6 +6,7 @@
 // Created at: 15.12.22
 //
 
+#if os(macOS)
 import SwiftUI
 
 /// Keyboard layout independent keycodes
@@ -119,3 +120,4 @@ private extension KeyCodeView {
         }
     }
 }
+#endif

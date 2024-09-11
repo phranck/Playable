@@ -9,35 +9,24 @@
 import SwiftUI
 
 enum NavigationItemGroup: Identifiable {
-    var id: UUID {
-        UUID()
-    }
+    var id: UUID { UUID() }
 
     case podcast([NavigationItem])
-    case radio([NavigationItem])
     case general([NavigationItem])
 }
 
 extension NavigationItemGroup {
     var title: String {
         switch self {
-            case .podcast:
-                return String(localized: "Podcasts")
-            case .radio:
-                return String(localized: "Radio")
-            case .general:
-                return String(localized: "General")
+            case .podcast: String(localized: "Podcasts")
+            case .general: String(localized: "General")
         }
     }
 
     var imageName: String {
         switch self {
-            case .podcast:
-                return "antenna.radiowaves.left.and.right"
-            case .radio:
-                return "waveform.badge.magnifyingglass"
-            case .general:
-                return "checklist.checked"
+            case .podcast: "antenna.radiowaves.left.and.right"
+            case .general: "checklist.checked"
         }
     }
 }
@@ -45,7 +34,6 @@ extension NavigationItemGroup {
 extension NavigationItemGroup: CaseIterable {
     static let allCases: [NavigationItemGroup] = [
         .podcast(NavigationItem.allCasesPodcast),
-        .radio(NavigationItem.allCasesRadio),
         .general(NavigationItem.allCasesGeneral)
     ]
 }
