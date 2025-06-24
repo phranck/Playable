@@ -62,4 +62,5 @@ public extension PlatformApplication {
 #endif
 }
 
+@MainActor
 public let PlatformApp = PlatformApplication.shared

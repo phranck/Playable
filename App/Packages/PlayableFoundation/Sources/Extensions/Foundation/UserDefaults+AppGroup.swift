@@ -13,11 +13,11 @@ public extension UserDefaults {
     struct GroupDefaults {
         private let defaults = UserDefaults(suiteName: Bundle.appGroupId)
 
-        public static let shared = GroupDefaults()
+        @MainActor public static let shared = GroupDefaults()
         private init() {}
     }
 
-    static let groupDefaults = GroupDefaults.shared
+    @MainActor static let groupDefaults = GroupDefaults.shared
 }
 
 public extension UserDefaults.GroupDefaults {

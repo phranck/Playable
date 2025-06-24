@@ -28,6 +28,7 @@ public extension Parse {
         log.debug("Parse Setup: done")
     }
 
+    @MainActor
     static func setupParseUser() {
         guard let user = PlayableParseUser.current else {
             PlayableParseUser.anonymousLogin()

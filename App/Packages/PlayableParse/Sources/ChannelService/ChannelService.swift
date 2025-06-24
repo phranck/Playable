@@ -51,25 +51,23 @@ private extension ChannelService {
     }
 
     func handleEvent(_ query: Query<Channel>, _ event: Event<Channel>) {
-        DispatchQueue.main.async {
-            switch event {
-                case .entered:
-                    log.debug("Event: entered")
-                case .left(let channel):
-                    log.debug("Event: left: \(channel)")
-                case .created:
-                    log.debug("Event: created")
-                case .updated(let channel):
-                    if let index = self.channels.firstIndex(of: channel) {
-                        self.channels[index] = channel
-                        log.debug("Event: updated: \(channel)")
-                    }
-                case .deleted(let channel):
-                    if let index = self.channels.firstIndex(of: channel) {
-                        self.channels.remove(at: index)
-                        log.debug("Event: deleted: \(channel)")
-                    }
-            }
+        switch event {
+            case .entered:
+                log.debug("Event: entered")
+            case .left(let channel):
+                log.debug("Event: left: \(channel)")
+            case .created:
+                log.debug("Event: created")
+            case .updated(let channel):
+                if let index = self.channels.firstIndex(of: channel) {
+                    self.channels[index] = channel
+                    log.debug("Event: updated: \(channel)")
+                }
+            case .deleted(let channel):
+                if let index = self.channels.firstIndex(of: channel) {
+                    self.channels.remove(at: index)
+                    log.debug("Event: deleted: \(channel)")
+                }
         }
     }
 }

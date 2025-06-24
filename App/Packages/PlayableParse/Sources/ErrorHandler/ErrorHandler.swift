@@ -11,7 +11,7 @@ import ParseSwift
 import PlayableFoundation
 import SwiftUI
 
-public struct ErrorHandler {
+public struct ErrorHandler : Sendable{
     public static let shared = ErrorHandler()
     private init() {}
 

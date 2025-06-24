@@ -4,6 +4,7 @@
 
 import SwiftUI
 
+@MainActor
 public struct Platform: OptionSet {
     public var rawValue: UInt8
 
@@ -24,7 +25,7 @@ public struct Platform: OptionSet {
     public static let current: Platform = .watchOS
 #endif
 
-    public init(rawValue: UInt8) {
+    nonisolated public init(rawValue: UInt8) {
         self.rawValue = rawValue
     }
 }
