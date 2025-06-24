@@ -1,6 +1,5 @@
 [![Mastodon: @phranck](https://img.shields.io/badge/Mastodon-@phranck-blue.svg?style=flat)](https://nerdculture.de/@phranck)
 [![Mastodon: @Podlive](https://img.shields.io/badge/Mastodon-@Podlive-ca94d4.svg?style=flat)](https://chaos.social/@Podlive)
-[![](https://img.shields.io/endpoint?url=https%3A%2F%2Fswiftpackageindex.com%2Fapi%2Fpackages%2Fpointfreeco%2Fswift-composable-architecture%2Fbadge%3Ftype%3Dswift-versions)](https://swiftpackageindex.com/phranck/RadioBrowserKit)
 
 # Playable
 
