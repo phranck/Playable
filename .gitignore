@@ -1,0 +1,8 @@
+# Private technical documentation
+/Documentations/private/
+
+# Local agent artifacts
+/.codex/
+/.openspec/
+/.cursor/
+/.aider/
