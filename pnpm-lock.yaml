@@ -11,6 +11,9 @@ importers:
       '@biomejs/biome':
         specifier: 2.4.8
         version: 2.4.8
+      '@playable/docs':
+        specifier: workspace:*
+        version: link:packages/docs
       typescript:
         specifier: ^5.9.3
         version: 5.9.3
@@ -59,6 +62,18 @@ importers:
 
   packages/contracts:
     devDependencies:
+      typescript:
+        specifier: ^5.9.3
+        version: 5.9.3
+      vitest:
+        specifier: ^3.2.4
+        version: 3.2.7(@types/node@22.20.4)
+
+  packages/docs:
+    devDependencies:
+      '@types/node':
+        specifier: ^22.19.1
+        version: 22.20.4
       typescript:
         specifier: ^5.9.3
         version: 5.9.3
