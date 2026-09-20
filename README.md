@@ -50,6 +50,14 @@ pnpm desktop:test
 
 `pnpm verify` covers everything that runs without a Swift toolchain. The two desktop commands are separate because a machine without Swift can still work on the platform, so failing its checks there would report a missing toolchain as a broken repository.
 
+## Continuous integration
+
+Every pull request runs the checks its own changes can break, worked out from the merge base. A change confined to `apps/desktop` runs the Swift job alone, and a change everywhere else runs the workspace job alone. A push to `main` runs everything, because a merge commit combines two branches that were each green on their own and nothing has ever tested the result.
+
+Branch protection requires one check, the `All checks` job. It waits for the filtered jobs and passes when every job that ran succeeded, treating a skipped job as a pass. Requiring the filtered jobs directly would block every pull request that skips one, since a skipped check never reports success.
+
+Release automation, when there is something to release, consumes this result rather than repeating it. A release workflow runs what publishing itself needs, meaning version references, artefacts and their upload. It does not re-run the linter, the type check or the test suites, because the commit it releases has already passed them here.
+
 ## Project status
 
 Playable is in active planning and development. The [Playable project board](https://github.com/users/phranck/projects/14) is the single source of truth for scope, priorities, implementation order, and current progress.
