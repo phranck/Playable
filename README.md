@@ -14,6 +14,37 @@ Playable connects the immediacy of live audio with the familiarity of a podcast 
 - Share a live stream through a stable Playable link.
 - Continue listening across sessions without losing context.
 
+## Repository layout
+
+Playable is one repository holding several deliverables. Applications live under `apps/`, shared code lives under `packages/`, and the dependency runs one way only: an application may build on a package, and a package never builds on an application.
+
+| Path | What it holds |
+|---|---|
+| `apps/backend` | The HTTP API serving the public and internal Playable endpoints. |
+| `apps/website` | The public playable.at site, including the live share routes. |
+| `apps/dashboard` | The internal operations dashboard. |
+| `apps/desktop` | The Swift package shared by the macOS and Linux desktop apps. |
+| `packages/contracts` | Types and values every workspace has to agree on. |
+| `scripts` | Repository checks that no single workspace owns. |
+| `Documentations` | Public technical guides. |
+
+`apps/desktop` is a SwiftPM package rather than a pnpm workspace, so it is absent from `pnpm-workspace.yaml` and carries its own manifest. It holds `PlayableCore`, `PlayableAPI` and `PlayableStore`, which both desktop apps build on. None of the three may import a user interface framework, because a shared module that reaches into SwiftUI or GTK stops being shared. `pnpm check:desktop-modules` fails when one does.
+
+## Working on Playable
+
+The repository needs Node 22 and pnpm 10, both pinned in `package.json`. Building the desktop package additionally needs a Swift 6 toolchain.
+
+```bash
+pnpm install
+pnpm verify          # structure checks, linter, types, build and tests
+pnpm desktop:build   # the shared Swift modules
+pnpm desktop:test
+```
+
+`pnpm verify` covers everything that runs without a Swift toolchain. The two desktop commands are separate because a machine without Swift can still work on the platform, so failing its checks there would report a missing toolchain as a broken repository.
+
 ## Project status
 
 Playable is in active planning and development. The [Playable project board](https://github.com/users/phranck/projects/14) is the single source of truth for scope, priorities, implementation order, and current progress.
+
+The desktop architecture, meaning the shared Swift modules and the two native user interfaces, is decided in the paper `PAP-PLY-001`.
