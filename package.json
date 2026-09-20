@@ -6,19 +6,20 @@
     "node": ">=22.23.1"
   },
   "scripts": {
-    "build": "pnpm --filter \"./packages/**\" build && pnpm -r --if-present build",
-    "check:config": "pnpm --filter @playable/config build && node scripts/sync-config-files.mjs --check",
+    "build": "pnpm packages:build && pnpm -r --if-present build",
+    "check:config": "pnpm packages:build && node scripts/sync-config-files.mjs --check",
     "check:desktop-modules": "node scripts/check-shared-swift-modules.mjs",
-    "check:documentation": "pnpm --filter @playable/docs build && node scripts/check-documentation.mjs",
+    "check:documentation": "pnpm packages:build && node scripts/check-documentation.mjs",
     "check:workspaces": "node scripts/check-workspace-boundaries.mjs",
-    "config:sync": "pnpm --filter @playable/config build && node scripts/sync-config-files.mjs",
+    "config:sync": "pnpm packages:build && node scripts/sync-config-files.mjs",
     "desktop:build": "swift build --package-path apps/desktop",
     "desktop:test": "swift test --package-path apps/desktop",
     "format": "biome format --write apps packages scripts",
     "lint": "biome check apps packages scripts",
     "lint:fix": "biome check --write apps packages scripts",
-    "test": "pnpm --filter \"./packages/**\" build && pnpm -r --if-present test",
-    "typecheck": "pnpm --filter \"./packages/**\" build && pnpm -r --if-present typecheck",
+    "packages:build": "pnpm --filter \"./packages/**\" build",
+    "test": "pnpm packages:build && pnpm -r --if-present test",
+    "typecheck": "pnpm packages:build && pnpm -r --if-present typecheck",
     "verify": "pnpm check:workspaces && pnpm check:desktop-modules && pnpm check:documentation && pnpm check:config && pnpm lint && pnpm typecheck && pnpm build && pnpm test"
   },
   "devDependencies": {
