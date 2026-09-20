@@ -25,10 +25,17 @@ Playable is one repository holding several deliverables. Applications live under
 | `apps/dashboard` | The internal operations dashboard. |
 | `apps/desktop` | The Swift package shared by the macOS and Linux desktop apps. |
 | `packages/contracts` | Types and values every workspace has to agree on. |
+| `packages/docs` | Reads and validates the public technical guides. |
 | `scripts` | Repository checks that no single workspace owns. |
-| `Documentations` | Public technical guides. |
+| `Documentations` | Public technical guides, described in [its own README](Documentations/README.md). |
 
 `apps/desktop` is a SwiftPM package rather than a pnpm workspace, so it is absent from `pnpm-workspace.yaml` and carries its own manifest. It holds `PlayableCore`, `PlayableAPI` and `PlayableStore`, which both desktop apps build on. None of the three may import a user interface framework, because a shared module that reaches into SwiftUI or GTK stops being shared. `pnpm check:desktop-modules` fails when one does.
+
+## Documentation
+
+Public technical guides live in `Documentations/` as Markdown, one file per chapter of the API reference. Each guide declares its own id, title and position in a front matter block, so the document is the single source and the documentation build only transports it. `Documentations/README.md` describes the format.
+
+`Documentations/private/` stays local. It is ignored by Git and skipped by the build, and `pnpm check:documentation` fails when a file below it is tracked anyway.
 
 ## Working on Playable
 
