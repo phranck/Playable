@@ -35,7 +35,23 @@ Playable is one repository holding several deliverables. Applications live under
 
 Public technical guides live in `Documentations/` as Markdown, one file per chapter of the API reference. Each guide declares its own id, title and position in a front matter block, so the document is the single source and the documentation build only transports it. `Documentations/README.md` describes the format.
 
-`Documentations/private/` stays local. It is ignored by Git and skipped by the build, and `pnpm check:documentation` fails when a file below it is tracked anyway.
+`Documentations/private/` stays local. It is ignored by Git and skipped by the build, and `pnpm check:documentation` fails when a file below it is tracked anyway. `pnpm config:sync` writes the secret ownership record there, which holds no values, only which secrets exist and who replaces them when.
+
+## Configuration
+
+Every environment variable Playable reads is described once, in `packages/config/src/inventory.ts`. The loader validates against it, `.env.example` is generated from it, and the private record of who owns each secret is generated from it as well. Nothing restates it by hand, so nothing can disagree with it. `pnpm check:config` fails when `.env.example` no longer matches, and `pnpm config:sync` brings both generated files back in step.
+
+A service refuses to start when a variable it needs is missing, and the error names all of them at once rather than the first.
+
+Playable runs in four places, named by `PLAYABLE_ENVIRONMENT`: `local`, `preview`, `staging` and `production`. That is separate from `NODE_ENV` on purpose. `NODE_ENV` tells libraries whether to optimize and hide stack traces, whilst `PLAYABLE_ENVIRONMENT` decides what data and which credentials a deployment may reach. A preview and production are both `production` to any library and nothing alike in what they are allowed to touch.
+
+### The database
+
+`DATABASE_URL` is the runtime and ordinary migration connection, owned by the unprivileged application role. `DB_MIGRATION_ROLE` names the role migrations must run as, and the runner aborts when the connected role differs.
+
+A `local` environment may only reach a database on this machine. A `DATABASE_URL` pointing anywhere else is rejected before the service starts, because a local run against a remote database answers every query and every answer is about somebody else's data.
+
+`PRODUCTION_DATABASE_ADMIN_URL` is the privileged connection for an approved repair. It is deliberately absent from the inventory, so no loader resolves it and no deployment carries it, and any service refuses to start while it is set.
 
 ## Working on Playable
 
@@ -43,8 +59,9 @@ The repository needs Node 22 and pnpm 10, both pinned in `package.json`. Buildin
 
 ```bash
 pnpm install
-pnpm verify          # structure checks, linter, types, build and tests
-pnpm desktop:build   # the shared Swift modules
+cp .env.example .env  # then fill in what your machine needs
+pnpm verify           # structure checks, linter, types, build and tests
+pnpm desktop:build    # the shared Swift modules
 pnpm desktop:test
 ```
 
