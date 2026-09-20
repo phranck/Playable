@@ -1,8 +1,29 @@
 # Private technical documentation
 /Documentations/private/
 
+# Local Papers workspace synchronized outside Git
+Papers
+
 # Local agent artifacts
 /.codex/
 /.openspec/
 /.cursor/
 /.aider/
+/.serena/
+
+# Node
+node_modules/
+dist/
+.pnpm-store/
+*.tsbuildinfo
+
+# Swift
+.build/
+.swiftpm/
+*.xcuserdatad
+xcuserdata/
+
+# Local environment
+.env
+.env.*
+!.env.example
