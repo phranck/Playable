@@ -1,0 +1,13 @@
+packages:
+  - "apps/backend"
+  - "apps/website"
+  - "apps/dashboard"
+  - "packages/*"
+
+# apps/desktop is a SwiftPM package and deliberately absent from this list.
+
+# Dependencies whose install scripts may run. pnpm blocks every other one, so a
+# fresh checkout without these two produces a vitest that cannot start.
+onlyBuiltDependencies:
+  - "@biomejs/biome"
+  - esbuild

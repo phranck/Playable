@@ -1,0 +1,25 @@
+{
+  "name": "playable",
+  "private": true,
+  "packageManager": "pnpm@10.33.1",
+  "engines": {
+    "node": ">=22.23.1"
+  },
+  "scripts": {
+    "build": "pnpm --filter @playable/contracts build && pnpm -r --if-present build",
+    "typecheck": "pnpm --filter @playable/contracts build && pnpm -r --if-present typecheck",
+    "test": "pnpm --filter @playable/contracts build && pnpm -r --if-present test",
+    "lint": "biome check apps packages scripts",
+    "lint:fix": "biome check --write apps packages scripts",
+    "format": "biome format --write apps packages scripts",
+    "check:workspaces": "node scripts/check-workspace-boundaries.mjs",
+    "check:desktop-modules": "node scripts/check-shared-swift-modules.mjs",
+    "desktop:build": "swift build --package-path apps/desktop",
+    "desktop:test": "swift test --package-path apps/desktop",
+    "verify": "pnpm check:workspaces && pnpm check:desktop-modules && pnpm lint && pnpm typecheck && pnpm build && pnpm test"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "2.4.8",
+    "typescript": "^5.9.3"
+  }
+}
