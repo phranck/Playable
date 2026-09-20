@@ -7,9 +7,11 @@
   },
   "scripts": {
     "build": "pnpm --filter \"./packages/**\" build && pnpm -r --if-present build",
+    "check:config": "pnpm --filter @playable/config build && node scripts/sync-config-files.mjs --check",
     "check:desktop-modules": "node scripts/check-shared-swift-modules.mjs",
     "check:documentation": "pnpm --filter @playable/docs build && node scripts/check-documentation.mjs",
     "check:workspaces": "node scripts/check-workspace-boundaries.mjs",
+    "config:sync": "pnpm --filter @playable/config build && node scripts/sync-config-files.mjs",
     "desktop:build": "swift build --package-path apps/desktop",
     "desktop:test": "swift test --package-path apps/desktop",
     "format": "biome format --write apps packages scripts",
@@ -17,11 +19,12 @@
     "lint:fix": "biome check --write apps packages scripts",
     "test": "pnpm --filter \"./packages/**\" build && pnpm -r --if-present test",
     "typecheck": "pnpm --filter \"./packages/**\" build && pnpm -r --if-present typecheck",
-    "verify": "pnpm check:workspaces && pnpm check:desktop-modules && pnpm check:documentation && pnpm lint && pnpm typecheck && pnpm build && pnpm test"
+    "verify": "pnpm check:workspaces && pnpm check:desktop-modules && pnpm check:documentation && pnpm check:config && pnpm lint && pnpm typecheck && pnpm build && pnpm test"
   },
   "devDependencies": {
     "@biomejs/biome": "2.4.8",
-    "typescript": "^5.9.3",
-    "@playable/docs": "workspace:*"
+    "@playable/config": "workspace:*",
+    "@playable/docs": "workspace:*",
+    "typescript": "^5.9.3"
   }
 }

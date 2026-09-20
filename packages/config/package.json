@@ -1,20 +1,30 @@
 {
-  "name": "@playable/backend",
+  "name": "@playable/config",
   "version": "0.0.0",
   "private": true,
   "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "build": "tsc -p tsconfig.build.json",
     "typecheck": "tsc -p tsconfig.json --noEmit",
     "test": "vitest run"
   },
-  "dependencies": {
-    "@playable/contracts": "workspace:*"
-  },
   "devDependencies": {
-    "@playable/config": "workspace:*",
     "@types/node": "^22.19.1",
     "typescript": "^5.9.3",
     "vitest": "^3.2.4"
+  },
+  "dependencies": {
+    "@playable/contracts": "workspace:*"
   }
 }
