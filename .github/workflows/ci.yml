@@ -1,0 +1,151 @@
+# Checks every pull request before it can reach main.
+#
+# A pull request runs only the checks its own changes can break, worked out
+# from the merge base. A push to main runs everything, because a merge commit
+# combines two branches that were each green on their own and nothing has ever
+# tested the result.
+#
+# The `gate` job at the bottom is what branch protection requires. Requiring
+# the filtered jobs directly would block every pull request that skips one,
+# since a skipped check never reports success.
+#
+# Every value taken from the event is passed through `env` rather than
+# interpolated into a shell command, so a branch name cannot become a command.
+name: CI
+
+on:
+  pull_request:
+  push:
+    branches:
+      - main
+
+# A newer commit on a branch supersedes the run in flight. On main it does not,
+# because cancelling there abandons the only run that ever sees the merge.
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: ${{ github.ref != 'refs/heads/main' }}
+
+permissions:
+  contents: read
+
+jobs:
+  changes:
+    name: Work out what changed
+    runs-on: ubuntu-latest
+    outputs:
+      node: ${{ steps.filter.outputs.node }}
+      desktop: ${{ steps.filter.outputs.desktop }}
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          fetch-depth: 0
+
+      - name: Compare against the merge base
+        id: filter
+        env:
+          IS_PULL_REQUEST: ${{ github.event_name == 'pull_request' }}
+          BASE_REF: ${{ github.event.pull_request.base.ref }}
+        run: |
+          set -euo pipefail
+
+          if [ "$IS_PULL_REQUEST" != "true" ]; then
+            echo "node=true" >> "$GITHUB_OUTPUT"
+            echo "desktop=true" >> "$GITHUB_OUTPUT"
+            echo "Push to the default branch, so everything runs."
+            exit 0
+          fi
+
+          git fetch --no-tags origin "$BASE_REF"
+          merge_base="$(git merge-base FETCH_HEAD HEAD)"
+          changed="$(git diff --name-only "$merge_base" HEAD)"
+
+          echo "Changed files:"
+          echo "$changed"
+
+          # The Swift package is self-contained, so only its own files, the
+          # check that reads them and this workflow can break it.
+          if echo "$changed" | grep -qE '^(apps/desktop/|scripts/check-shared-swift-modules\.mjs$|\.github/workflows/ci\.yml$)'; then
+            echo "desktop=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "desktop=false" >> "$GITHUB_OUTPUT"
+          fi
+
+          # Everything outside the Swift package shares one toolchain, one
+          # lockfile and one set of root configuration files, so a change to any
+          # of them can break any workspace.
+          if echo "$changed" | grep -qvE '^apps/desktop/'; then
+            echo "node=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "node=false" >> "$GITHUB_OUTPUT"
+          fi
+
+  node:
+    name: Workspaces
+    needs: changes
+    if: needs.changes.outputs.node == 'true'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+
+      - name: Enable the pinned pnpm
+        run: corepack enable
+
+      - uses: actions/setup-node@v5
+        with:
+          node-version-file: .nvmrc
+          cache: pnpm
+
+      - run: pnpm install --frozen-lockfile
+
+      # check:desktop-modules reads Swift sources with Node and needs no Swift
+      # toolchain, so it belongs here rather than on the expensive runner.
+      - run: pnpm check:workspaces
+      - run: pnpm check:desktop-modules
+      - run: pnpm check:documentation
+      - run: pnpm lint
+      - run: pnpm typecheck
+      - run: pnpm build
+      - run: pnpm test
+
+  desktop:
+    name: Shared Swift modules
+    needs: changes
+    if: needs.changes.outputs.desktop == 'true'
+    runs-on: macos-15
+    steps:
+      - uses: actions/checkout@v5
+
+      # Recorded in the log so a failure that turns out to be a toolchain
+      # difference is visible without a second run.
+      - run: swift --version
+
+      - run: swift build --package-path apps/desktop
+      - run: swift test --package-path apps/desktop
+
+  gate:
+    name: All checks
+    needs:
+      - changes
+      - node
+      - desktop
+    if: always()
+    runs-on: ubuntu-latest
+    steps:
+      - name: Require every job that ran to have succeeded
+        env:
+          RESULTS: ${{ toJSON(needs) }}
+        run: |
+          set -euo pipefail
+
+          echo "$RESULTS"
+
+          # A skipped job is one whose area nothing touched, which is a pass.
+          # Anything else, including a cancelled or failed job, is not. Read
+          # with jq rather than grep, so the result does not depend on how
+          # toJSON happens to lay the object out.
+          if jq -e 'to_entries | any(.value.result == "failure" or .value.result == "cancelled")' <<< "$RESULTS" > /dev/null; then
+            echo "At least one check did not pass."
+            exit 1
+          fi
+
+          echo "Every check that ran passed."
