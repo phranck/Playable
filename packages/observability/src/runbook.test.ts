@@ -20,7 +20,7 @@ describe("runbookProcedures", () => {
     expect(new Set(titles).size).toBe(titles.length);
   });
 
-  it("holds no credential, because the repository is public", () => {
+  it("holds no credential, because a repository keeps whatever it is given", () => {
     const everything = JSON.stringify([runbookProcedures, backupPolicy, runbookPlaceholders]);
 
     expect(isSecretValue(everything)).toBe(false);
