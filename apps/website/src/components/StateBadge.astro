@@ -1,0 +1,90 @@
+---
+import { ChannelState, type LiveChannel } from "@playable/contracts";
+
+interface Props {
+  /** The channel whose state is being shown. */
+  channel: LiveChannel;
+}
+
+const { channel } = Astro.props;
+
+/**
+ * What each state is called on the page.
+ *
+ * Written out rather than showing the stored name, because `online` means
+ * reachable and not transmitting, and a reader seeing the word "online" beside
+ * a podcast would reasonably conclude the opposite.
+ */
+const wording: Record<ChannelState, string> = {
+  [ChannelState.Preshow]: "Gleich live",
+  [ChannelState.Live]: "Live",
+  [ChannelState.Postshow]: "Noch auf Sendung",
+  [ChannelState.Offline]: "Nicht auf Sendung",
+  [ChannelState.Online]: "Nicht auf Sendung",
+  [ChannelState.Break]: "Pause",
+  [ChannelState.Test]: "Testsendung",
+};
+
+const listeners = channel.listenerCount === 1 ? "1 hört zu" : `${channel.listenerCount} hören zu`;
+---
+
+<p class="badge" data-on-air={channel.onAir}>
+  <span class="dot" aria-hidden="true"></span>
+  <span class="word">{wording[channel.state]}</span>
+  {channel.onAir && <span class="listeners">{listeners}</span>}
+</p>
+
+<style>
+  /* The state is said three ways, not one: the wording, the colour, and the
+     dot, which is filled whilst on air and hollow otherwise. Colour alone asks
+     a reader to compare two tints. */
+  .badge {
+    margin: 0;
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
+    padding: var(--space-1) var(--space-3);
+    border-radius: 999px;
+    background: color-mix(in srgb, var(--text-primary) 6%, transparent);
+    color: var(--state-off-air);
+    font-size: var(--size-label);
+    font-variant-numeric: tabular-nums;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    transition:
+      background-color var(--motion-settle) var(--motion-ease),
+      color var(--motion-settle) var(--motion-ease);
+  }
+
+  .badge[data-on-air="true"] {
+    background: var(--state-on-air-tint);
+    color: var(--state-on-air);
+  }
+
+  .dot {
+    inline-size: 7px;
+    block-size: 7px;
+    border-radius: 50%;
+    border: 1px solid currentcolor;
+    transition: background-color var(--motion-settle) var(--motion-ease);
+  }
+
+  .badge[data-on-air="true"] .dot {
+    background: currentcolor;
+  }
+
+  .word {
+    font-weight: 600;
+  }
+
+  .listeners {
+    color: var(--text-secondary);
+    text-transform: none;
+    letter-spacing: 0;
+  }
+
+  .listeners::before {
+    content: "·";
+    margin-inline-end: var(--space-2);
+  }
+</style>

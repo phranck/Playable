@@ -1,0 +1,7 @@
+---
+// The apps claim everything below /live and the site keeps /live itself, which
+// the association file says in as many words. Without this page that claim
+// points at a 404, so somebody who shortened a share link by hand would be
+// told the site has nothing rather than being shown who is on air.
+return Astro.redirect("/", 302);
+---

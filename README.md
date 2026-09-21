@@ -21,7 +21,7 @@ Playable is one repository holding several deliverables. Applications live under
 | Path | What it holds |
 |---|---|
 | `apps/backend` | The HTTP API serving the public and internal Playable endpoints. |
-| `apps/website` | The public playable.at site, including the live share routes. |
+| `apps/website` | The public playable.at site, its live overview and the share routes. |
 | `apps/dashboard` | The internal operations dashboard, shipped as static files. |
 | `apps/worker` | Scheduled ingestion and reconciliation. Serves nothing. |
 | `apps/desktop` | The Swift package shared by the macOS and Linux desktop apps. |
@@ -106,6 +106,14 @@ Every pull request runs the checks its own changes can break, worked out from th
 Branch protection requires one check, the `All checks` job. It waits for the filtered jobs and passes when every job that ran succeeded, treating a skipped job as a pass. Requiring the filtered jobs directly would block every pull request that skips one, since a skipped check never reports success.
 
 Release automation, when there is something to release, consumes this result rather than repeating it. A release workflow runs what publishing itself needs, meaning version references, artefacts and their upload. It does not re-run the linter, the type check or the test suites, because the commit it releases has already passed them here.
+
+## Share links
+
+A podcast has two addresses, and both open an installed app: the readable `playable.at/mein-podcast-name` and the identifier-based `playable.at/live/<id>`. The rules live in `packages/contracts` so the site, the API and the apps read one scheme, and `Documentations/share-urls.md` describes them.
+
+The website serves `/.well-known/apple-app-site-association`, which is the half of the Universal Link claim that belongs to the site. Without it macOS concludes no app may open these links, and every shared link opens a browser however correct the app is. Its contents are generated from the reserved path list, so a page added to the site cannot be forgotten in the claim.
+
+Until Playable's own API exists, the site reads channels from the legacy Parse backend behind `ChannelSource`. A machine without those credentials gets fixtures and says so; a deployment without them refuses to start, because a site quietly serving fixtures looks entirely healthy whilst showing nobody who is really on air.
 
 ## Operations
 

@@ -13,3 +13,4 @@ packages:
 onlyBuiltDependencies:
   - "@biomejs/biome"
   - esbuild
+  - sharp
