@@ -1,10 +1,12 @@
+# Globs rather than a list of names. A named list is a second place to edit
+# when a workspace is added, and forgetting it produces a directory that builds
+# locally and is invisible to every gate.
+#
+# apps/desktop is a SwiftPM package with no package.json, so pnpm passes over
+# it without needing an exclusion.
 packages:
-  - "apps/backend"
-  - "apps/website"
-  - "apps/dashboard"
+  - "apps/*"
   - "packages/*"
-
-# apps/desktop is a SwiftPM package and deliberately absent from this list.
 
 # Dependencies whose install scripts may run. pnpm blocks every other one, so a
 # fresh checkout without these two produces a vitest that cannot start.

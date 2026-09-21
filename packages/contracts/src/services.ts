@@ -14,6 +14,8 @@ export const PlayableService = {
   Website: "website",
   /** The internal operations dashboard behind its audit boundary. */
   Dashboard: "dashboard",
+  /** The container running ingestion, reconciliation and other scheduled work. */
+  Worker: "worker",
   /** The PostgreSQL instance that owns every persisted record. */
   Database: "database",
 } as const;

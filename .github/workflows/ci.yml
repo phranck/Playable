@@ -103,6 +103,7 @@ jobs:
       - run: pnpm check:desktop-modules
       - run: pnpm check:documentation
       - run: pnpm check:config
+      - run: pnpm check:deployment
       - run: pnpm lint
       - run: pnpm typecheck
       - run: pnpm build
