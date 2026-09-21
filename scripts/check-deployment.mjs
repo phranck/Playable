@@ -18,7 +18,12 @@
 import { readFile } from "node:fs/promises";
 import { join } from "node:path";
 import { fileURLToPath } from "node:url";
-import { administrativeDatabaseUrlName, entriesForService } from "@playable/config";
+import {
+  administrativeDatabaseUrlName,
+  databaseRole,
+  entriesForService,
+  zeropsDatabaseServiceType,
+} from "@playable/config";
 import { PlayableService, playableServiceNames } from "@playable/contracts";
 import Ajv2020 from "ajv/dist/2020.js";
 import { parse } from "yaml";
@@ -91,7 +96,29 @@ if (pipelineNames.includes(databaseService)) {
   problems.push(`zerops.yml builds "${databaseService}", which Zerops provides and this repository does not`);
 }
 
-// 4. The administrative connection appears nowhere. Any service refuses to
+// 4. The database the definition asks for is the one the pin names. Two
+//    majors apart is not a warning at migration-generation time: it is a
+//    migration that applies here and fails, or applies differently, there.
+const declaredDatabase = (projectImport.services ?? []).find((service) => service.hostname === databaseService);
+if (declaredDatabase && declaredDatabase.type !== zeropsDatabaseServiceType) {
+  problems.push(
+    `zerops-project-import.yml asks for "${declaredDatabase.type}" whilst packages/config pins "${zeropsDatabaseServiceType}"`,
+  );
+}
+
+// 5. Every service that migrates names the pinned role. The runner compares
+//    the connected role against this value and aborts when they differ, so a
+//    stale name here fails the deployment rather than the check.
+for (const service of pipelines.zerops ?? []) {
+  const declaredRole = service.run?.envVariables?.DB_MIGRATION_ROLE;
+  if (declaredRole !== undefined && declaredRole !== databaseRole) {
+    problems.push(
+      `${service.setup} sets DB_MIGRATION_ROLE to "${declaredRole}" whilst packages/config pins "${databaseRole}"`,
+    );
+  }
+}
+
+// 6. The administrative connection appears nowhere. Any service refuses to
 //    start while it is set, so a deployment carrying it would never come up,
 //    and the reason would be invisible in the deployment log.
 for (const [file, document] of [
@@ -103,7 +130,7 @@ for (const [file, document] of [
   }
 }
 
-// 5. Every required variable is either set in the pipeline or supplied as a
+// 7. Every required variable is either set in the pipeline or supplied as a
 //    secret by the topology. A service missing one starts, fails its own
 //    configuration check and restarts, which reads as a crash loop rather than
 //    as a missing variable.

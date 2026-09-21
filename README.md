@@ -56,6 +56,35 @@ A `local` environment may only reach a database on this machine. A `DATABASE_URL
 
 `PRODUCTION_DATABASE_ADMIN_URL` is the privileged connection for an approved repair. It is deliberately absent from the inventory, so no loader resolves it and no deployment carries it, and any service refuses to start while it is set.
 
+The PostgreSQL major version, the local port, the database name and the application role are pinned in `packages/config/src/database.ts`. The deployment definition and the generated `.env.example` read from that pin, and `pnpm check:deployment` fails when the definition disagrees with it. Local and production being two majors apart is not a warning at migration-generation time; it is a migration that applies here and fails, or applies differently, there.
+
+### The local database
+
+Playable runs its own PostgreSQL container, as every project on this machine does, on a port that clears the others.
+
+```bash
+docker run -d \
+  --name playable \
+  --restart unless-stopped \
+  -e POSTGRES_PASSWORD=dev-password-local-only \
+  -p 127.0.0.1:5435:5432 \
+  -v playable-postgres-data:/var/lib/postgresql \
+  postgres:18
+
+docker exec playable psql -U postgres -c "create role playable with login password 'dev-password-local-only'"
+docker exec playable psql -U postgres -c "create database playable owner playable"
+```
+
+The two roles are the point. `POSTGRES_USER` is deliberately unset, so the image's bootstrap superuser stays `postgres` and `playable` is created as an ordinary role that owns the database. Creating the container the obvious way, with `POSTGRES_USER=playable`, makes the application a superuser, and the guarded migration runner refuses to run as one. The rule would then hold only in production, which is the last place to meet it for the first time.
+
+Check it with:
+
+```bash
+docker exec playable psql -U playable -d playable -tAc "select rolsuper from pg_roles where rolname = current_user"
+```
+
+It answers `f`.
+
 ## Working on Playable
 
 The repository needs Node 22 and pnpm 10, both pinned in `package.json`. Building the desktop package additionally needs a Swift 6 toolchain.
