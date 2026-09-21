@@ -1,0 +1,162 @@
+# yaml-language-server: $schema=https://api.app-prg1.zerops.io/api/rest/public/settings/zerops-yml-json-schema.json
+
+# How each Playable service is built and started.
+#
+# `zerops-project-import.yml` says what exists; this says what each one does.
+# The two are checked against each other and against PlayableService in
+# packages/contracts by `pnpm check:deployment`.
+#
+# Nothing here has been provisioned. The start commands name entry points that
+# the issues building each service create, and each one is named in a comment
+# beside it. Until then this file is the agreed target, which is the point:
+# provisioning should be a review of a written definition rather than a series
+# of decisions made at a console.
+#
+# Every build installs from the lockfile and compiles the workspace packages
+# first, because each application imports them and pnpm does not build a
+# workspace dependency on its own.
+zerops:
+  - setup: backend
+    build:
+      base: alpine/nodejs@22
+      buildCommands:
+        - corepack enable
+        - pnpm install --frozen-lockfile
+        - pnpm packages:build
+        - pnpm --filter @playable/backend build
+      deployFiles:
+        - apps/backend/dist
+        - apps/backend/package.json
+        - packages
+        - node_modules
+        - package.json
+      cache:
+        - node_modules
+        - .pnpm-store
+    run:
+      base: alpine/nodejs@22
+      ports:
+        - port: 4000
+          httpSupport: true
+      envVariables:
+        # Bind dual-stack. Zerops service discovery can return an IPv6 address
+        # for a service, and a process bound only to 0.0.0.0 is unreachable at
+        # it until the caller falls back, which shows up as intermittent
+        # ingress failures rather than as a bind error.
+        HOST: "::"
+        NODE_ENV: production
+        PLAYABLE_ENVIRONMENT: production
+        # The role migrations must run as. The runner compares the connected
+        # role against this and aborts when they differ, which is what stops a
+        # migration running as a superuser. Built in #20.
+        DB_MIGRATION_ROLE: playable
+        ALLOWED_ORIGINS: https://playable.at,https://dashboard.playable.at
+        # DATABASE_URL comes from the project import as a secret and is
+        # deliberately absent here, so the connection string exists in one
+        # place. PRODUCTION_DATABASE_ADMIN_URL is absent by design: any service
+        # refuses to start while it is set.
+      # PORT is reserved by Zerops and rejected in envVariables, so it is set
+      # on the process. The value matches the port declared above.
+      start: sh -c 'PORT=4000 exec node apps/backend/dist/server.js'
+      # Readiness rather than liveness. The check answers 503 until the
+      # expected tables, the runtime role's grants and the applied migration
+      # state are all consistent, which keeps a container with a half-applied
+      # schema out of rotation instead of serving wrong answers. Built in #20.
+      healthCheck:
+        httpGet:
+          port: 4000
+          path: /health/ready
+
+  - setup: worker
+    build:
+      base: alpine/nodejs@22
+      buildCommands:
+        - corepack enable
+        - pnpm install --frozen-lockfile
+        - pnpm packages:build
+        - pnpm --filter @playable/worker build
+      deployFiles:
+        - apps/worker/dist
+        - apps/worker/package.json
+        - packages
+        - node_modules
+        - package.json
+      cache:
+        - node_modules
+        - .pnpm-store
+    run:
+      base: alpine/nodejs@22
+      envVariables:
+        NODE_ENV: production
+        PLAYABLE_ENVIRONMENT: production
+        DB_MIGRATION_ROLE: playable
+      # The worker serves nothing. It waits for its scheduled ticks, so it has
+      # no port, no health path and no readiness check to offer.
+      start: node apps/worker/dist/main.js
+      crontab:
+        # Each tick is expected to be idempotent and lock-protected, so a tick
+        # that overlaps a slow predecessor exits rather than doing the work
+        # twice. The schedules are placeholders until the jobs exist: feed
+        # discovery is #23 and reconciliation is #26.
+        - command: node apps/worker/dist/jobs/refresh-feeds.js
+          timing: "*/15 * * * *"
+          allContainers: false
+          workingDir: /var/www
+        - command: node apps/worker/dist/jobs/reconcile-live-catalog.js
+          timing: "*/5 * * * *"
+          allContainers: false
+          workingDir: /var/www
+
+  - setup: website
+    build:
+      base: alpine/nodejs@22
+      buildCommands:
+        - corepack enable
+        - pnpm install --frozen-lockfile
+        - pnpm packages:build
+        - pnpm --filter @playable/website build
+      deployFiles:
+        - apps/website/dist
+        - apps/website/package.json
+        - packages
+        - node_modules
+        - package.json
+      cache:
+        - node_modules
+        - .pnpm-store
+    run:
+      base: alpine/nodejs@22
+      ports:
+        - port: 3000
+          httpSupport: true
+      envVariables:
+        HOST: "::"
+        NODE_ENV: production
+        PLAYABLE_ENVIRONMENT: production
+        # The internal address of the backend. Requests between services stay
+        # inside the project and never leave through the public ingress.
+        BACKEND_URL: http://backend:4000
+      # The entry point is created in #40, which also decides how the site is
+      # rendered.
+      start: sh -c 'PORT=3000 exec node apps/website/dist/server/entry.mjs'
+
+  - setup: dashboard
+    build:
+      base: alpine/nodejs@22
+      buildCommands:
+        - corepack enable
+        - pnpm install --frozen-lockfile
+        - pnpm packages:build
+        - pnpm --filter @playable/dashboard build
+        - cp -r apps/dashboard/dist/. .
+      deployFiles:
+        - index.html
+        - assets
+      cache:
+        - node_modules
+        - .pnpm-store
+    run:
+      base: alpine/nginx@1.22
+      ports:
+        - port: 80
+          httpSupport: true

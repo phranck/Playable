@@ -1,0 +1,60 @@
+# The Playable service topology, for `zcli project project-import`.
+#
+# This file says what exists. `zerops.yml` says how each service is built and
+# started. Nothing here is provisioned: creating the project is a separate step
+# that needs explicit approval, and this definition exists so that step is a
+# review rather than a decision made at the console.
+#
+# Every hostname below is a member of PlayableService in packages/contracts,
+# and `pnpm check:deployment` fails when the two disagree. A hostname is not a
+# label: services reach each other at `http://<hostname>:<port>` inside the
+# project, so renaming one here silently breaks whichever service still
+# addresses the old name.
+#
+# The region is chosen when the project is created. It is deliberately not set
+# here, because the import reference does not document a key for it.
+project:
+  name: playable
+  description: Live podcasts and published episodes in one place.
+  corePackage: LIGHT
+
+services:
+  # Created first, because every other service fails its readiness check until
+  # the database answers. Single container: Playable has one production
+  # deployment and no availability requirement that a three-node cluster would
+  # satisfy and a restore would not.
+  - hostname: database
+    type: postgresql:single@17
+    priority: 30
+
+  - hostname: backend
+    type: nodejs@22
+    enableSubdomainAccess: true
+    priority: 20
+    envSecrets:
+      # The connection string Zerops generates for the database service. Taken
+      # whole rather than assembled from parts, so a rotated password reaches
+      # the application without anything here being edited. It belongs to the
+      # service's own role, never to a superuser, which is what lets the
+      # migration runner refuse to start as one.
+      DATABASE_URL: ${database_connectionString}
+
+  # No public port and no subdomain. It runs scheduled ingestion and
+  # reconciliation, so nothing outside the project has any reason to reach it.
+  - hostname: worker
+    type: nodejs@22
+    priority: 20
+    envSecrets:
+      DATABASE_URL: ${database_connectionString}
+
+  - hostname: website
+    type: nodejs@22
+    enableSubdomainAccess: true
+    priority: 10
+
+  # Static files behind nginx. The dashboard talks to the backend from the
+  # browser and has no server of its own.
+  - hostname: dashboard
+    type: nginx@1.22
+    enableSubdomainAccess: true
+    priority: 10
