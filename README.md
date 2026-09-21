@@ -124,16 +124,6 @@ Nothing is provisioned yet. The definition exists so that creating the project i
 
 The schema is vendored under `scripts/schemas/`, refreshed with `pnpm schema:refresh`. Fetching it during the check would make CI depend on the network and let a change upstream turn the repository red without anything here having changed.
 
-## Security
-
-Security problems do not go in issues. Use [private vulnerability reporting](https://github.com/phranck/Playable/security/advisories/new), which is private between you and the maintainer. [SECURITY.md](.github/SECURITY.md) says what helps and what to expect.
-
-## License
-
-Playable is a commercial product. No licence is granted, and none is planned, so everything copyright reserves is reserved.
-
-Being able to read this source is not permission to copy it, modify it, redistribute it or run it, and pull requests are not accepted. The repository is readable at the moment, which is a temporary state rather than a grant of rights.
-
 ## Project status
 
 Playable is in active planning and development. The [Playable project board](https://github.com/users/phranck/projects/14) is the single source of truth for scope, priorities, implementation order, and current progress.
