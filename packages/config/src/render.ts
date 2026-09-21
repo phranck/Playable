@@ -13,11 +13,11 @@ import {
  * first instinct on finding a wrong value in a generated file is to correct it
  * there.
  */
-function generatedHeader(command: string): string {
+function generatedHeader(): string {
   return [
     "# Generated from the configuration inventory in packages/config.",
     "# Editing this file has no effect: the next run overwrites it.",
-    `# Change packages/config/src/inventory.ts and run ${command}.`,
+    "# Change packages/config/src/inventory.ts and run pnpm generate.",
   ].join("\n");
 }
 
@@ -32,7 +32,7 @@ function generatedHeader(command: string): string {
  * @returns The complete file contents, ending in a newline.
  */
 export function renderEnvExample(): string {
-  const lines = [generatedHeader("pnpm config:sync"), ""];
+  const lines = [generatedHeader(), ""];
 
   for (const entry of configurationInventory) {
     lines.push(`# ${entry.purpose}`);
@@ -61,7 +61,7 @@ export function renderSecretOwnership(): string {
 
   const lines = [
     "<!--",
-    generatedHeader("pnpm config:sync").replace(/^# ?/gm, ""),
+    generatedHeader().replace(/^# ?/gm, ""),
     "-->",
     "",
     "# Secret ownership and rotation",

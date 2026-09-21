@@ -20,6 +20,9 @@ importers:
       '@playable/docs':
         specifier: workspace:*
         version: link:packages/docs
+      '@playable/observability':
+        specifier: workspace:*
+        version: link:packages/observability
       ajv:
         specifier: ^8.20.0
         version: 8.20.0
@@ -126,6 +129,25 @@ importers:
         version: 3.2.7(@types/node@22.20.4)(yaml@2.9.1)
 
   packages/docs:
+    devDependencies:
+      '@types/node':
+        specifier: ^22.19.1
+        version: 22.20.4
+      typescript:
+        specifier: ^5.9.3
+        version: 5.9.3
+      vitest:
+        specifier: ^3.2.4
+        version: 3.2.7(@types/node@22.20.4)(yaml@2.9.1)
+
+  packages/observability:
+    dependencies:
+      '@playable/config':
+        specifier: workspace:*
+        version: link:../config
+      '@playable/contracts':
+        specifier: workspace:*
+        version: link:../contracts
     devDependencies:
       '@types/node':
         specifier: ^22.19.1

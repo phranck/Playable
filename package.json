@@ -7,28 +7,29 @@
   },
   "scripts": {
     "build": "pnpm packages:build && pnpm -r --if-present build",
-    "check:config": "pnpm packages:build && node scripts/sync-config-files.mjs --check",
     "check:deployment": "pnpm packages:build && node scripts/check-deployment.mjs",
     "check:desktop-modules": "node scripts/check-shared-swift-modules.mjs",
     "check:documentation": "pnpm packages:build && node scripts/check-documentation.mjs",
+    "check:generated": "pnpm packages:build && node scripts/sync-generated-files.mjs --check",
     "check:workspaces": "node scripts/check-workspace-boundaries.mjs",
-    "config:sync": "pnpm packages:build && node scripts/sync-config-files.mjs",
     "desktop:build": "swift build --package-path apps/desktop",
     "desktop:test": "swift test --package-path apps/desktop",
     "format": "biome format --write apps packages scripts",
+    "generate": "pnpm packages:build && node scripts/sync-generated-files.mjs",
     "lint": "biome check apps packages scripts",
     "lint:fix": "biome check --write apps packages scripts",
     "packages:build": "pnpm --filter \"./packages/**\" build",
     "schema:refresh": "curl -sSf https://api.app-prg1.zerops.io/api/rest/public/settings/zerops-yml-json-schema.json -o scripts/schemas/zerops-yml.schema.json",
     "test": "pnpm packages:build && pnpm -r --if-present test",
     "typecheck": "pnpm packages:build && pnpm -r --if-present typecheck",
-    "verify": "pnpm check:workspaces && pnpm check:desktop-modules && pnpm check:documentation && pnpm check:config && pnpm check:deployment && pnpm lint && pnpm typecheck && pnpm build && pnpm test"
+    "verify": "pnpm check:workspaces && pnpm check:desktop-modules && pnpm check:documentation && pnpm check:generated && pnpm check:deployment && pnpm lint && pnpm typecheck && pnpm build && pnpm test"
   },
   "devDependencies": {
     "@biomejs/biome": "2.4.8",
     "@playable/config": "workspace:*",
     "@playable/contracts": "workspace:*",
     "@playable/docs": "workspace:*",
+    "@playable/observability": "workspace:*",
     "ajv": "^8.20.0",
     "typescript": "^5.9.3",
     "yaml": "^2.9.1"
