@@ -13,6 +13,7 @@ Papers
 
 # Node
 node_modules/
+.astro/
 dist/
 .pnpm-store/
 *.tsbuildinfo

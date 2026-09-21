@@ -1,6 +1,12 @@
 {
   "$schema": "https://biomejs.dev/schemas/2.4.8/schema.json",
-  "assist": { "actions": { "source": { "organizeImports": "on" } } },
+  "assist": {
+    "actions": {
+      "source": {
+        "organizeImports": "on"
+      }
+    }
+  },
   "linter": {
     "enabled": true,
     "rules": {
@@ -17,6 +23,15 @@
     "lineWidth": 120
   },
   "files": {
-    "includes": ["apps/**", "packages/**", "scripts/**", "!apps/desktop/**", "!**/dist", "!**/node_modules"]
+    "includes": [
+      "apps/**",
+      "packages/**",
+      "scripts/**",
+      "!apps/desktop/**",
+      "!**/*.astro",
+      "!**/.astro",
+      "!**/dist",
+      "!**/node_modules"
+    ]
   }
 }
