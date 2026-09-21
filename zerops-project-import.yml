@@ -51,6 +51,14 @@ services:
     type: nodejs@22
     enableSubdomainAccess: true
     priority: 10
+    envSecrets:
+      # The legacy Parse backend the live overview reads until Playable's own
+      # API exists. Read access only: the site never writes and never holds a
+      # master key. All three are filled in at the Zerops project rather than
+      # here, and #40 removes this reader entirely.
+      PARSE_SERVER_URL: <@generateRandomString(<8>)>
+      PARSE_APPLICATION_ID: <@generateRandomString(<8>)>
+      PARSE_REST_API_KEY: <@generateRandomString(<8>)>
 
   # Static files behind nginx. The dashboard talks to the backend from the
   # browser and has no server of its own.

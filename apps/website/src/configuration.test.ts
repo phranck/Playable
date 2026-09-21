@@ -17,6 +17,9 @@ describe("website configuration", () => {
     const configuration = loadServiceConfiguration(serviceName, {
       PLAYABLE_ENVIRONMENT: "local",
       BACKEND_URL: "http://127.0.0.1:4000",
+      PARSE_SERVER_URL: "https://parse.example.com/parse",
+      PARSE_APPLICATION_ID: "an-application-id",
+      PARSE_REST_API_KEY: "a-read-key",
       DATABASE_URL: "postgresql://playable:password@127.0.0.1:5432/playable",
     });
 
