@@ -124,6 +124,20 @@ Nothing is provisioned yet. The definition exists so that creating the project i
 
 The schema is vendored under `scripts/schemas/`, refreshed with `pnpm schema:refresh`. Fetching it during the check would make CI depend on the network and let a change upstream turn the repository red without anything here having changed.
 
+## Contributing
+
+Playable is built by one person, and the repository is public so the work can be read rather than so it can be contributed to. Bug reports, questions and ideas are welcome as issues. Unsolicited pull requests are not accepted, because scope and order are decided on a board that is not public and because no licence grants anyone rights to this source. [CONTRIBUTING.md](.github/CONTRIBUTING.md) says the rest.
+
+## Security
+
+Security problems do not go in issues. Use [private vulnerability reporting](https://github.com/phranck/Playable/security/advisories/new), which is private between you and the maintainer. [SECURITY.md](.github/SECURITY.md) says what helps and what to expect.
+
+## License
+
+No licence has been granted for this source. Publishing source is not by itself a grant of rights, so everything copyright reserves stays reserved. Reading the code, quoting it in an issue and reporting problems against it are all fine; copying, modifying, redistributing or running it are not.
+
+Choosing a licence is the owner's decision and has not been made yet.
+
 ## Project status
 
 Playable is in active planning and development. The [Playable project board](https://github.com/users/phranck/projects/14) is the single source of truth for scope, priorities, implementation order, and current progress.
