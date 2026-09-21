@@ -28,6 +28,7 @@ Playable is one repository holding several deliverables. Applications live under
 | `packages/contracts` | Types and values every workspace has to agree on. |
 | `packages/docs` | Reads and validates the public technical guides. |
 | `packages/config` | The configuration inventory, its loader and its generators. |
+| `packages/observability` | Readiness checks, structured logging, redaction and the runbook source. |
 | `scripts` | Repository checks that no single workspace owns. |
 | `Documentations` | Public technical guides, described in [its own README](Documentations/README.md). |
 
@@ -37,11 +38,11 @@ Playable is one repository holding several deliverables. Applications live under
 
 Public technical guides live in `Documentations/` as Markdown, one file per chapter of the API reference. Each guide declares its own id, title and position in a front matter block, so the document is the single source and the documentation build only transports it. `Documentations/README.md` describes the format.
 
-`Documentations/private/` stays local. It is ignored by Git and skipped by the build, and `pnpm check:documentation` fails when a file below it is tracked anyway. `pnpm config:sync` writes the secret ownership record there, which holds no values, only which secrets exist and who replaces them when.
+`Documentations/private/` stays local. It is ignored by Git and skipped by the build, and `pnpm check:documentation` fails when a file below it is tracked anyway. `pnpm generate` writes the secret ownership record and the operations runbook there.
 
 ## Configuration
 
-Every environment variable Playable reads is described once, in `packages/config/src/inventory.ts`. The loader validates against it, `.env.example` is generated from it, and the private record of who owns each secret is generated from it as well. Nothing restates it by hand, so nothing can disagree with it. `pnpm check:config` fails when `.env.example` no longer matches, and `pnpm config:sync` brings both generated files back in step.
+Every environment variable Playable reads is described once, in `packages/config/src/inventory.ts`. The loader validates against it, `.env.example` is generated from it, and the private record of who owns each secret is generated from it as well. Nothing restates it by hand, so nothing can disagree with it. `pnpm check:generated` fails when a generated file no longer matches its source, and `pnpm generate` brings them back in step.
 
 A service refuses to start when a variable it needs is missing, and the error names all of them at once rather than the first.
 
@@ -76,6 +77,34 @@ Every pull request runs the checks its own changes can break, worked out from th
 Branch protection requires one check, the `All checks` job. It waits for the filtered jobs and passes when every job that ran succeeded, treating a skipped job as a pass. Requiring the filtered jobs directly would block every pull request that skips one, since a skipped check never reports success.
 
 Release automation, when there is something to release, consumes this result rather than repeating it. A release workflow runs what publishing itself needs, meaning version references, artefacts and their upload. It does not re-run the linter, the type check or the test suites, because the commit it releases has already passed them here.
+
+## Operations
+
+### Readiness
+
+A service proves its dependencies before it accepts traffic. A check that only establishes that the process is listening proves what the network already established, so `runHealthChecks` refuses a check set with nothing in it.
+
+Three states rather than two. A service whose cache is unreachable keeps serving and says it is degraded; a service whose schema is half-applied answers 503 and leaves rotation. Collapsing them means either removing a working service or keeping a broken one.
+
+A check that throws reports a fixed safe sentence, never what it threw, because a database driver puts its connection string into that message. The real cause goes to the log, where it is redacted first.
+
+### Logs
+
+One JSON line per record. A failure carries a stable code, a unique error ID and which kind of failure it is, so the error ID a person quotes leads to the one line that explains it.
+
+A rejected request body is logged as a warning and an unreachable dependency as an error, because the first arrives constantly and would otherwise bury the second.
+
+A deviation that a fallback absorbed is logged as a deviation, with what the service did instead. Handling something successfully and logging nothing is how a fallback that fires on every request comes to look exactly like a system that never fails.
+
+Redaction happens in the logger rather than at the call sites. The secret names come from the configuration inventory, so a variable marked secret there is redacted without a second edit, and credentials are matched by value as well, since a driver's error message carries a connection string under no telling field name at all.
+
+### Backups and recovery
+
+Zerops backs the database up nightly and keeps at least seven daily, four weekly and three monthly copies. There is no key for this in the import definition, so the intended settings live in `packages/observability/src/operations.ts` and are applied in the Zerops interface at provisioning.
+
+The incident, rollback, manual backup and restore drill procedures are rendered by `pnpm generate` into `Documentations/private/operations-runbook.md`. They are rendered rather than committed because this repository is public and a runbook naming real infrastructure is a map of where to push. The procedures are versioned; the identifiers they need are not.
+
+The restore drill has never been run. It needs a provisioned database and the readiness verification from #20, and a backup nobody has restored is a hope rather than a recovery plan.
 
 ## Deployment
 
