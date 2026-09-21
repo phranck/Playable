@@ -107,6 +107,14 @@ Branch protection requires one check, the `All checks` job. It waits for the fil
 
 Release automation, when there is something to release, consumes this result rather than repeating it. A release workflow runs what publishing itself needs, meaning version references, artefacts and their upload. It does not re-run the linter, the type check or the test suites, because the commit it releases has already passed them here.
 
+## Interface
+
+Every colour, radius, spacing step, size and duration is a custom property in `apps/website/src/styles/tokens.css`. Nothing below that file states a value of its own, and what can be derived is derived: the radius of a nested surface is the card's radius less its padding rather than a number chosen to look right.
+
+Icons come from [Phosphor](https://phosphoricons.com) and from nowhere else, at `duotone` weight unless a surface says otherwise. Brand marks are a separate question and come from a dedicated source, because no general family carries every logo.
+
+Nothing imports Phosphor yet. The site currently needs no icon, and the family is recorded here rather than installed, because the decision is what has to survive and a dependency nothing uses is not the way to record one.
+
 ## Share links
 
 A podcast has two addresses, and both open an installed app: the readable `playable.at/mein-podcast-name` and the identifier-based `playable.at/live/<id>`. The rules live in `packages/contracts` so the site, the API and the apps read one scheme, and `Documentations/share-urls.md` describes them.
