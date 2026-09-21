@@ -1,0 +1,87 @@
+---
+import "../styles/tokens.css";
+
+interface Props {
+  /** What the browser tab says. */
+  title: string;
+  /** The one sentence a shared link shows when it is unfurled. */
+  description: string;
+}
+
+const { title, description } = Astro.props;
+const canonical = new URL(Astro.url.pathname, Astro.site ?? Astro.url.origin).toString();
+---
+
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonical} />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonical} />
+    <meta name="twitter:card" content="summary_large_image" />
+  </head>
+  <body>
+    <header class="band">
+      <div class="measure row">
+        <a class="wordmark" href="/">Playable</a>
+      </div>
+    </header>
+
+    <main class="measure content">
+      <slot />
+    </main>
+
+    <footer class="measure foot">
+      <p>Playable zeigt, welche Podcasts gerade live sind.</p>
+    </footer>
+
+    <style>
+      /* The band spans the window and carries the edge; the row inside it
+         keeps the page measure, so the wordmark begins where the content
+         beneath it begins. */
+      .band {
+        border-block-end: 1px solid var(--edge);
+        background: color-mix(in srgb, var(--surface-page) 80%, transparent);
+        backdrop-filter: blur(12px);
+        position: sticky;
+        inset-block-start: 0;
+        z-index: 1;
+      }
+
+      .row {
+        display: flex;
+        align-items: center;
+        block-size: var(--space-8);
+      }
+
+      .wordmark {
+        color: var(--text-primary);
+        font-size: var(--size-heading);
+        font-weight: 600;
+        letter-spacing: -0.01em;
+        text-decoration: none;
+      }
+
+      .content {
+        padding-block: var(--space-7) var(--space-8);
+      }
+
+      .foot {
+        padding-block-end: var(--space-7);
+        color: var(--text-muted);
+        font-size: var(--size-small);
+      }
+
+      .foot p {
+        margin: 0;
+      }
+    </style>
+  </body>
+</html>

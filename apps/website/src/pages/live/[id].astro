@@ -1,0 +1,156 @@
+---
+import { isWellFormedChannelId } from "@playable/contracts";
+import StateBadge from "../../components/StateBadge.astro";
+import Page from "../../layouts/Page.astro";
+import { channelSource } from "../../lib/source.js";
+
+const { id } = Astro.params;
+
+// Somebody with Podlive installed never reaches this page: macOS hands the
+// link to the app first. Everybody else does, which is most people, so the
+// page is the share link's real destination rather than a fallback.
+//
+// The identifier is validated before anything is looked up with it, because
+// this address is public and what arrives in it is whatever was typed.
+const channel = id !== undefined && isWellFormedChannelId(id) ? await channelSource().channel(id) : undefined;
+
+if (channel === undefined) {
+  Astro.response.status = 404;
+}
+
+const title = channel ? `${channel.name} auf Playable` : "Nicht gefunden";
+const description = channel
+  ? (channel.description ?? `${channel.name} auf Playable.`)
+  : "Diesen Podcast gibt es hier nicht.";
+
+Astro.response.headers.set("cache-control", "public, max-age=15, stale-while-revalidate=30");
+---
+
+<Page title={title} description={description}>
+  {
+    channel === undefined ? (
+      <section class="missing">
+        <h1 class="display">Nicht gefunden</h1>
+        <p>Diesen Podcast gibt es hier nicht. Vielleicht ist der Link unvollständig.</p>
+        <p>
+          <a href="/">Zeig mir, wer gerade live ist</a>
+        </p>
+      </section>
+    ) : (
+      <article class="detail">
+        <div class="cover">
+          {channel.coverUrl ? (
+            <img src={channel.coverUrl} alt="" width="160" height="160" decoding="async" />
+          ) : (
+            <span class="placeholder" aria-hidden="true">
+              {channel.name.slice(0, 1)}
+            </span>
+          )}
+        </div>
+
+        <div class="about">
+          <h1 class="name">{channel.name}</h1>
+          <StateBadge channel={channel} />
+
+          {channel.description && <p class="description">{channel.description}</p>}
+
+          {!channel.onAir && (
+            <p class="note">
+              Gerade läuft hier nichts. Der Link bleibt gültig, also führt er auch beim nächsten Mal hierher.
+            </p>
+          )}
+
+          <div class="links">
+            {channel.websiteUrl && (
+              <a href={channel.websiteUrl} rel="noopener noreferrer nofollow">
+                Website des Podcasts
+              </a>
+            )}
+            {channel.chatUrl && channel.onAir && (
+              <a href={channel.chatUrl} rel="noopener noreferrer nofollow">
+                Zum Chat
+              </a>
+            )}
+          </div>
+        </div>
+      </article>
+    )
+  }
+</Page>
+
+<style>
+  .display,
+  .name {
+    margin: 0;
+    font-size: var(--size-display);
+    font-weight: 700;
+    letter-spacing: -0.02em;
+  }
+
+  .missing {
+    padding-inline-start: var(--card-text-inset);
+  }
+
+  .missing p {
+    color: var(--text-secondary);
+  }
+
+  .detail {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-5);
+    padding: var(--card-padding);
+    border: 1px solid var(--edge);
+    border-radius: var(--card-radius);
+    background: var(--surface-card);
+  }
+
+  .cover {
+    flex: none;
+    inline-size: 160px;
+    block-size: 160px;
+    border-radius: var(--card-inner-radius);
+    overflow: hidden;
+    background: var(--surface-raised);
+    display: grid;
+    place-items: center;
+  }
+
+  .cover img {
+    inline-size: 100%;
+    block-size: 100%;
+    object-fit: cover;
+  }
+
+  .placeholder {
+    font-size: var(--size-display);
+    font-weight: 600;
+    color: var(--text-muted);
+  }
+
+  .about {
+    min-inline-size: 0;
+    flex: 1 1 320px;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-3);
+    align-items: flex-start;
+  }
+
+  .description,
+  .note {
+    margin: 0;
+    color: var(--text-secondary);
+  }
+
+  .note {
+    font-size: var(--size-small);
+  }
+
+  .links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-4);
+    font-size: var(--size-small);
+  }
+</style>

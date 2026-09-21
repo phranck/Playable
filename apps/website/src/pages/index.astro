@@ -1,0 +1,61 @@
+---
+import { sortedForOverview } from "@playable/contracts";
+import ChannelCard from "../components/ChannelCard.astro";
+import Page from "../layouts/Page.astro";
+import { channelSource } from "../lib/source.js";
+
+const channels = await channelSource().allChannels();
+const onAir = sortedForOverview(channels.filter((channel) => channel.onAir));
+
+// The page is only worth reading whilst it is current, and a shared link to it
+// must not show somebody a podcast that finished an hour ago.
+Astro.response.headers.set("cache-control", "public, max-age=15, stale-while-revalidate=30");
+---
+
+<Page
+  title="Playable"
+  description="Welche Podcasts gerade live sind."
+>
+  <h1 class="display">Jetzt live</h1>
+
+  {
+    onAir.length === 0 ? (
+      <p class="empty">Gerade ist niemand auf Sendung. Schau später noch einmal vorbei.</p>
+    ) : (
+      <ul class="grid">
+        {onAir.map((channel) => (
+          <li>
+            <ChannelCard channel={channel} />
+          </li>
+        ))}
+      </ul>
+    )
+  }
+</Page>
+
+<style>
+  /* A heading standing above a card begins where that card's curve gives way
+     to its straight edge, rather than out at the measure. */
+  .display {
+    margin: 0 0 var(--space-6);
+    padding-inline-start: var(--card-text-inset);
+    font-size: var(--size-display);
+    font-weight: 700;
+    letter-spacing: -0.02em;
+  }
+
+  .empty {
+    margin: 0;
+    padding-inline-start: var(--card-text-inset);
+    color: var(--text-secondary);
+  }
+
+  .grid {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: grid;
+    gap: var(--space-4);
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  }
+</style>
