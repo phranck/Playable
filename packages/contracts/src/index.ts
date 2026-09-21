@@ -1,5 +1,13 @@
 export { type AppLinkComponent, appLinkComponents } from "./appLinks.js";
 export {
+  ChannelState,
+  channelStates,
+  isChannelState,
+  isOnAir,
+  type LiveChannel,
+  sortedForOverview,
+} from "./liveChannel.js";
+export {
   isPlayableServiceName,
   PlayableService,
   type PlayableServiceName,
