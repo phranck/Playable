@@ -1,0 +1,12 @@
+# Blank issues stay enabled. The maintainer files most issues from the command
+# line, where a template is bypassed anyway, and forcing a form on a bug report
+# from somebody passing through costs more than it collects.
+blank_issues_enabled: true
+
+contact_links:
+  - name: Report a security problem privately
+    url: https://github.com/phranck/Playable/security/advisories/new
+    about: Vulnerabilities go to a private advisory, never to a public issue.
+  - name: How to contribute
+    url: https://github.com/phranck/Playable/blob/main/.github/CONTRIBUTING.md
+    about: What is welcome here, and why pull requests are not.
