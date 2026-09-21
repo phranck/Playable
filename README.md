@@ -22,10 +22,12 @@ Playable is one repository holding several deliverables. Applications live under
 |---|---|
 | `apps/backend` | The HTTP API serving the public and internal Playable endpoints. |
 | `apps/website` | The public playable.at site, including the live share routes. |
-| `apps/dashboard` | The internal operations dashboard. |
+| `apps/dashboard` | The internal operations dashboard, shipped as static files. |
+| `apps/worker` | Scheduled ingestion and reconciliation. Serves nothing. |
 | `apps/desktop` | The Swift package shared by the macOS and Linux desktop apps. |
 | `packages/contracts` | Types and values every workspace has to agree on. |
 | `packages/docs` | Reads and validates the public technical guides. |
+| `packages/config` | The configuration inventory, its loader and its generators. |
 | `scripts` | Repository checks that no single workspace owns. |
 | `Documentations` | Public technical guides, described in [its own README](Documentations/README.md). |
 
@@ -74,6 +76,24 @@ Every pull request runs the checks its own changes can break, worked out from th
 Branch protection requires one check, the `All checks` job. It waits for the filtered jobs and passes when every job that ran succeeded, treating a skipped job as a pass. Requiring the filtered jobs directly would block every pull request that skips one, since a skipped check never reports success.
 
 Release automation, when there is something to release, consumes this result rather than repeating it. A release workflow runs what publishing itself needs, meaning version references, artefacts and their upload. It does not re-run the linter, the type check or the test suites, because the commit it releases has already passed them here.
+
+## Deployment
+
+Playable runs on Zerops as five services. `zerops-project-import.yml` says what exists and `zerops.yml` says how each one is built and started.
+
+| Service | What it is |
+|---|---|
+| `database` | PostgreSQL, provisioned by Zerops |
+| `backend` | The HTTP API, publicly reachable |
+| `worker` | Scheduled ingestion and reconciliation, with no port and no public access |
+| `website` | The public site, publicly reachable |
+| `dashboard` | Static files behind nginx, publicly reachable |
+
+Nothing is provisioned yet. The definition exists so that creating the project is a review of something written down rather than a series of decisions made at a console, and the entry points it names are created by the issues that build each service.
+
+`pnpm check:deployment` validates `zerops.yml` against Zerops' own schema and holds the three descriptions of the topology together: the service names in `packages/contracts`, the hostnames in the import file, and the pipelines in `zerops.yml`. A hostname is an address inside the project, so a service named in one place and not another is not a typo, it is a service nothing can reach. The check also fails when a required variable is provided by neither the pipeline nor the secrets, and when any file mentions the administrative database connection.
+
+The schema is vendored under `scripts/schemas/`, refreshed with `pnpm schema:refresh`. Fetching it during the check would make CI depend on the network and let a change upstream turn the repository red without anything here having changed.
 
 ## Project status
 
