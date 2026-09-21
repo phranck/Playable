@@ -50,7 +50,7 @@ export interface ConfigurationEntry {
 export const configurationInventory: readonly ConfigurationEntry[] = [
   {
     name: "NODE_ENV",
-    services: [PlayableService.Backend, PlayableService.Website, PlayableService.Dashboard],
+    services: [PlayableService.Backend, PlayableService.Website, PlayableService.Dashboard, PlayableService.Worker],
     purpose: "What libraries assume about optimization, caching and error detail.",
     secret: false,
     fallback: "development",
@@ -59,7 +59,7 @@ export const configurationInventory: readonly ConfigurationEntry[] = [
   },
   {
     name: "PLAYABLE_ENVIRONMENT",
-    services: [PlayableService.Backend, PlayableService.Website, PlayableService.Dashboard],
+    services: [PlayableService.Backend, PlayableService.Website, PlayableService.Dashboard, PlayableService.Worker],
     purpose: "Which deployment this is, which decides what data and credentials it may reach.",
     secret: false,
     fallback: "local",
@@ -68,7 +68,7 @@ export const configurationInventory: readonly ConfigurationEntry[] = [
   },
   {
     name: "HOST",
-    services: [PlayableService.Backend, PlayableService.Website, PlayableService.Dashboard],
+    services: [PlayableService.Backend, PlayableService.Website],
     purpose: "The address to bind to. Deployments bind dual-stack, so the value there is a bare colon pair.",
     secret: false,
     fallback: "127.0.0.1",
@@ -76,7 +76,7 @@ export const configurationInventory: readonly ConfigurationEntry[] = [
   },
   {
     name: "PORT",
-    services: [PlayableService.Backend, PlayableService.Website, PlayableService.Dashboard],
+    services: [PlayableService.Backend, PlayableService.Website],
     purpose: "The port to listen on.",
     secret: false,
     fallback: "4000",
@@ -84,7 +84,7 @@ export const configurationInventory: readonly ConfigurationEntry[] = [
   },
   {
     name: "DATABASE_URL",
-    services: [PlayableService.Backend],
+    services: [PlayableService.Backend, PlayableService.Worker],
     purpose: "The runtime and ordinary migration connection, owned by the unprivileged application role.",
     secret: true,
     example: "postgresql://playable:password@127.0.0.1:5432/playable",
@@ -93,15 +93,15 @@ export const configurationInventory: readonly ConfigurationEntry[] = [
   },
   {
     name: "DB_MIGRATION_ROLE",
-    services: [PlayableService.Backend],
+    services: [PlayableService.Backend, PlayableService.Worker],
     purpose: "The exact role migrations must run as. The runner aborts when the connected role differs.",
     secret: false,
     example: "playable",
   },
   {
     name: "BACKEND_URL",
-    services: [PlayableService.Website, PlayableService.Dashboard],
-    purpose: "Where to reach the backend. Inside a deployment this is the internal service address.",
+    services: [PlayableService.Website],
+    purpose: "Where the website reaches the backend. Inside a deployment this is the internal service address.",
     secret: false,
     example: "http://127.0.0.1:4000",
   },
