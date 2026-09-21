@@ -24,7 +24,7 @@ services:
   # deployment and no availability requirement that a three-node cluster would
   # satisfy and a restore would not.
   - hostname: database
-    type: postgresql:single@17
+    type: postgresql:single@18
     priority: 30
 
   - hostname: backend
