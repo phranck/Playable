@@ -1,4 +1,5 @@
 import { PlayableService, type PlayableServiceName } from "@playable/contracts";
+import { databaseRole, localDatabaseUrl } from "./database.js";
 
 /**
  * One configuration variable, described once for everything that needs to know.
@@ -87,7 +88,7 @@ export const configurationInventory: readonly ConfigurationEntry[] = [
     services: [PlayableService.Backend, PlayableService.Worker],
     purpose: "The runtime and ordinary migration connection, owned by the unprivileged application role.",
     secret: true,
-    example: "postgresql://playable:password@127.0.0.1:5432/playable",
+    example: localDatabaseUrl,
     owner: "Zerops project secrets for every deployment, and the developer's own machine locally.",
     rotation: "When the application role's password changes, and immediately on any suspected exposure.",
   },
@@ -96,7 +97,7 @@ export const configurationInventory: readonly ConfigurationEntry[] = [
     services: [PlayableService.Backend, PlayableService.Worker],
     purpose: "The exact role migrations must run as. The runner aborts when the connected role differs.",
     secret: false,
-    example: "playable",
+    example: databaseRole,
   },
   {
     name: "BACKEND_URL",

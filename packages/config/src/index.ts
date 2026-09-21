@@ -1,4 +1,14 @@
 export {
+  databaseName,
+  databaseRole,
+  localDatabaseImage,
+  localDatabasePassword,
+  localDatabasePort,
+  localDatabaseUrl,
+  postgresMajorVersion,
+  zeropsDatabaseServiceType,
+} from "./database.js";
+export {
   developmentEnvironments,
   isPlayableEnvironment,
   PlayableEnvironment,
