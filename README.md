@@ -126,7 +126,7 @@ The schema is vendored under `scripts/schemas/`, refreshed with `pnpm schema:ref
 
 ## Contributing
 
-Playable is built by one person, and the repository is public so the work can be read rather than so it can be contributed to. Bug reports, questions and ideas are welcome as issues. Unsolicited pull requests are not accepted, because scope and order are decided on a board that is not public and because no licence grants anyone rights to this source. [CONTRIBUTING.md](.github/CONTRIBUTING.md) says the rest.
+Playable is a commercial product built by one person. It is not an open source project and will not become one, so pull requests are not accepted from anyone. Reports of something broken are useful and belong in an [issue](https://github.com/phranck/Playable/issues). [CONTRIBUTING.md](.github/CONTRIBUTING.md) says the rest.
 
 ## Security
 
@@ -134,9 +134,9 @@ Security problems do not go in issues. Use [private vulnerability reporting](htt
 
 ## License
 
-No licence has been granted for this source. Publishing source is not by itself a grant of rights, so everything copyright reserves stays reserved. Reading the code, quoting it in an issue and reporting problems against it are all fine; copying, modifying, redistributing or running it are not.
+No licence is granted, and none is planned. Everything copyright reserves is reserved.
 
-Choosing a licence is the owner's decision and has not been made yet.
+Being able to read this source is not permission to copy it, modify it, redistribute it or run it. The repository is readable at the moment, which is a temporary state rather than a grant of rights.
 
 ## Project status
 

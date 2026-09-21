@@ -9,4 +9,4 @@ contact_links:
     about: Vulnerabilities go to a private advisory, never to a public issue.
   - name: How to contribute
     url: https://github.com/phranck/Playable/blob/main/.github/CONTRIBUTING.md
-    about: What is welcome here, and why pull requests are not.
+    about: Why pull requests are not accepted, and what is useful instead.

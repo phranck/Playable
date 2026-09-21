@@ -1,29 +1,21 @@
 # Contributing to Playable
 
-Playable is built by one person. The repository is public so the work can be read and so problems can be reported against something real, and that is what public means here: the source is visible, not open to contribution.
+Playable is a commercial product built by one person. It is not an open source project, and it is not going to become one. The repository is readable at the moment; that is a temporary state and not an invitation.
 
-## What is welcome
+## Pull requests are not accepted
 
-**Bug reports.** If something is wrong, say so in an [issue](https://github.com/phranck/Playable/issues). Describe what you did, what happened, and what you expected instead.
+Not from anyone, and not on a case by case basis. No licence has been granted for this source, so nobody outside holds the right to modify or redistribute it, and a contribution would have no terms under which it could be given or used.
 
-**Questions about how something works.** An issue is the right place for those too. If the answer turns out to be missing from the documentation, that is a defect in the documentation.
+Please do not open one. Declining it would waste your work, and leaving it open would be worse.
 
-**Ideas.** They may not be built, and they are still worth having written down.
+## What you can do instead
 
-## What is not accepted
+**Report something broken.** If you have found a defect, an [issue](https://github.com/phranck/Playable/issues) describing what you did, what happened and what you expected is genuinely useful.
 
-**Unsolicited pull requests.** Two reasons, and neither is about the quality of the work.
+**Report something sensitive privately.** Security problems never go in issues. See [SECURITY.md](SECURITY.md).
 
-Scope and order are decided on a project board that is not public. A pull request from outside cannot be reviewed against a plan nobody outside can see, so it would either be judged on the wrong criteria or sit unanswered.
+That is the whole list. Feature requests and design suggestions are read, and what gets built is decided elsewhere, so an issue asking for something is not a queue you are joining.
 
-No licence has been granted for this source. Without one, the terms under which a contribution would be given and used are undefined, and nobody should be asked to contribute into that.
+## Licensing
 
-If you have found something and know how to fix it, the fix belongs in the issue as a description. That reaches the same outcome without either of us relying on an arrangement that does not exist yet.
-
-## Reporting something sensitive
-
-Security problems do not go in issues. See [SECURITY.md](SECURITY.md).
-
-## If you are wondering whether this will change
-
-It may. If Playable is licensed and the planning becomes public, this file changes with it. Until then this describes what is actually true rather than what would be more welcoming to read.
+No licence is granted, and none is planned. Everything copyright reserves is reserved. Being able to read the source is not permission to copy it, modify it, redistribute it or run it.
