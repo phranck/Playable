@@ -102,7 +102,7 @@ Redaction happens in the logger rather than at the call sites. The secret names 
 
 Zerops backs the database up nightly and keeps at least seven daily, four weekly and three monthly copies. There is no key for this in the import definition, so the intended settings live in `packages/observability/src/operations.ts` and are applied in the Zerops interface at provisioning.
 
-The incident, rollback, manual backup and restore drill procedures are rendered by `pnpm generate` into `Documentations/private/operations-runbook.md`. They are rendered rather than committed because this repository is public and a runbook naming real infrastructure is a map of where to push. The procedures are versioned; the identifiers they need are not.
+The incident, rollback, manual backup and restore drill procedures are rendered by `pnpm generate` into `Documentations/private/operations-runbook.md`. The procedures are versioned; the identifiers they need are not. A repository is cloned, backed up and can change visibility, so anything committed to it is committed to every copy of it permanently, and a runbook naming real infrastructure does not belong in one.
 
 The restore drill has never been run. It needs a provisioned database and the readiness verification from #20, and a backup nobody has restored is a hope rather than a recovery plan.
 

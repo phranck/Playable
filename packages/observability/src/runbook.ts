@@ -6,7 +6,7 @@ import { backupPolicy, runbookPlaceholders, runbookProcedures } from "./operatio
  * The document goes to `Documentations/private/`, which never leaves the
  * machine. It is rendered rather than written by hand so the procedures
  * survive a fresh checkout without the identifiers they need being committed
- * to a public repository.
+ * to a repository at all.
  *
  * @returns The complete Markdown document, ending in a newline.
  */
@@ -20,7 +20,7 @@ export function renderOperationsRunbook(): string {
     "",
     "# Operations runbook",
     "",
-    "This document stays on this machine. The procedures below are versioned in the repository; the identifiers they need are not, because the repository is public and an incident procedure naming real infrastructure is a map of where to push.",
+    "This document stays on this machine. The procedures below are versioned in the repository; the identifiers they need are not. A repository is cloned, backed up and can change visibility, so anything committed to it is committed to every copy of it permanently.",
     "",
     "## What to fill in",
     "",

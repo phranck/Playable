@@ -2,10 +2,14 @@
  * The operational facts the private runbook is rendered from.
  *
  * The runbook itself is written to `Documentations/private/` and never
- * committed, because this repository is public and an incident procedure
- * naming real identifiers is a map of where to push. What lives here is only
- * the mechanics, every one of which is already published by Zerops, so the
- * knowledge survives a fresh checkout whilst the identifiers do not.
+ * committed. A repository is cloned, backed up, mirrored by tooling and can
+ * change visibility in either direction, so anything committed to it is
+ * committed to every copy of it permanently, whatever the current setting
+ * says. An incident procedure naming real identifiers does not belong in one.
+ *
+ * What lives here is only the mechanics, every one of which Zerops already
+ * publishes, so the knowledge survives a fresh checkout whilst the identifiers
+ * do not.
  *
  * Anything an operator has to fill in locally is a {@link RunbookPlaceholder}
  * rather than a value, so the difference between what is known and what has to

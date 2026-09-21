@@ -10,7 +10,9 @@ This file is the exception. It describes the folder rather than the product, so 
 
 ## What stays local
 
-`Documentations/private/` never leaves the machine it was written on. It is ignored by Git, skipped by the documentation build, and meant for notes that would be a liability in a public repository: credential ownership, incident details, contacts, and anything naming infrastructure that is not already public.
+`Documentations/private/` never leaves the machine it was written on. It is ignored by Git, skipped by the documentation build, and meant for credential ownership, incident details, contacts and anything naming infrastructure.
+
+None of that belongs in a repository whatever its visibility is set to. A repository is cloned, backed up and mirrored by tooling, and it can be made public as easily as it was made private, so anything committed to it is committed to every copy of it permanently.
 
 `pnpm check:documentation` fails when a file below it is tracked by Git. That catches the case `.gitignore` cannot, which is a file added before the rule existed or forced in with `git add -f`.
 
